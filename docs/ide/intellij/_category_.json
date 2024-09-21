@@ -1,0 +1,8 @@
+{
+  "label": "Intellij",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Is an integrated development environment (IDE) written in Java for developing computer software written in Java, Kotlin, Groovy, and other JVM-based languages. It is developed by JetBrains and is available as an Apache 2 Licensed community edition, and in a proprietary commercial edition. Both can be used for commercial development."
+  }
+}

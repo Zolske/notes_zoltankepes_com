@@ -71,6 +71,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode:'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -91,6 +96,12 @@ const config = {
             sidebarId: 'java',
             position: 'left',
             label: 'Java',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'ide',
+            position: 'left',
+            label: 'IDE',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {

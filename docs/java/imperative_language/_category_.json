@@ -1,0 +1,8 @@
+{
+  "label": "Imperative Language Concept",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Is a programming paradigm that involves explicitly telling a computer what steps to take to achieve a desired outcome. It's similar to writing a detailed recipe for a program, with each step being a command for the computer to perform."
+  }
+}

@@ -34,3 +34,8 @@
   content: url(/static/img/logo_java32.png);
   padding-right: 3px;
 }
+
+.navbar__brand + .navbar__link + .navbar__link::before {
+  content: url(/static/img/logo_ide32.png);
+  padding-right: 3px;
+}
