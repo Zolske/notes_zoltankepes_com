@@ -39,3 +39,35 @@
   content: url(/static/img/logo_ide32.png);
   padding-right: 3px;
 }
+
+/*comments in code block*/
+.comment {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+highlight in code block,
+.theme-code-block-highlighted-line {
+  background-color: rgba(224, 217, 218, 0.63);
+}
+
+/*  //highlight-next-line (next line only)
+    //highlight-start
+    //highlight-end       (everything in between) */
+.theme-code-block-highlighted-line > .comment {
+  color: rgba(60, 148, 25, 0.623) !important;
+}
+/* highlight error in code block, */
+.theme-code-block-highlighted-line-error {
+  background-color: rgba(220, 20, 60, 0.3);
+}
+
+/*  //highlight-error-next-line (next line only)
+    //highlight-error-start
+    //highlight-error-end       (everything in between) */
+.theme-code-block-highlighted-line-error > .comment {
+  color: red !important;
+  font-weight: bold !important;
+}
+
+
+

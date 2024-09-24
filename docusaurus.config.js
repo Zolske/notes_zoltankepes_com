@@ -159,7 +159,21 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['git', 'java', 'c', 'cpp', 'bash']
+        additionalLanguages: ['git', 'java', 'c', 'cpp', 'bash'],
+        magicComments: [
+          // highlight ERROR line in code block, see src/css/custom for style
+          {
+            className: 'theme-code-block-highlighted-line-error',
+            line: 'highlight-error-next-line',
+            block: {start: 'highlight-error-start', end: 'highlight-error-end'},
+          },
+          // highlight line in code block, see src/css/custom for style
+          {
+            className: 'theme-code-block-highlighted-line',
+            line: 'highlight-next-line',
+            block: {start: 'highlight-start', end: 'highlight-end'},
+          },
+        ],
       },
     }),
 };
