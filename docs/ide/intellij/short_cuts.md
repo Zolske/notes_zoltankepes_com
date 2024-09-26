@@ -18,6 +18,7 @@ description: Useful short cuts.
 |---|---|
 |`Alt` + `j`|Select the next occurrence|
 |`Ctrl` *twice and hold* + `ARROW_KEY`|Multi cursor editing line up/down|
+|*hold* `Ctrl` + `click` *on the identifier*|Brings you to the declaration of the method, ...|
 
 ## Code Snippets
 |short cut|code|

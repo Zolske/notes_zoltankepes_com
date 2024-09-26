@@ -264,3 +264,88 @@ for ( int i = 1, j = 6; i <= j; i++, j-- )
 2 * 5 = 10
 3 * 4 = 12
 ```
+
+### "Break and Continue Label"
+Allows to "jump" to "before" or "after" a "code block" or to break a "nested loop" from within an "**inner loop**".  
+**NOTE**: to many "jumps" can make the code difficult to follow (*"Spaghetti code"*) !
+
+- "**label**":
+    - Can be any **name** but has to be terminated with `:` a colon.
+    - Has to come before `break` or `continue` .
+    - Must be right before the "code block" (*loop*), nothing in between is allowed.
+- "**break**":
+    - Code continues after the code block which has been marked with the **label**.
+- "**continue**":
+    - Code continues from where the **label** is set, but it works only on loops.
+
+#### break and continue on loops
+```java showLineNumbers
+label:                               //code continue from here with 'continue'
+// System.out.println("not allowed");                        //no code allowed between label and block
+while (true) {
+    System.out.println("looping");
+    break /* continue */ label;           //either 'break' or 'continue', 'continue' courses an 'infinite loop'
+    System.out.println("Can only be reached with continue");
+}
+                                     //code continue from here with 'break'
+```
+- *line 5*: `break label;` (*comment out continue*)  
+    - Code continues from *line 8* because that is where the "labeled" code block ends.
+    - None of the statements between `break` till the end of the block is executed. 
+- *line 5*: `continue label;` (*comment out break*)  
+    - Code continues from *line 1* because that is where the "labeled" code block starts.
+    - The code block **must be a loop** for continue to work.
+
+```java showLineNumbers
+while (true) {
+    outer_loop:
+    while (true)
+        break outer_loop;
+    System.out.println( "Outer loop." );
+}
+```
+- *line 4*; 
+    - Code continues from *line 5* (*is not part of the code block line 3-4*), which prints out the message, after the "outer loop" is restarted the cycle starts again (*infinite loop*).
+    - If the **label** 'outer_loop' would have been on *line 0*, then `break` would have broken the "outer loop" and there would have not been an 'infinite loop'.
+
+#### break on code blocks
+```java
+label:
+{
+    // some code, executed
+    break label;
+    // some code, not executed
+}
+// code continues from here
+```
+
+#### break "switch-statement"
+```java showLineNumbers
+// cytosine [C], guanine [G], adenine [A] or thymine [T]
+String dnaBases = "CGCAGTTCTTCGGXAC";
+int a = 0, g = 0, c = 0, t = 0;
+//highlight-next-line
+loop:                                             //'for loop block' is labeled 'loop'
+for ( int i = 0; i < dnaBases.length(); i++ ) {
+    switch ( dnaBases.charAt( i ) ) {
+        case 'A', 'a':
+            a++;
+            break;
+        case 'C', 'c':
+            c++;
+            break;
+        case 'G', 'g':
+            g++;
+            break;
+        case 'T', 't':
+            t++;
+          break;
+        default:
+            System.err.println( "Unknown nucleotide " + dnaBases.charAt( i ) );
+            //highlight-next-line
+            break loop;
+    }
+}
+```
+The "for loop" iterates through every character of the string `dnaBase`. The "switch statement" within compares the character with its cases and increments the counters accordantly. If it has no `case` for it (`X`) then the `default` is executed, which prints an error message and **breaks**.  
+Without the **label**, it would only **break** the "switch-statement" and not the "for loop", but because of it the "for loop" is **broken** and the code would continue from after with `loop` labeled "for loop block" (*line 24*).
