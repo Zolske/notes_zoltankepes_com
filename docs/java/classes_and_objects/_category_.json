@@ -1,0 +1,8 @@
+{
+  "label": "Classes and Objects",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "An object in Java is a basic unit of Object-Oriented Programming and represents real-life entities. Objects are the instances of a class that are created to use the attributes and methods of a class."
+  }
+}

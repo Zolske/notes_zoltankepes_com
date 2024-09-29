@@ -4,7 +4,7 @@ description: A method is a function that belongs to a class. A function is a reu
 ---
 
 # Methods
-A method is a function that belongs to a class. A function is a reusable portion of a program, sometimes called a procedure or subroutine.
+>A method is a function that belongs to a class. A function is a reusable portion of a program, sometimes called a procedure or subroutine.
 
 #### advantages:
 1. Recurring program parts should not be programmed over and over again, but should be offered in one place. Changes to the functionality can then be made easier.
@@ -35,6 +35,7 @@ A method is a function that belongs to a class. A function is a reusable portion
 	- Statements to be executed.
 	- Use the `return` keyword to mark the return value or expression if needed.
 
+---
 ### Calling a "Static Method"
 There is no need to create first an instance of the methods objects.
 
@@ -70,6 +71,7 @@ public class ProgramStart {                    //declare 'ProgramStart' class
 - *line 8*:  
 	The method `hello` of the class `HelloYou` is called, which needs to be referenced, because the method is from a different class then the one from where it is called.
 
+---
 ### Parameters, Arguments and Parameter Values
 - Parameters are placeholders (*when a method is declared*) for the values (*arguments*) when the method is called.  
 - The "data type" must match between declaration and call, but in some cases the compiler may be able to "implicit cast" to the "parameter data type".
@@ -99,57 +101,220 @@ public class HelloWorld {
 - *line 10*:  
 	The "outside variable" `num_1` has not changed after its value has been passed to the method.
 
+---
 ### Method Overloading
-Multiple methods can have the same name but need to be different in:
-1. **argument quantity**, *and / or*
-2. **parameter data type**.  
+> Is a feature that allows a class to have multiple methods with the same name but different parameters. This enables methods to perform similar, yet slightly varied tasks, based on different inputs. It’s a type of polymorphism, specifically compile-time (or static) polymorphism, since the decision of which method to invoke is made at compile-time.
 
-A difference "**return type**" *and / or* a different "**parameter name**" is not enough.
-```java showLineNumbers
-public class Overload {
-    public static int sum(int num_1, int num_2) {
-    	return (num_1 + num_2);
+#### Key Points of Method Overloading
+1. **Same Method Name**: All overloaded methods must have the same name.
+2. **Different Parameter List**: Overloaded methods must differ in terms of:
+	- Number of parameters (e.g., method(int) vs. method(int, int)).
+	- Type of parameters (e.g., method(int) vs. method(double)).
+	- Order of parameters (e.g., method(int, double) vs. method(double, int)).
+3. **Return Type Can Be Different**: Return types can be different, but they don’t differentiate overloaded methods. The method signature (name + parameter list) is what matters for overloading.
+4. **Does Not Depend on Access Modifiers**: Access modifiers (e.g., public, private) don’t affect method overloading.
+5. **Cannot Overload by Changing Only Return Type**: Changing only the return type or access modifier without changing the parameter list results in a compilation error, since Java cannot distinguish between methods based solely on return type.
+
+#### Example of Method Overloading
+```java
+public class MethodOverloadingExample {
+
+    // Method 1: Adds two integers
+    public int add(int a, int b) {
+        return a + b;
     }
-    public static double sum(double num_1, double num_2) {
-    	return (num_1 + num_2);
+
+    // Method 2: Adds three integers
+    public int add(int a, int b, int c) {
+        return a + b + c;
     }
+
+    // Method 3: Adds two double values
+    public double add(double a, double b) {
+        return a + b;
+    }
+
     public static void main(String[] args) {
-    System.out.println(sum(4, 6));                         //output '10'
-    System.out.println(sum(3.4, 0.8));                     //output '4.2'
-    System.out.println(sum(4, 6.8));                       //output '10.8'
+        MethodOverloadingExample example = new MethodOverloadingExample();
+
+        // Calling different overloaded methods
+        System.out.println("Sum of 2 integers: " + example.add(10, 20));           // Calls Method 1
+        System.out.println("Sum of 3 integers: " + example.add(10, 20, 30));       // Calls Method 2
+        System.out.println("Sum of 2 doubles: " + example.add(10.5, 20.5));        // Calls Method 3
     }
 }
 ```
-- *line 11*:  
-	First the "parameter list is evaluated", this curses `4` to be casted to an double (`4.0`) because the 2nd value is double which is the more accurate data type.  
-	After the `sum()` method which takes the `doubles` as arguments is called.  
-
+``` bash title="output"
+Sum of 2 integers: 30
+Sum of 3 integers: 60
+Sum of 2 doubles: 31.0
+```
 The screen shot below shows that the method `System.out.println()` is also overloaded.
 ![intellj overload println](../img/overload_intellj.webp)
 
+#### Benefits of Method Overloading
+1. **Code Readability and Reusability**: Overloading makes it easier to read and maintain code, as you don’t need to use multiple method names for similar actions.
+2. **Flexibility**: It provides flexibility by allowing methods to handle different types or numbers of inputs.
+3. **Cleaner Code**: Overloading helps avoid unnecessary complexity by not having to invent different method names for similar operations.
 
+#### Overloading with Type Promotion
+When method overloading, type promotion can occur where one data type is automatically converted to another.  
+*For example*, an `int` can be promoted to a `long`, `float`, or `double`.
+```java
+public class TypePromotionExample {
+
+    public void show(int a) {
+        System.out.println("Method with int: " + a);
+    }
+
+    public void show(double a) {
+        System.out.println("Method with double: " + a);
+    }
+
+    public static void main(String[] args) {
+        TypePromotionExample example = new TypePromotionExample();
+
+        example.show(10);    // Calls method with int
+        example.show(10.5);  // Calls method with double
+        example.show('A');   // Calls method with int (char is promoted to int)
+    }
+}
+```
+```bash title="output"
+Method with int: 10
+Method with double: 10.5
+Method with int: 65
+```
+The last method call `example.show('A')` demonstrates type promotion. The `char 'A'` is promoted to its ASCII value `65`, and the method with the `int` parameter is invoked.
+
+#### Method Overloading vs. Method Overriding
+- **Overloading** happens within the same class, while **overriding** is between a parent and child class.
+- Overloading is resolved at compile-time, while overriding is resolved at runtime.
+- Overloading relies on different parameter lists, while overriding requires the same method signature (name, parameters, and return type).
+
+#### When to Use Method Overloading
+Use method overloading when:
+- You want a single method name to perform a similar task for different types or numbers of inputs.
+- You want to improve code readability by avoiding multiple method names for similar actions.
+
+#### Summary
+Method overloading is a way to enhance code readability and organization by allowing methods to share the same name while performing slightly different tasks based on varying inputs.
+
+---
 ### Scope
-The variable scope determents where a variable is "alive" (*visible*).
-1. Within the block in which it was declared and it's nested blocks.  
-2. The same variable name can not be used within its scope (*line 6*).
-2. Not "alive" outside of it's declared block.
-3. Once a variable is not "reachable" any more, it is destroyed (*e.g.: `z` after line 8*).
-	```java showLineNumbers
-	int x = 42;
-	{
-	    System.out.println(x);      //ok, 'x' is visible, output '42'
-	    {
-	        System.out.println(x);  //ok, 'x' is visible, output '42'
-			//highlight-error-next-line
-	        int x = 99;             //variable `x` already defined
-	        int z = 10;
-	    }
-		//highlight-error-next-line
-	    System.out.println(z);      //can not find symbol, symbol variable z
-	}
-	```
+>In Java, scope refers to the accessibility and lifetime of variables, methods, and classes within different parts of a program. Understanding scope is crucial as it determines where a particular variable or method can be accessed and modified.
+
+#### Types of Scope in Java
+1. **Class Scope** (*Static Variables and Methods*)
+2. **Instance Scope** (*Instance Variables and Methods*)
+3. **Method Scope** (*Local Variables*)
+4. **Block Scope** (*Variables inside loops or conditional statements*)
+
+#### 1. Class Scope
+- **Definition**: Variables and methods that are declared as static belong to the class rather than an instance of the class. They have a single copy shared among all instances.
+- **Accessibility**: Can be accessed using the class name directly without creating an object.
+- **Lifetime**: Exists for the lifetime of the class, as long as it is loaded in memory.
+```java
+public class ScopeExample {
+    // Class scope variable
+    public static int classVar = 10;
+
+    public static void main(String[] args) {
+        // Accessing class variable
+        System.out.println(ScopeExample.classVar);
+    }
+}
+```
+
+#### 2. Instance Scope
+- **Definition**: Variables and methods declared without the static keyword are associated with an instance of the class. These are known as instance variables or methods.
+- **Accessibility**: Can be accessed only through an object of the class.
+- **Lifetime**: Exists as long as the object exists in memory.
+```java
+public class ScopeExample {
+    // Instance scope variable
+    private int instanceVar = 20;
+
+    public void display() {
+        System.out.println("Instance variable: " + instanceVar);
+    }
+
+    public static void main(String[] args) {
+        ScopeExample obj = new ScopeExample(); // Create an object
+        obj.display(); // Access instance variable through method
+    }
+}
+```
+
+#### 3. Method Scope (Local Variables)
+- **Definition**: Variables declared within a method (local variables) have method scope.
+- **Accessibility**: Can only be accessed within the method in which they are declared.
+- **Lifetime**: Exists only during the execution of the method. Once the method completes, the local variables are destroyed.
+```java
+public class ScopeExample {
+    public void display() {
+        // Method scope variable
+        int localVar = 30;
+        System.out.println("Local variable: " + localVar);
+    }
+
+    public static void main(String[] args) {
+        ScopeExample obj = new ScopeExample();
+        obj.display();
+        // System.out.println(localVar); // Error: localVar not accessible here
+    }
+}
+```
+
+#### 4. Block Scope
+- **Definition**: Variables declared inside a block of code, such as loops, if statements, or switch blocks, have block scope.
+- **Accessibility**: Accessible only within the block of code in which they are declared.
+- **Lifetime**: Exists only during the execution of the block.
+```java
+public class ScopeExample {
+    public static void main(String[] args) {
+        if (true) {
+            // Block scope variable
+            int blockVar = 40;
+            System.out.println("Block variable: " + blockVar);
+        }
+        // System.out.println(blockVar); // Error: blockVar not accessible here
+    }
+}
+```
+
+#### Scope Rules in Java
+1. **Inner to Outer Scope**: Variables in an inner scope (e.g., local or block) can access variables in an outer scope (e.g., instance or class scope), but not vice versa.
+2. **Variable Shadowing**: If a local variable has the same name as an instance or class variable, it "shadows" the outer variable, making it inaccessible within the method or block.
+```java
+public class ScopeExample {
+    private int var = 50; // Instance variable
+
+    public void display() {
+        int var = 100; // Local variable shadows instance variable
+        System.out.println("Local variable: " + var); // Prints 100
+        System.out.println("Instance variable: " + this.var); // Prints 50
+    }
+
+    public static void main(String[] args) {
+        ScopeExample obj = new ScopeExample();
+        obj.display();
+    }
+}
+```
+In this example, this.var is used to access the instance variable var that is shadowed by the local variable var in the display method.
+
+#### Summary
+- **Class Scope**: Variables and methods accessible through the class itself.
+- **Instance Scope**: Variables and methods accessible through an object of the class.
+- **Method Scope**: Local variables within a method.
+- **Block Scope**: Variables defined within a block of code (loops, if statements).  
+
+Understanding scope helps you manage the accessibility and lifespan of variables and methods, thereby improving code readability, organization, and error prevention.
+
+---
 ### Recursion
-Recursion is a concept in programming where a method calls itself in order to solve a problem. It's often used when a problem can be divided into smaller, similar sub-problems.  
+>Recursion is a concept in programming where a method calls itself in order to solve a problem. It's often used when a problem can be divided into smaller, similar sub-problems.  
 In Java, a "recursive function" typically has a **base case** to prevent "infinite recursion" and a **recursive case** that reduces the problem step-by-step.
 
 #### Components of Recursion
@@ -182,7 +347,6 @@ Factorial of 5 is: 120
 
 <details>
 	<summary>explanation</summary>
-### How it Works
 1. (*line 14*) The `factorial` method is called with `n = 5`.
 2. (*line 5*) Since `n` is not less than or equal to `1`, it proceeds to the **recursive case**:  
 	(*line 9*) `return 5 * factorial(4)`.  
@@ -212,7 +376,7 @@ Makes code concise and easier to understand for problems that have repetitive su
 Avoids the need for complex loops or manual stack management.
 
 ###### Drawbacks:
-Can lead to a stack overflow if the base case is not defined correctly or if the recursion is too deep.  
+Can lead to a **stack overflow** if the **base case** is not defined correctly or if the recursion is too deep.  
 May be less efficient than iterative solutions due to repeated function calls and stack management.
 
 #### Converting Recursion to Iteration
