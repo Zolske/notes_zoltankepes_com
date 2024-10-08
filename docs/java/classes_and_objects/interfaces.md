@@ -266,3 +266,68 @@ It allows you to specify a set of methods that a class **MUST** implement, witho
 		In the above example, the `PaymentProcessor` class does not depend on a specific type of payment method. You can pass any class implementing the Payment interface  
 		(e.g., `CreditCardPayment`, `DebitCardPayment`), making it flexible and easily extendable.
 	</details>
+
+<details>
+	<summary>*example*: *payment* **loose coupling**</summary>
+
+	```java title="Main.java" showLineNumbers
+	// Main.java (Testing the ShoppingCart with Different Payment Methods)
+	public class Main {
+	    public static void main(String[] args) {
+	        Payment creditCard = new CreditCardPayment();
+			//highlight-error-next-line
+	        creditCard.sayHello(); // not exist, because it is not part of the Payment interface
+	        ShoppingCart cart1 = new ShoppingCart(creditCard);
+			//highlight-next-line
+	        cart1.checkout(100.00); // Output: Paid $100.0 using Credit Card.
+
+	        Payment paypal = new PaypalPayment();
+	        ShoppingCart cart2 = new ShoppingCart(paypal);
+	        cart2.checkout(200.00); // Output: Paid $200.0 using PayPal.
+	    }
+	}
+	```
+	- *line 7*:  
+		If you want to change how the `checkout` method for `CreditCardPayment` works, than you only need to change "*line 4*" in the `CreditCardPayment` class.
+	```java title="interface Payment"
+	public interface Payment {
+	    void pay(double amount);
+	}
+	```
+	```java title="CreditCardPayment class" showLineNumbers
+	public class CreditCardPayment implements Payment {
+	    @Override
+	    public void pay(double amount) {
+			//highlight-next-line
+	        System.out.println("Paid $" + amount + " using Credit Card.");
+	    }
+
+	    public void sayHello() {
+	        System.out.println("Hello from CreditCardPayment!");
+	    }
+	}
+	```
+	```java title="PaypalPayment class"
+	class PaypalPayment implements Payment {
+	    @Override
+	    public void pay(double amount) {
+	        System.out.println("Paid $" + amount + " using PayPal.");
+	    }
+	}
+	```
+	```java title="ShoppingCart class"
+	public class ShoppingCart {
+	    private Payment payment; // Reference to Payment interface, not concrete classes
+
+	    // Constructor to set the payment method
+	    public ShoppingCart(Payment payment) {
+	        this.payment = payment;
+	    }
+
+	    public void checkout(double amount) {
+	        payment.pay(amount); // Call the pay method of the Payment interface
+	    }
+	}
+	```
+	![graph loose coupling example payment](../img/loose_coupling.webp)
+</details>
