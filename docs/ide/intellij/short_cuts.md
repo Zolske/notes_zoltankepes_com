@@ -23,4 +23,5 @@ description: Useful short cuts.
 ## Code Snippets
 |short cut|code|
 |---|---|
-|`sout` `tab`|`System.out.println();`|
+|`sout` `TAB`|`System.out.println();`|
+|`psvm` `TAB`|Create a `main` method|

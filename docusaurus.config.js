@@ -13,7 +13,8 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  // url: 'https://your-docusaurus-site.example.com',
+  url: 'https://notes.zoltankepes.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -44,7 +45,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Zolske/notes_zoltankepes_com/blob/main/',
         },
         blog: {
           showReadingTime: true,
@@ -102,6 +103,12 @@ const config = {
             sidebarId: 'ide',
             position: 'left',
             label: 'IDE',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'bootcamp',
+            position: 'left',
+            label: 'Bootcamp',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {

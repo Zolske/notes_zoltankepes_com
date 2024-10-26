@@ -180,7 +180,7 @@ By putting a program’s hardest workload into a thread, you free up the rest of
 	                    System.out.println("Error: " + nfe.getMessage());
 	                }
 	            }
-	            boolean complete = false;
+	            boolean complete = false; 
 	            while (!complete) {
 	                complete = true;
 	                for (int j = 0; j < finder.length; j++) {
@@ -193,7 +193,7 @@ By putting a program’s hardest workload into a thread, you free up the rest of
 	                    }
 	                }
 	            // try {
-	            //     Thread.sleep((1000));
+	            //     Thread.sleep(1000);
 	            // } catch (InterruptedException ie) {
 	            //     // do nothing
 	            // }
@@ -220,3 +220,22 @@ By putting a program’s hardest workload into a thread, you free up the rest of
 		```
 	</details>
 
+## Stopping a Thread
+The best way to stop a thread is to place a loop in the thread’s `run()` method that ends when a variable changes in value.
+
+- A class method, `Thread.currentThread()`, returns a reference to the current thread (*in other words, the thread in which the object is running*).
+- The following run() method loops as long as runner and currentThread() refer to the same object:
+
+	```java
+	public void run() {
+	    Thread thisThread = Thread.currentThread();
+	    while (runner == thisThread) {
+	        // body of loop
+	    }
+	}
+	```
+- If you use a loop like this, you can stop the thread anywhere in the class with the following statement:
+
+	```java
+	runner = null
+	```

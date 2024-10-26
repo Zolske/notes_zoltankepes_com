@@ -40,6 +40,11 @@
   padding-right: 3px;
 }
 
+.navbar__brand + .navbar__link + .navbar__link + .navbar__link::before {
+  content: url(/static/img/logo_bootcamp_32.png);
+  padding-right: 3px;
+}
+
 /*comments in code block*/
 .comment {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
