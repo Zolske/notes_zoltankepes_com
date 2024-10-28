@@ -13,5 +13,5 @@ My special Thanks go to the mentors:
 **Simon, Alex, Chris, Katherine, Béla, Despina, Jackson, Neil** and all the other staff behind the scene, 
  for there amazing support and care, **thank you!** &#129303;  
 <br/>
-A big shout out to my peers, the **Java 2024 October Cohort** for being such a great community and alway helping each other! &#10084;
+A big shout out to my peers, the **Java 2024 October Cohort** for being such a great community and always helping each other! &#10084;
 
