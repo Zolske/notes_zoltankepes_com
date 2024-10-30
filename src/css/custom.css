@@ -41,6 +41,11 @@
 }
 
 .navbar__brand + .navbar__link + .navbar__link + .navbar__link::before {
+  content: url(/static/img/logo_git32.png);
+  padding-right: 3px;
+}
+
+.navbar__brand + .navbar__link + .navbar__link + .navbar__link + .navbar__link::before {
   content: url(/static/img/logo_bootcamp_32.png);
   padding-right: 3px;
 }

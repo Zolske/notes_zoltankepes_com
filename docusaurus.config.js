@@ -106,6 +106,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'git',
+            position: 'left',
+            label: 'Git',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'bootcamp',
             position: 'left',
             label: 'Bootcamp',
