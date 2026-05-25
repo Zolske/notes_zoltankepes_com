@@ -14,4 +14,6 @@ My special Thanks go to the mentors:
  for there amazing support and care, **thank you!** &#129303;  
 <br/>
 A big shout out to my peers, the **Java 2024 October Cohort** for being such a great community and always helping each other! &#10084;
+<br/>  
+*sorry but I need to remove this page*
 
