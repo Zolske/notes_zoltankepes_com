@@ -116,6 +116,12 @@ const config = {
             position: 'left',
             label: 'Bootcamp',
           },
+                    {
+            type: 'docSidebar',
+            sidebarId: 'soft_ent',
+            position: 'left',
+            label: 'SE',
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Zolske',
