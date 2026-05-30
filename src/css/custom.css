@@ -55,6 +55,20 @@
   padding-right: 3px;
 }
 
+/*definition list*/
+dt {
+  font-weight: bold;
+  size: 18px;
+}
+
+/* as Heading for Bullet lists */
+h5 {
+  font-size: 16px;
+  text-decoration: underline;
+  margin-bottom: 5px !important;
+  letter-spacing: 0.05ch;
+}
+
 /*comments in code block*/
 .comment {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
