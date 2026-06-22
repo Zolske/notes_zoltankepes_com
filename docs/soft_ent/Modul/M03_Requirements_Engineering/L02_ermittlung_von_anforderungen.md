@@ -4,16 +4,19 @@ title: L02 Ermittlung von Anforderungen
 
 # Requirements Engineering
 
-## L02 ERMITTLUNG VON ANFORDERUNGEN
-> Die Ermittlung von Anforderungen ist die Kernaktivität im Requirements Engineering, in der die funktionalen Anforderungen, die Qualitätsanforderungen und die Randbedingungen für ein System identifiziert und bewertet werden. Das System, für das die Anforderungen erhoben werden, muss sich später in ein bestehendes Umfeld eingliedern. 
+# L02 ERMITTLUNG VON ANFORDERUNGEN
+> Die Ermittlung von Anforderungen ist die Kernaktivität im Requirements Engineering, in der die [funktionalen Anforderungen](./L01_grundlagen_begriffe_re.md#funktionale-anforderungen), die [Qualitätsanforderungen](./L01_grundlagen_begriffe_re.md#qualitätsanforderungen) und die [Randbedingungen](./L01_grundlagen_begriffe_re.md#randbedingungen) für ein System identifiziert und bewertet werden. Das System, für das die Anforderungen erhoben werden, muss sich später in ein bestehendes Umfeld eingliedern. 
 
-1. **Systemkontext bestimmen**:  
-Es wird analysiert, welche Stakeholder und welche anderen Systeme direkte Abhängigkeiten zu dem erstellenden System haben, um eine Idee über die konkreten Quellen für Anforderungen zu bekommen.
-2. **Quellen für Anforderungen ermitteln**:  
- Typische Quellen für Anforderungen sind Stakeholder, Dokumente und andere Systeme.
-3. **Geeignete Ermittlungstechniken auswählen**:  
+##### 4 Schritte zur Ermittlung von Anforderungen
+1. [**Systemkontext bestimmen**](#1-bestimmung-des-systemkontextes):  
+**Was ist relevant für das System?**  
+Grenzt den Bereich ab aus dem die Anforderungen später ermittelt werden.
+2. [**Quellen für Anforderungen ermitteln**](#2-bestimmung-der-quellen-von-anforderungen):  
+**Woher kommen die Anforderungen konkret?**  
+Bestimmung der genauen Quelle für Anforderungen + Stakeholdermanagement.
+3. [**Geeignete Ermittlungstechniken auswählen**](#3-auswählen-der-geeigneten-ermittlungstechniken):  
 Je nach Anforderungsquelle, Projektsituation und Art der Anforderungen muss eine geeignete Ermittlungstechnik oder eine Kombination aus verschiedenen Ermittlungstechniken ausgewählt werden.
-4. **Anforderungen unter Einsatz der Techniken ermitteln**:  
+4. [**Anforderungen unter Einsatz der Techniken ermitteln**](#4-anforderungen-unter-einsatz-der-techniken-ermitteln):  
 Aus den bestimmten Quellen mit den gewählten Ermittlungstechniken werden Anforderungen in dem für die aktuelle Situation erforderlichen Detailgrad ermittelt.
 
 <details>
@@ -40,53 +43,63 @@ oder Gelesenen hat und durch kontinuierliches Feedback Anforderungen an die Stak
 </details>
 
 ---
-### 1. Bestimmung des Systemkontextes
+## 1. Bestimmung des Systemkontextes
+> Bestimmung der **relevante Teil der Systemumgebung**, die zur Definition und zum Verständnis der Anforderungen nachher analysiert werden müssen.
 
+*Zusammenhang von System, Systemkontext und irrelevanter Umgebung*
 ![Zusammenhang von System, Systemkontext und irrelevanter Umgebung](./img/system_systemkontext.jpg)
 
-#### Systemkontext:  
-> Relevanter Teil der Systemumgebung, der zur Definition und zum Verständnis von Anforderungen analysiert werden muss.
-- **Stakeholder**:  
-	Verfolgen bestimmte Ziele und interagieren direkt mit dem System.
-- **Umsysteme**:  
-	Über technische Schnittstellen zu Umsystemen können die Funktionen anderer Systeme eingebunden werden (*z. B. das Prüfen von Adressdaten*).
-- **Dokumente**:  
-	Können Randbedingungen für die Entwicklung des Systems liefern (*z.B. Gesetze, Richtlinien*).  
-	Dokumente von bereits existierenden Umsystemen (*z.B. für Schnittstellen*).
-- **System- und Kontextgrenzen**:  
-Können sich während des Projektverlaufs ändern.  
-	- Eine Anforderung kann durch dass System selber gelöst oder durch eine technische Schnittstelle zu einem Umsystem.  
-	- Durch die Hinzunahme oder den Ausschluss von Anforderungen verändern sich der funktionale Umfang des Systems und damit auch die Grenzen.
-	- Häufig wird erst während des Projektverlaufs klar ob Gesetze relevant sind.
+##### Zusammenhang: System - Systemkontext - irrelevanter Umgebung
+- **System**: (*das zu entwickelnde oder anzupassende System*)
+- **Systemkontext**:  
+	- alle **Stakeholder**
+	- existierende **Systeme**: (*nicht das zu entwickelnde oder anzupassende System*)  
+		- **Umsysteme**:  
+			Andere Systeme die durch eine technische Schnittstelle mit dem System verbunden sind (*z. B. prüfen von Adressdaten*).
+		- **Altsysteme**:  
+			- Analyse von Altsystems (*z.B. Nutzungsprotokolle*). Welche Stärken und Schwächen gab es? Was kann besser gemacht bzw. gestrichen werden?
+		- **Konkurrenzsysteme**:  
+			- Produktanalyse
+	- **Dokumente**:  
+		- ... die Randbedingungen liefern (*z.B. Gesetze, Richtlinien*).  
+			- Unternehmensinterne Dokumente (*z.B. Leitlinien, Unternehmens- oder IT-Strategien, Nachhaltigkeitsberichten und Sicherheitskonzepten*)  
+			- Öffentliche Dokumente (*z.B. Standards und Best-Practices-Quellen*)
+		- ... von bereits existierenden Umsystemen (*z.B. Schnittstellen*) oder Altsystemen.
+- **irrelevante Umgebung**:  
+Enthält alles was keinen Einfluss auf die Anforderungen hat.
+
+##### System- und Kontextgrenze
+- Können sich während der Entwicklung verschieben.
+- Anforderung können entweder direkt vom System oder durch ein Umsystem gelöst werden.   
+- Durch die Hinzunahme oder den Ausschluss von Anforderungen verändern sich der funktionale Umfang des Systems und damit auch die Grenzen.
+- Häufig wird erst während des Projektverlaufs klar ob Gesetze relevant sind.
+
 ---
+## 2. Bestimmung der Quellen von Anforderungen
 
-### 2. Bestimmung der Quellen von Anforderungen
+### Quellen von Anforderungen
+>**Identifikation der Quellen** aus dem Systemkontext: Stakeholder, Dokumente, existierende Systeme.
 
-#### Quellen von Anforderungen
-- **Systemkontext**
-- **Stakeholder** (*alle*) :  
-	(*z.B. Auftraggeber, Benutzer, Mitarbeiter der Rechtsabteilung, Entwickler, ...*)
-- **Dokumente**:  
-	Unternehmensinterne Dokumente (*z.B. Leitlinien, Unternehmens- oder IT-Strategien, Nachhaltigkeitsberichten und Sicherheitskonzepten*) sowie  
-	Öffentliche Dokumente (*z.B. Standards und Best-Practices-Quellen*)
-- **Altsysteme**:  
-	Dokumente des Altsystems.  
-	Was kann verbessert oder gestrichen werden?
-- **Konkurrenzsysteme**
+### Stakeholdermanagement
+>Aktives Stakeholdermanagement ist ein **elementarer** Bestandteil des Requirements Engineerings. 
 
-#### Stakeholdermanagement
-> Jeder Stakeholder hat einen individuellen Hintergrund, Kenntnisstand und ein individuelles Problemverständnis.
-Dies führt dazu, dass auch jeder Stakeholder eine eigene Sichtweise und eigene Prioritäten hat.
+##### Zentrale Aufgaben:
+- Identifizierung aller [**relevanten Stakeholder**](./M03_glossar.md#relevante-stakeholder).
+	1. Stakeholder werden nach Interesse und Einfluss (*Macht*) auf das Projekt in die **Stakeholder-Priorisierungsmatrix** eingeordnet (*oft in Zusammenarbeit mit der Projektleitung*).
+	2. Ausgehend von der Matrix und weiteren Details  
+	(*z.B. benötigte Unterstützung, ggf. Projektrolle mit zugehörigen Aufgaben, vom Stakeholder benötigten Informationen*)  
+	wird eine **Stakeholder-Tabelle** erstellt. Diese wird genutzt um die **Stakeholderinvolvierung** im Detail zu planen.
+- Die Herstellung und Aufrechterhaltung der **Kooperationsbereitschaft** der Stakeholder.  
+Ursachen für unzureichende Kooperationsbereitschaft können *z.B. Motivationsmangel, Unzufriedenheit mit dem Altsystem oder Angst vor Veränderung sein.*
 
-#### Stakeholder-Priorisierungsmatrix
-> Zunächst ist es die Aufgabe des Requirements Engineer, die relevanten Stakeholder zu identifizieren und deren Interessen und Einflüsse auf das Projekt im Detail zu analysieren. Oft geschieht das in Zusammenarbeit mit der Projektleitung. Anhand dieser Erkenntnisse werden die Stakeholder in eine Stakeholder-Priorisierungsmatrix eingetragen
+##### Wichtig
+- Vergessene oder fehlende Stakeholder können dazu führen, dass Anforderungen spät oder gar nicht erkannt werden.
+- Anforderungen, die zu spät im Projekt erkannt werden, verursachen hohe Kosten.
 
+*"Stakeholder-Priorisierungsmatrix"*
 ![Stakeholder-Priorisierungsmatrix](./img/stakeholder-priorisierungsmatrix.jpg)
 
-#### Stakeholder Tabelle
-> Ausgehend von der Stakeholder-Priorisierungsmatrix wird eine Tabelle mit weiteren Merkmalen erstellt  
-(*z.B. Name, Rolle im Unternehmen, zugehörige Aufgaben*).
-
+*"Stakeholder-Tabelle"*
 |Name|Rolle|Macht|Interesse|Unterstützung|Benötigte Info.|
 |---|---|---|---|---|---|
 |Meier|Sachbearbeiter|gering|hoch|Quelle für GUI-Anforderungen|Verbesserungsvorschläge|
@@ -105,58 +118,28 @@ das Projekt erläutern, überzeugen und motivieren.
 durch aktive Einbeziehung und regelmäßige Informationsweitergabe bestärken.
 ---
 
-### 3. Auswählen der geeigneten Ermittlungstechniken
+## 3. Auswählen der geeigneten Ermittlungstechniken
 > Für die Ermittlung von Anforderungen gibt es verschiedene Techniken, welche grundsätzlich immer von der spezifischen Situation und der Art der zu ermittelnden Anforderungen abhängig sind.
 
-#### Befragungstechnik
-- **Techniken**:  
-Interview, Fragebogen
-- **Nachteile**:  
-	- Stakeholder müssen fähig und willig sein sowie genug Zeit besitzen um Anforderungen explizit zu äußern.
-	- Ungeeignet für als selbstverständlich vorausgesetzte Anforderungen.
-- **Vorteile**:  
-	- Detailgrad der Anforderungen kann sehr hoch sein.
-	- Ermittlung von **innovativen**, **explizit geforderten** und **grundlegenden Anforderungen**.
+|Technik |Beispiele |Vorteile |Nachteile |Geeignet für ...|
+|---|---|---|---|---|
+|**Befragungs-<br></br>techniken**|Interview, Fragebogen|- Sehr detaillierte Anforderungen möglich<br></br>- Verschiedene Anforderungstypen ermittelbar (*innovativ, explizit, grundlegend*)|- Stakeholder müssen Anforderungen explizit formulieren können<br></br>- Erfordert Zeit und Kooperationsbereitschaft der Stakeholder|Explizit gewünschte & detaillierte Anforderungen|
+|**Kreativitäts-<br></br>techniken**|Brainstorming, Perspektivwechsel, Workshop|- Viele Ideen in kurzer Zeit<br></br>- Fördert innovative & unkonventionelle Anforderungen<br></br>- Entwicklung einer gemeinsamen Systemvision|- Weniger detaillierte Anforderungen<br></br>- Hoher Aufwand<br></br>- Ergebnisse abhängig von Gruppendynamik<br></br>- Dominante Stakeholder können Ergebnisse verfälschen|Innovative Anforderungen & erste Systemvision|
+|**Beobachtungs-<br></br>techniken**|Feldbeobachtung, Apprenticing|- Erfasst implizite/unbewusste Anforderungen<br></br>- Unabhängig von der Fähigkeit, Anforderungen zu verbalisieren|- Zeitaufwändig<br></br>- Beobachter muss Ist-Zustand kritisch hinterfragen, um Soll-Situationen abzuleiten<br></br>- Risiko der subjektiven Interpretation|Grundlegende & als selbstverständlich angesehene Anforderungen|
+|**Dokument-<br></br>zentrierte Techniken** |Systemarchäologie, Perspektivenbasiertes Lesen |- Wiederverwendung bereits bewährter Anforderungen<br></br>- Gut strukturiert & nachvollziehbar |- Erfordert Domänenwissen & Fähigkeit zur Interpretation von Modellen<br></br>- Gefahr, veraltete Anforderungen zu übernehmen |Grundlegende Anforderungen aus bestehenden Systemen/Dokumenten |
+|**Prototyping** |Handskizzen, digitale Prototypen |- Tiefes Problemverständnis durch frühzeitiges „Anfassen"<br></br>- Ermittlung & Prüfung von Anforderungen in einem<br></br>- Liefert auch innovative Anforderungen |- Aufwändig in der Erstellung<br></br>- Grenze zwischen Ermittlung und Prüfung oft unklar<br></br>- Prototypen können falsche Erwartungen wecken |Innovative Anforderungen & Validierung von Anforderungen|
 
+##### Unterstützende Techniken
+*Z.B. Mindmaps, CRC-Karten, Analogietechnik, audiovisuelle Aufzeichnung, UC-Modelle.*
 
-#### Kreativitätstechniken
-- **Techniken**:  
-verbales Brainstorming, schriftliches Brainstorming, Brainstorming paradox, Perspektivwechsel, Workshop
-- **Nachteile**:  
-	- Vergleichsweise hoher Aufwand.
-	- Weniger detaillierte Anforderungen.
-- **Vorteile**:  
-	- Gemeinsame Systemvision durch kreative und kooperative Zusammenarbeit.
-	- Ermittlung von **Innovativen Anforderungen**.
+##### Wichtig
+Die Techniken werden in der Praxis nicht isoliert, sondern in Kombination eingesetzt. Die Wahl der richtigen Technik hängt ab von:
+- Art der Anforderungen (innovativ, explizit, grundlegend)
+- Verfügbarkeit und Fähigkeiten der Stakeholder
+- Organisatorischen Rahmenbedingungen (Budget, Zeit, Vertragsart)
+- Komplexität des Projekts
 
-#### Dokumentenzentriete Technik
-- **Techniken**:  
-Systemarchäologie, perspektiven basiertes Lesen, Wiederverwendung
-- **Vorteile**:  
-	- Ermittlung basiert auf der Nutzung vorhandener Systeme oder Dokumentation.
-	- Anforderungen wurden bereits in vorherigen Systemen umgesetzt.
-	- Ermittlung von **grundlegenden Anforderungen**.
-
-#### Beobachtungstechnik
-- **Techniken**:  
-Feldbeobachtung, Apprenticing
-- **Vorteile**:
-	- Durch Beobachtung von Arbeitsabläufen werden Systemfunktionalitäten abgeleitet.
-	- Ermittlung von **grundlegenden Funktionalität** und für von Stakeholdern als **selbstverständlich eingeschätzten Anforderungen**. 
-
-#### Prototyping
-- **Techniken**:  
-horizontal, vertikal, wegwerf, evolutionär, analog, digital
-- **Vorteile**:  
-	- Initiale Systemversionen werden erstellt um ein tieferes Problemverständnis und Wissen über potenzielle Lösungen zu erlangt.
-	- Beschaffenheit des Prototyps (*z. B. analoge Handskizzen und digitale Prototypen*) hängt von Projektvorschriften ab.
-	- Ermittlung von **innovative Anforderungen**
-
-#### Unterstützende Techniken
-- **Techniken**:  
-Mindmaps, CRC-Karten, Analogietechnik, audiovisuelle Aufzeichnung, UC-Modelle
-
-#### Einflussfaktoren auf die Wahl der Ermittlungstechniken
+### Einflussfaktoren auf die Wahl der Ermittlungstechniken
 > Um möglichst vollständige Anforderungen zu erhalten, werden die Techniken in der Praxis häufig kombiniert (*z. B. eine Kreativitätstechnik, um Fragen für ein Interview zu erarbeiten*).  
 Es müssen verschiedene Faktoren, die Einfluss auf das Projekt und die Anforderungen haben, untersucht werden, um die geeigneten Techniken auswählen zu können.
 
@@ -171,10 +154,10 @@ Es müssen verschiedene Faktoren, die Einfluss auf das Projekt und die Anforderu
 	- Die Komplexität eines Projekts kann beispielsweise erfordern, dass eine gut strukturierte dokumentenzentrierte Technik zum Einsatz kommt.
 ---
 
-### 4. Anforderungen unter Einsatz der Techniken ermitteln
+## 4. Anforderungen unter Einsatz der Techniken ermitteln
 > Während der Ermittlung muss je nach Ermittlungstechnik ggf. steuernd eingreifen und durch Moderation sichergestellt werden, dass der Fokus der Anforderungserhebung nicht verloren geht. Gleichzeitig muss die eigene Wahrnehmung und die Aussagen der Stakeholder hinterfragen werden, um zu überprüfen ob die Anforderung richtig verstanden wurden.
 
-#### Menschliche Wahrnehmung
+### Menschliche Wahrnehmung
 - **Informationsaufnahme**:  
 ist von der individuellen Erfahrung und kulturellen Prägung abhängig. Die gleichen Informationen werden von verschiedenen Menschen unterschiedlich wahrgenommen und interpretiert.
 - **Informationswiedergabe**:  
