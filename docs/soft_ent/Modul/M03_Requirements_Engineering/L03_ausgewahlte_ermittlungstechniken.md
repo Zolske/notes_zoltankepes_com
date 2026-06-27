@@ -30,14 +30,52 @@ Mit Prototyping können innovative Anforderungen gewonnen werden, indem initiale
 </details>
 
 ---
-## 1. Kreativitätstechniken
-- geeignet:
-	- zur Entwicklung innovativer Anforderungen
-	- einer ersten Vision des zu entwickelnden Systems
-- ungeeignet:
-	- um detaillierte Anforderungen an das Systemverhalten zu ermitteln
+>Techniken werden oft miteinander kombiniert.
 
-### Perspektivwechsel
+*Eignung konkreter Techniken zum praktischen Einsatz*
+||Brains.<br></br>verb.|Brains.<br></br>user story|Work-<br></br>shop|Perspek-<br></br>tive|Feldbeo-<br></br>bachtung|Appren-<br></br>ticing|Frage-<br></br>bogen|Inter-<br></br>view|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|**Menschliche Einflussfaktoren**|**###**|**###**|**###**|**###**|**###**|**###**|**###**|**###**|
+|geringe Motivation der Stakeholder (aktiv mitzuwirken)|-|-|-|-|+|–|0|+|
+|schlechte kommunikative Fähigkeiten|-|0|-|-|++|++|–|+|
+|geringes Abstraktionsvermögen|–|–|0|–|++|++|0|+|
+|viele verschiedene Meinungen|+|+|++|+|++|++|+|0|
+|Machtgefälle zwischen beteiligten Parteien|–|+|–|–|0|0|0|0|
+|problematische Gruppendynamik|–|+|–|+|0|0|0|0|
+|**Organisatorische Einflussfaktoren**|**###**|**###**|**###**|**###**|**###**|**###**|**###**|**###**|
+|Entwicklung für den komplexen Markt|++|++|++|+|–|–|++|0|
+|fixiertes, knappes Projektbudget|++|++|+|+|+|–|–|+|
+|hohe örtliche Verteilung der Stakeholder|–|0 (_*1_)|–|–|0|0|++|0|
+|schlechte zeitliche Verfügbarkeit der Stakeholder|+|+|–|–|+|–|+|++|
+|hohe Anzahl der Stakeholder|+|+|–|+|0|–|++|0|
+|**Fachliche/inhaltliche Einflussfaktoren**|**###**|**###**|**###**|**###**|**###**|**###**|**###**|**###**|
+|hohe Kritikalität des Sachverhalts|0|+ (_*2_)|+|+|++|–|+|+|
+|großer Systemumfang|0|+|0|0|+|–|–|+|
+|keine Erfahrung im Fachgebiet|0|0|0|0|–|+|–|–|
+|grobe Anforderungen gesucht|++|++|+|+|+|0|+|++|
+|detaillierte Anforderungen gesucht|+|0 (_*3_)|+|+|+|++|–|+|
+|nicht funktionale Anforderungen|0|–|0|0|0|+|–|+|
+|Komplexität des Sachverhalts|0|0|0|0|–|–|–|+|
+
+**Legende**: | `–` *nicht empfohlen* | `0` *kein Einfluss -> ist anwendbar* | `+` *empfohlen* | `++` *sehr empfohlen* |  
+**Anmerkungen**:  
+&nbsp;&nbsp;&nbsp;&nbsp;-> _*1_ *mithilfe digitaler Kommunikationstechnologie*  
+&nbsp;&nbsp;&nbsp;&nbsp;-> _*2_ *um einen ersten Eindruck über die Anforderungen zu bekommen,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unbedingt mit weiteren Techniken kombinieren*  
+&nbsp;&nbsp;&nbsp;&nbsp;-> _*3_ *mehrere Iterationen durchführen*  
+
+*Vergleich zwischen der verschieden Techniken*
+|Technik |Vorteile |Nachteile |Wann einsetzen? |
+|---|---|---|---|
+|**Beobachtungstechniken**<br></br>(*z. B. Feldbeobachtung, Apprenticing*)|- Erfasst implizites/unbewusstes Wissen (*als selbstverständlich vorausgesetzte Anforderungen*) <br></br>- Realitätsnahe Einblicke in tatsächliche Arbeitsabläufe <br></br>- Unabhängig von Artikulationsfähigkeit der Stakeholder|- Zeitaufwändig <br></br>- RE muss Beobachtetes kritisch hinterfragen (*Ist- vs. Soll-Situation*) <br></br>- Beeinflussung durch Anwesenheit des Beobachters möglich|- Stakeholder haben keine Zeit oder können Anforderungen nicht explizit formulieren <br></br>- Grundlegende, selbstverständliche Anforderungen sollen ermittelt werden <br></br>- Arbeitsabläufe sollen analysiert und optimiert werden|
+|**Kreativitätstechniken**<br></br>(*z. B. Brainstorming, Perspektivwechsel/Sechs-Hüte, Workshops*) |- Ermöglicht innovative, neue Anforderungen <br></br>- Gemeinsame Systemvision entsteht durch kooperative Zusammenarbeit <br></br>- In kurzer Zeit viele Ideen sammelbar |- Hoher Aufwand (Organisation, Moderation) <br></br>- Ergebnisse weniger detailliert <br></br>- Schwierige Gruppendynamik oder dominante Stakeholder können Ergebnisse negativ beeinflussen <br></br>- Ungeeignet für detaillierte Systemverhaltensanforderungen | <br></br>- Zu Projektbeginn, wenn noch keine klare Systemvision existiert <br></br>- Wenn innovative Anforderungen gesucht werden <br></br>- Wenn unbewusstes Wissen durch kreative Impulse sichtbar gemacht werden soll|
+|**Befragungstechniken**<br></br>(*z. B. Interview, Fragebogen*) |- Sehr detaillierte Anforderungen ermittelbar <br></br>- Sowohl innovative als auch explizit gewünschte und grundlegende Anforderungen abdeckbar <br></br>- Direkte Kommunikation mit Stakeholdern |- Setzt voraus, dass Stakeholder Anforderungen explizit äußern können und wollen <br></br>- Erfordert Zeit und Verfügbarkeit der Stakeholder <br></br>- Qualität abhängig von Fragevorbereitung und Kommunikationsfähigkeit |- Wenn Stakeholder verfügbar, willig und in der Lage sind, Anforderungen zu formulieren <br></br>- Wenn detaillierte Anforderungen benötigt werden <br></br>- Zur Vertiefung und Klärung von bereits bekannten Anforderungen|
+|**Dokumentzentrierte Techniken**<br></br>(*z. B. Systemarchäologie, perspektivenbasiertes Lesen*) |- Nutzung bestehender Dokumentationen und Altsysteme <br></br>- Anforderungen können wiederverwendet werden <br></br>- Unabhängig von Verfügbarkeit der Stakeholder|- Dokumentation kann veraltet oder unvollständig sein <br></br>- Hauptsächlich grundlegende (keine innovativen) Anforderungen ermittelbar <br></br>- Interpretationsspielraum bei alten Dokumenten|- Wenn Altsysteme oder existierende Dokumentation vorhanden ist <br></br>- Wenn grundlegende (bereits bekannte) Anforderungen ermittelt werden sollen <br></br>- Wenn Stakeholder nicht verfügbar sind|
+|**Prototyping**<br></br>(*z. B. horizontale GUI-Prototypen, vertikale Prototypen*) |- Tieferes Problemverständnis durch greifbare Systemversionen <br></br>- Ermöglicht innovative Anforderungen und frühes Feedback <br></br>- Visualisiert Dialogflüsse und Erwartungen (GUI-Prototypen) <br></br>- Nutzbar zur Ermittlung UND Prüfung von Anforderungen |- Kann zeitaufwändig und kostspielig sein (besonders digitale Prototypen) <br></br>- Grenze zwischen Ermittlung und Prüfung verschwimmt <br></br>- Gefahr, dass Stakeholder den Prototyp mit dem Endprodukt verwechseln|- Wenn Anforderungen schwer in Worte zu fassen sind (greifbares Modell hilft) <br></br>- Zu Projektbeginn für erste UI-Konzepte (Handskizzen) <br></br>- Wenn neue Technologien oder Implementierungsoptionen getestet werden sollen (vertikale Prototypen) <br></br>- Wenn frühzeitig Feedback von Stakeholdern eingeholt werden soll|
+
+---
+## 1. Kreativitätstechniken
+### 1.1 Perspektivwechsel
 > Dient dazu, ein Problem aus verschiedenen Blickwinkeln zu betrachten. Die beteiligten Personen denken und argumentieren dabei aus der Perspektive einer ganz bestimmten Rolle, beispielsweise des Nutzers, des Testers oder eines Kunden. Auf diese Weise können bei der Ermittlung von Anforderungen Perspektiven von Stakeholdern berücksichtigt werden, deren direkte Einbeziehung nicht möglich ist.
 
 <dl>
@@ -51,26 +89,25 @@ Mit Prototyping können innovative Anforderungen gewonnen werden, indem initiale
 	<dd>- problematisch bei konservativen und introvertierten Stakeholdern</dd>
 </dl>
 
-#### die Methode des Sechs-Hut-Denkens (*von Edward de Bono*)
-> jeder Hut stellt einen Blickwinkel auf ein Problem dar. Den Teilnehmern bei der Anwendung dieser Methode werden symbolisch unterschiedlich farbige Hüte aufgesetzt, die die Perspektive, aus der der Stakeholder das Problem betrachten wird.
+#### 1.1.1 Die Methode des Sechs-Hut-Denkens (*von Edward de Bono*)
+> Jeder Hut stellt einen **Blickwinkel** auf ein Problem dar. Den Teilnehmern bei der Anwendung dieser Methode werden symbolisch unterschiedlich farbige Hüte aufgesetzt.
 
-|Hutfarbe|steht für ...|Stakeholder|
+|Hutfarbe|steht für ...|Perspektive|
 |---|---|---|
-|weiß|Objektivität und Neutralität|achtet vor allem auf Zahlen und Fakten|
 |rot|subjektive Meinung und persönliche Empfindungen|äußert seine Gefühle, Ängste und Hoffnungen|
-|schwarze| - |objektiv, aber negativ Argumentation|
-|gelb| - |objektiv, jedoch positiv Argumentation|
-|grün|Kreativität|bringt neue ideen ein|
+|weiß|objektiv und neutral|Zahlen und Fakten|
+|schwarze|objektiv|negativ Argumentation|
+|gelb|objektiv|positiv Argumentation|
+|grün|kreative|bringt neue ideen ein|
 |blau|Kontrolle und Organisation des Denkprozesses|Die Person moderiert und koordiniert den Prozess der Ideenfindung.|
 
 #### Ablauf:
-- Auch diese Perspektive wird von unterschiedlichen Stakeholdern eingenommen und nicht nur vom RE, der typischerweise moderiert.
 - Stakeholder, die besonders überzeugt von ihrer Sichtweise sind, werden durch einen Perspektivwechsel animiert, neue Sichten anzunehmen. Daher eignet sich die Methode auch besonders um eingeengte Sichtweisen und Formulierungen zu lösen.
 - Um existierende Lösungsansätze von verschiedenen Seiten zu betrachten.
 - Die Anforderungssammlung ist mit einem hohem Detaillierungsgrad sehr aufwendig.
 - Für introvertierte und konservative Stakeholder kann die Methode abgehoben wirken. Der RE muss behutsam vorgehen, damit die Kooperationsbereitschaft der Stakeholder nicht vermindert werden.
 
-### Verbales Brainstorming
+### 1.2 Verbales Brainstorming
 > Die Gruppe, sammelt in einer vorgegebenen Zeit und zu einem vorgegebenen Thema Ideen. Die Stakeholder äußern ihre Ideen und nutzen die Ideen der anderen Stakeholder als Inspiration für weitere Ideen. Brainstorming ist besonders erfolgreich, wenn die Teilnehmer möglichst heterogen ausgewählt wurden und durch Einflüsse aus anderen Domänen angeregt werden.
 
 <dl>
@@ -97,13 +134,13 @@ Mit Prototyping können innovative Anforderungen gewonnen werden, indem initiale
 - Entlastet den RE: muss Ideen nicht notiren, kein vergessen und ungehemmter Kreativitätsprozess.
 - Die Ideensammlung kann auch anonym durchgeführt werden, indem Stakeholder ihre Ideen nur sammeln und notieren, jedoch nicht laut äußern. Die Anonymität hilft, negative Gruppendynamik und Hierarchiekonflikte zu verhindern. Nachteil kann sein, dass die eigene Kreativität nicht durch geäußerte Ideen der anderen Stakeholder angeregt wird.
 
-### Schriftliches Brainstorming mit User Stories
+### 1.3 Schriftliches Brainstorming mit User Stories
 > User Stories sind funktionale Anforderungen, die aus Sicht eines Benutzers formuliert werden. Eine User Story wird immer nach einem bestimmten Schema formuliert.
 
 |Rolle|*Fülltext*|bestimmtes Ziel|*Fülltext*|Begründung|
 |---|---|---|---|---|
 |**&lt;Benutzerrolle>**|*, möchte ich*|**&lt;ein bestimmtes Ziel erreichen (funktionale Anforderung)>**|*, um*|**&lt;Begründung, warum das Ziel erreicht werden soll>**|
-|**Als Kunde**|*möchte ich*|**meine Verträge online verwalten können**|*, damit*|**ich auch außerhalb der Geschäftszeiten Änderungen an meinen Verträgen vornehmen kann.**|
+|**Als Kunde**|*, möchte ich*|**meine Verträge online verwalten können**|*, damit*|**ich auch außerhalb der Geschäftszeiten Änderungen an meinen Verträgen vornehmen kann.**|
 
 <dl>
 	<dt>Einsatzszenarien</dt>
@@ -133,7 +170,7 @@ Mit Prototyping können innovative Anforderungen gewonnen werden, indem initiale
 - Um mehr Ideen zu produzieren, kann die Methode Perspektivenwechsel mit der User-Story-Technik kombiniert werden. Das ist insbesondere dann sinnvoll, wenn wichtige Stakeholdergruppen nicht direkt verfügbar sind.
 - In der Praxis hat es sich bewährt, User Stories mit einem dicken Stift auf eine Karteikarte zu schreiben. Durch den begrenzten Platz werden Stakeholder angeregt, präzise zu formulieren, und im Anschluss lassen sich Karten leicht sortieren und gruppieren sowie doppelte Ideen eliminieren.
 
-### Workshop
+### 1.4 Workshop
 > Verschiedene Interessenvertreter von Stakeholdergruppen kommen zusammen, um gemeinsam an der Ermittlung von Anforderungen zu arbeiten. Diese Vertreter müssen mit dem nötigen Fachwissen und der nötigen Entscheidungskompetenz ausgestattet sein, damit als Resultat des Workshops abgestimmte Anforderungen gewonnen werden. Dabei sind die räumliche Nähe und der direkte Austausch untereinander ein ideales Mittel, um in Konflikt zueinander stehende Anforderungen zu identifizieren und durch Auflösung der Konflikte bereits abgestimmte Anforderungen zu erhalten. Die Abstimmung mit allen Stakeholdern würde alternativ erst in einem gesonderten, nachgelagerten Schritt geschehen. Häufig gewinnt in solchen Workshops derjenige Interessenvertreter, dessen Gruppe die größte Macht besitzt (*z. B. die Gruppe mit Budgetverantwortung*).
 
 <dl>
@@ -168,12 +205,7 @@ Mit Prototyping können innovative Anforderungen gewonnen werden, indem initiale
 ---
 
 ## 2. Befragungstechniken
-- **Voraussetzung**:
-	- befragte Stakeholder sind fähig, Anforderungen explizit zu äußern, verfügen über die notwendige Zeit und haben den Willen zur Befragung.
-- **geeignet**:
-	- zur Ermittlung von innovativen, expliziten, grundlegenden und sehr detaillierten Anforderungen.
-
-### Interview
+### 2.1 Interview
 > Das Interview ist eine vom Requirements Engineer aktiv gesteuerte Befragungstechnik, die
 es ermöglicht, sehr detaillierte Anforderungen zu ermitteln.
 
@@ -221,7 +253,7 @@ lassen den Befragten Freiraum bei der Beantwortung, sind aber aufwendiger auszuw
 	<dd>Folgt keiner strukturierten Befragung, sondern lassen dem Befragten die Chance, sein Meinungsbild abzugeben.</dd>
 </dl>
 
-### Fragebogen
+### 2.2 Fragebogen
 > Ist keine Vollbefragung möglich, muss eine Stichprobe, aus einer repräsentative Menge der Stakeholder ausgewählt werden. Fragen müssen sorgfältig formuliert, detailliert und priorisiert werden um einen Abbruch durch die Befragten zu vermeiden. Kreativitätstechniken (*z.B. Workshop*) können helfen Gute Fragen zu gewinnen. Digitale Fragebögen können in Textverarbeitungsprogrammen oder Tools (*z. B. SurveyMonkey*) erstellt, durchgeführt und eventuell ausgewertet werden.
 
 <dl>
@@ -240,9 +272,7 @@ lassen den Befragten Freiraum bei der Beantwortung, sind aber aufwendiger auszuw
 ---
 
 ## 3. Beobachtungstechniken
-> Eignen sich wenn die Fachexperten keine Zeit haben oder nicht in der Lage sind, Anforderungen explizit zu äußern, z. B. weil diese als selbstverständlich vorausgesetzt werden. Der RE beobachtet Arbeitsabläufe, dokumentiert diese unter Berücksichtigung von Fehlern, Risiken und offenen Fragen und leitet daraus potenzielle Anforderungen an das System ab. Er muss die beobachteten Abläufe kritisch hinterfragen, um Soll-Situationen zu produzieren und Schwachstellen in Arbeitsabläufen und im ggf. schon bestehenden System offenzulegen.
-
-### Feldbeobachtung
+### 3.1 Feldbeobachtung
 > RE ist vor Ort und beobachtet unmittelbar die stattfindenden Geschäftsprozesse. Er erfasst die Aktivitäten und deren zeitliche Reihenfolge, um daraus die Arbeitsabläufe zu ermitteln. Dabei muss der Beobachter nicht nur passiv beobachten, sondern kann aktiv nachfragen und sich Arbeitsabläufe erläutern lassen. Der RE muss vorher das Arbeitsumfeld der Stakeholder grundlegend verstehen und sich ein Bild davon machen, was die Stakeholder eigentlich tun.
 
 <dl>
@@ -262,7 +292,7 @@ lassen den Befragten Freiraum bei der Beantwortung, sind aber aufwendiger auszuw
 - Das kritische Hinterfragen aller Abläufe, um Optimierungspotenzial zu identifizieren. Festgefahrene und verbesserungswürdige Prozesse sollten nicht eins zu eins in das neue System übernommen werden.
 - Der RE kann die Feldbeobachtung durch Audio- und Videoaufzeichnungen unterstützen, muss in diesem Fall jedoch vorab das Einverständnis der Beobachteten einholen.
 
-### Apprenticing
+### 3.2 Apprenticing
 > Wie die Feldbeobachtung, jedoch erlernt und führt der RE die Tätigkeiten zusätzlich zur Beobachtung auch aus. Dies bietet ihm als Lehrling die Möglichkeit, unklare bzw. unverständliche
 Aktionen und Abläufe direkt zu hinterfragen. Stakeholder fühlen sich nicht mehr kontrolliert sondern in einer erhabenen Position, da sie ihr Wissen weitergeben dürfen.
 
@@ -284,8 +314,6 @@ Aktionen und Abläufe direkt zu hinterfragen. Stakeholder fühlen sich nicht meh
 ---
 
 ## 4. Prototyping
-> Ist eine initiale Version eines Softwaresystems, mit der Konzepte demonstriert oder Entwürfe erprobt werden können, um generell mehr über das Problem und dessen möglichen Lösungen zu erfahren. Durch die Erstellung und der Kommunikation von Prototypen wird ein tieferes Problemverständnis erlangt, auf dessen Basis Anforderungen ermittelt werden.
-
 #### Kriterien unterschiedlicher Prototypen
 - **Beschaffenheit**:  
  gibt an, ob es sich um **analoge Prototypen** oder **digitale Prototypen** handelt.
@@ -299,10 +327,10 @@ Aktionen und Abläufe direkt zu hinterfragen. Stakeholder fühlen sich nicht meh
 	![Vertikale und horizontale Prototypen](./img/vertikaler_horizontaler_prototyp.png)
 - Prototypen können kombiniert werden, einige schließen sich jedoch aus. Analoge Prototypen können nicht vertikal „implementiert“ werden und sich auch nicht evolutionär und inkrementell zum Endprodukt weiterentwickeln.
 
-### Horizontale GUI-Prototypen
+### 4.1 Horizontale GUI-Prototypen
 > Können als Hilfsmittel zur Abbildung von Dialogflüssen und zum Erwartungsmanagement genutzt werden. Je nach Projektphase werden entweder analoge Handskizzen oder digital implementierte Prototypen eingesetzt.
 
-#### Handskizze
+#### 4.1.1 Handskizze
 > Zu Beginn eines Projekts wird eine Handskizze verwendet um schnell erste Konzepte zur Umsetzung einer grafischen Oberfläche zu visualisieren. Vorteil hierbei ist die intuitive Durchführbarkeit der Technik sowie die Gewinnung zusätzlicher funktionaler Anforderungen. Darüber hinaus suggeriert die Handskizze kein fertiges System, und die Stakeholder trauen sich, Änderungswünsche zu äußern.
 
 <dl>
@@ -318,7 +346,7 @@ Aktionen und Abläufe direkt zu hinterfragen. Stakeholder fühlen sich nicht meh
 	<dd>- physisch begrenzt</dd>
 </dl>
 
-#### Wireframes
+#### 4.1.2 Wireframes
 > Sind digital angefertigte Oberflächenskizzen, die einheitlich gestaltet und ggf. klickbar, jedoch noch offensichtlich unfertig sind. Vorteil ist hier, dass der Navigationsfluss schon gezeigt werden kann und diese genauer sind als Handskizzen (z. B. kann der Styleguide der Organisation berücksichtigt werden).  Hingegen ist die Erstellung von Wireframes aufwendiger.
 
 <dl>
@@ -334,7 +362,7 @@ Aktionen und Abläufe direkt zu hinterfragen. Stakeholder fühlen sich nicht meh
 	<dd>- Visueller Eindruck der GUI ist noch „verzerrt“ im Vergleich zu echten GUI.</dd>
 </dl>
 
-#### Mock-up
+#### 4.1.3 Mock-up
 > Ist ein in der Zieltechnologie des Systems implementierter Prototyp in Originalgröße und Farbe, jedoch ohne Funktionalität. Die Funktionalität kann durch das Hinterlegen eines unveränderlichen Datensatzes simuliert werden. Mock-ups werden eingesetzt, um das Erscheinungsbild des geplanten Systems zu visualisieren und abzustimmen. Diese Prototypen werden schnell und ohne Berücksichtigung besonderer Qualitätsanforderungen („quick and dirty“) entwickelt, wenn sie so schnell wie möglich verfügbar sein müssen. Dieser Prototyp darf unter keinen Umständen Teil des Endprodukts werden.
 
 <dl>
@@ -352,7 +380,7 @@ Aktionen und Abläufe direkt zu hinterfragen. Stakeholder fühlen sich nicht meh
 	<dd>- suggeriert ggf. schon fertiges System</dd>
 </dl>
 
-### Vertikale Prototypen
+### 4.2 Vertikale Prototypen
 >  Implementiert ausgewählte Funktionen des Zielsystems vollständig durch alle Systemschichten hindurch. Diese Technik ist dort geeignet, wo Funktionalitäts- und Implementierungsoptionen geklärt werden sollen. Dies ist in der Regel der Fall, wenn neue Technologien getestet oder Pilotsysteme gebaut werden. Ein vertikaler Prototyp ermöglicht es, einzelne Anwendungsfälle oder eine Zieltechnologie auszuprobieren oder die generelle Umsetzbarkeit zu testen.
 
 <dl>
