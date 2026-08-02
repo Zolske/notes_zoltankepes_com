@@ -25,3 +25,7 @@ Der Schlüsselgedanke: Das Problem ist unabhängig von jeder Lösung. Erst die A
 **Beispiel**:  
 *Fachliches Problem: „Kunden wissen beim Online-Einkauf nicht, ob ein Artikel auf Lager ist."*  
 *Anforderung: „Das System zeigt dem Kunden auf der Produktseite in Echtzeit den aktuellen Lagerbestand an."*
+
+---
+### Softwareprozess
+> Mit „Softwareprozess" ist der gesamte Ablauf der Softwareentwicklung gemeint – also alle Phasen und Aktivitäten, die von der ersten Idee bis zum fertigen Produkt durchlaufen werden (z. B. Anforderungsanalyse, Design, Implementierung, Test, Wartung).  

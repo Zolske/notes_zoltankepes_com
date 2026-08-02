@@ -51,7 +51,7 @@ Zur Dokumentation von Anforderungen kann jede Art der Darstellung verwendet werd
 3. **Dokumentation der Anforderungen**:  
 	- Anforderungen in einer für den Zweck und die Zielgruppe geeigneten Form dokumentieren.
 4. **Prüfung, ob Dokumentation noch zu Zweck und Zielgruppe passt**:  
-	- Kritisches prüfen nach dem Abschluss einer langer Dokumentationszeit.
+	- Kritisches prüfen nach dem Abschluss einer langen Dokumentationszeit.
 	- Ursprünglicher Zweck kann während der Dokumentation verloren gehen.
 	- Bedienungen im Projekt können sich geändert haben.
 
