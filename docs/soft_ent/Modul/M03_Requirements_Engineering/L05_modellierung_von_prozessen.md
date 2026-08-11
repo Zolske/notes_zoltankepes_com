@@ -30,20 +30,8 @@ Um Abläufe zu modellieren, kann die Business Process Model and Notation (BPMN) 
 ## 1. Grundlagen und Begriffe
 
 - Unternehmensmodellierung
-	- Aufbauorganisation
-	- Ablauforganisation
-	- die Bestandteile von Geschäftsprozessen
-
-
-In diesem Lernzyklus werden die Grundlagen und Begriffe zur Unternehmensmodellierung erläutert. Dazu zählen neben der Aufbauorganisation auch die Ablauforganisation und die Bestandteile von Geschäftsprozessen.
-
-- Die Bestandteile eines Prozesses können verwendet werden, um die Geschäftsprozesse zu modellieren.
-
-Da Geschäftsprozesse die Grundlage des betrieblichen Handelns bilden, stellen sie eine elementare Grundlage für das Requirements Engineering für betriebliche Informationssysteme dar. 
-
-In einem Geschäftsprozess werden Aufgaben durch bestimmte Organisationseinheiten erledigt. In diesen Aufgaben werden Entscheidungen getroffen und Geschäftsobjekte bearbeitet. Die Bearbeitung dieser Aufgaben kann durch IT-Systeme unterstützt werden, sodass die Angemessenheit und Korrektheit der Anforderungen an dieses System einen wesentlichen Einfluss auf den Erfolg des Unternehmens haben.
-
-Im Folgenden wird zuerst erläutert, wie Organisationen strukturell aufgebaut sein können (sogenannte Aufbauorganisation), um daraufhin die Ziele von Geschäftsprozessen in der Ablauforganisation und die Elemente von Geschäftsprozessen sowie deren Beziehungen zueinander zu erläutern.
+	- Aufbauorganisation (*wie Unternehmen Strukturiert sind*)
+	- Ablauforganisation (*wie Aufgaben gelöst werden*)
 
 ### Aufbauorganisation (*Organisationsstruktur eines Unternehmens*)
 - Hierarchischer Aufbau, legt die Rahmenbedingungen für die Bearbeitung von Aufgaben in einem Unternehmen fest (*welche Aufgaben von welchen Menschen mit welchen Sachmitteln erledigt werden sollen*).
@@ -53,50 +41,31 @@ Zuordnung von Aufgaben und Verantwortlichkeiten möglich machen.
 
 ##### Organisationsformen
 ![Organisationsformen](./img/organisationsformen.jpg)
-- **Einliniensystem**:
-	- In jeder Hierarchieebene herrscht Vollkompetenz.
-	- Die obere Ebene ist den untergeordneten Ebenen gegenüber weisungs- und entscheidungsbefugt.
-	- Die untergeordneten Ebenen haben gegenüber ihrer übergeordneten Ebene Vorschlagsrecht.
-	- Eine Linie von oben nach unten (z. B. Hauptabteilungsleiter → Abteilungsleiter → Teamleiter) heißt Dienstweg, dessen Einhaltung obligatorisch ist (*z.B Damit zwei Teamleiter miteinander arbeiten, ist die Einbeziehung des übergeordneten Abteilungsleiters verpflichtend*).
-	- **Vorteile**:
-		- klaren Befugnisse und Verantwortungsbereiche
-	- **Nachteile**:
-		- langen Informationswege
-		- Vorgesetzte werden überlastet (*müssen jede Entscheidung treffen, können Entscheidungskompetenz nicht delegieren*).
-- **Mehrliniensystem**:
-	- Aufgebaut wie Einliniensystem, außer dass gleichrangig Vorgesetzte auch teamübergreifende Weisungsbefugnis haben (*Teamleiter von Team A ist auch den Mitarbeitern von Team B gegenüber weisungsbefugt bzw. die Mitarbeiter von Team B können sich auch an den Teamleiter von Team A wenden*).
-	- **Vorteile**:
-		- kürzere Kommunikationswegen
-		- Spezialisierung der Leitung durch Funktionsverteilung
-		- Durch direkte Kommunikationswege können sich Vorgesetzte mehr auf ihre Kernkompetenz konzentrieren, da Verwaltungsaufgaben, die im Einliniensystem zu erfüllen wären, wegfallen (*-> Betonung der Fachautorität*).
-	- **Nachteile**:
-		- Abgrenzungsprobleme der Zuständigkeiten und somit Kompetenzkonflikte
-- **Stabliniensystem**:
-	- Ist um eine Stabstelle erweitertes Einliniensystem zur Entlastung der Linieninstanzen.
-	- Ein Stab ist ein Experte für bestimmte Gebiete. Vergibt keine Arbeitsanweisungen sondern Steht nur beratend zu Seite.
-	- **Vorteile**:
-		- die gleichen wie beim Einliniensystem
-		- zunehmende Entscheidungsqualität durch Spezialisten
-	- **Nachteile**:
-		- eine Konzentration des spezialisierten Wissens in der Leitungsebene
-		- verstärkter autoritärer Führungsstil und Gefahr einer selektiven Informationsweitergabe
-		- zusätzliche Kosten für Stabstellen
+
+|System Beschreibung |Vorteile |Nachteile |
+|---|---|---|
+|**Einliniensystem**:<br></br>- in jeder Hierarchieebene herrscht Vollkompetenz<br></br>- obere Ebene ist den untergeordneten Ebenen gegenüber weisungs- und entscheidungsbefugt<br></br>- untergeordneten Ebenen haben gegenüber ihrer übergeordneten Ebene Vorschlagsrecht<br></br>- eine Linie von oben nach unten (*z. B. Hauptabteilungsleiter → Abteilungsleiter → Teamleiter*) heißt Dienstweg, dessen Einhaltung obligatorisch ist (*z.B. Damit zwei Teamleiter miteinander arbeiten, ist die Einbeziehung des übergeordneten Abteilungsleiters verpflichtend*) |- klaren Befugnisse und Verantwortungsbereiche |- langen Informationswege<br></br>- Vorgesetzte werden überlastet (*müssen jede Entscheidung treffen, können Entscheidungskompetenz nicht delegieren*) |
+|**Mehrliniensystem**:<br></br>- wie Einliniensystem, außer dass gleichrangig Vorgesetzte auch teamübergreifende Weisungsbefugnis haben (*z.B. Teamleiter von Team A ist auch den Mitarbeitern von Team B gegenüber weisungsbefugt bzw. die Mitarbeiter von Team B können sich auch an den Teamleiter von Team A wenden*) |- kürzere Kommunikationswegen <br></br>- Spezialisierung der Leitung durch Funktionsverteilung <br></br>- Durch direkte Kommunikationswege können sich Vorgesetzte mehr auf ihre Kernkompetenz konzentrieren, da Verwaltungsaufgaben, die im Einliniensystem zu erfüllen wären, wegfallen (-> Betonung der Fachautorität). |- Abgrenzungsprobleme der Zuständigkeiten und somit Kompetenzkonflikte |
+| **Stabliniensystem**: <br></br>- wie Einliniensystem, nur um eine Stabstelle erweitertes zur Entlastung der Linieninstanzen. <br></br>- Ein Stab ist ein Experte für bestimmte Gebiete. Vergibt keine Arbeitsanweisungen sondern Steht nur beratend zu Seite. |- die gleichen wie beim Einliniensystem <br></br>- zunehmende Entscheidungsqualität durch Spezialisten |- eine Konzentration des spezialisierten Wissens in der Leitungsebene <br></br>- verstärkter autoritärer Führungsstil und Gefahr einer selektiven Informationsweitergabe <br></br>- zusätzliche Kosten für Stabstellen |
+
 - Projekte sind als temporäre Organisation häufig etwas anders organisiert. Die dauerhaft bestehenden Bereiche und Abteilungen im Unternehmen folgen in der Regel jedoch den hier gezeigten Organisationsmodellen.
 
 ### Ablauforganisation
-> Beschreibt den Ablauf innerhalb der Organisationsstruktur. Sie dokumentiert die Gestaltung der Arbeitsabläufe der Aufbauorganisation durch die Verkettung einzelner Arbeitsschritte unter Nutzung der Ressourcen der Aufbauorganisation. Im Mittelpunkt stehen dabei die zielbezogene menschliche Handlung und die Ausstattung von Arbeitsprozessen mit Sachmitteln und Informationen (sogenannter Leistungserstellungsprozess).
+> Beschreibt den Ablauf innerhalb der Organisationsstruktur. Sie dokumentiert die Gestaltung der Arbeitsabläufe der Aufbauorganisation durch die Verkettung einzelner Arbeitsschritte unter Nutzung der Ressourcen der Aufbauorganisation.  
+**Leistungserstellungsprozess**: im Mittelpunkt stehen die zielbezogene menschliche Handlung und die Ausstattung von Arbeitsprozessen mit **Sachmitteln** und **Informationen**.
 
 ##### Ziele:
-- Die Auslastung der Leistungserstellung soll maximal sein.
-- Bei maximaler Auslastung sollen Durchlaufzeiten so gering wie möglich sein. Gleiches gilt für Wartezeiten, in denen der Leistungserstellungsprozess stillsteht.
+- Die Auslastung der Leistungserstellung soll maximal sein:
+	- bei maximaler Auslastung oder bei Wartezeiten, sollen Durchlauf- bzw. Wartezeiten so gering wie möglich sein.
 - Die Kosten der Leistungserstellung sollen so gering wie möglich sein.
 - Die Qualität der Vorgangsbearbeitung und die Arbeitsbedingungen sollen verbessert werden.
 - Die Ablauforganisation ist durch Geschäftsprozesse definiert.
 
 #### Elemente in Geschäftsprozessen
->„Ein Geschäftsprozess (GP) ist eine zielgerichtete, zeitlich-logische Abfolge von Aufgaben, die arbeitsteilig von mehreren Organisationen oder Organisationseinheiten unter Nutzung von IKT (**I**nformations- und **K**ommunikations**t**echnologie) ausgeführt werden können.  
+>„Ist eine zielgerichtete, zeitlich-logische Abfolge von Aufgaben, die arbeitsteilig von mehreren Organisationen oder Organisationseinheiten unter Nutzung von IKT (**I**nformations- und **K**ommunikations**t**echnologie) ausgeführt werden können. 
 Er dient der Erstellung von Leistungen entsprechend den vorgegebenen, aus der Unternehmensstrategie abgeleiteten Prozesszielen.  
-Der Geschäftsprozess kann formal auf unterschiedlichen Detaillierungsebenen aus mehreren Sichten beschrieben werden. Ein maximaler Detaillierungsgrad der Beschreibung ist dann erreicht, wenn die ausgewiesenen Aufgaben je in einem Zug von einem Mitarbeiter ohne Wechsel des Arbeitsplatzes ausgeführt werden können“.
+Der Geschäftsprozess kann formal auf unterschiedlichen Detaillierungsebenen aus mehreren Sichten beschrieben werden.  
+Ein maximaler Detaillierungsgrad der Beschreibung ist dann erreicht, wenn die ausgewiesenen Aufgaben je in einem Zug von einem Mitarbeiter ohne Wechsel des Arbeitsplatzes ausgeführt werden können“.
 
 - In einem Geschäftsprozess wird also eine Reihe von Aktivitäten in einer bestimmten Reihenfolge unter Zuhilfenahme von IT durch mehrere Organisationseinheiten (Stelle, Rolle, Abteilung, Bereich, Organisation) bearbeitet.
 
@@ -126,117 +95,174 @@ Der Geschäftsprozess kann formal auf unterschiedlichen Detaillierungsebenen aus
 ![Strukturierung von Geschäftsprozessen](./img/strukturierung_von_geschäftsprozessen.jpg)
 
 ---
-## 2. Modellierung mit der Business Process Model and Notation
-> Die Business Process Model and Notation (BPMN) ist eine Notation zur Modellierung von Geschäftsprozessen und wird von der Object Management Group (OMG) verwaltet und weiterentwickelt. Die OMG selber ist ein Konsortium, das aus über 800 Mitgliedsunternehmen besteht und herstellerneutrale Industriestandards erstellt und pflegt. Die OMG stellt mit der BPMN einen Modellierungsstandard bereit, der die Bedeutung grafischer Notationselemente und deren Zusammenspiel definiert. Da die BPMN eine sehr ausdrucksmächtige Sprache ist, würde eine vollständige Einführung den Umfang dieses Lernskripts sprengen.
+## 2. Elemente der BPMN und EPK Prozess Modelle
 
-|Name|Bedeutung|Darstellung|
+|Beschreibung: Elemente in Geschäftsprozessen |Darstellung<br></br>BPMN |Darstellung<br></br>(E)EPK |
 |---|---|---|
-|Aktivität|Aktivitäten repräsentieren Aufgaben, die im Prozess ausgeführt werden, und sind atomar, also nicht sinnvoll weiter zerlegbar. Aktivitäten werden aktiv formuliert und nach dem Pattern [Objekt] + [Verb] benannt (*z.B. Antrag unterschreiben*).|![aktivität](./img/bpmn_aktivität.png)|
-|Teilprozess|Diese Teilprozesse verfeinern Geschäftsprozesse und können durch ein weiteres BPMN-Diagramm verfeinert werden. Die Darstellung mit einem „+“ blendet den internen Ablauf im Teilprozess aus. Teilprozesse werden aktiv formuliert und nach dem Pattern [Objekt] + [Verb] benannt (*z.B. Schaden bearbeiten, auf Klausur vorbereiten*).|![Teilprozess](./img/bpmn_teilprozess.png)|
-|Ereignisse|Ein Ereignis ist etwas, das im Verlauf eines Prozesses passiert und den Ablauf beeinflusst. Ereignisse haben in der Regel eine Ursache (trigger) und Auswirkungen (results). Die BPMN kennt drei Ereignistypen, die durch interne Marker weiter unterschieden werden können. Die drei Typen besitzen jeweils verschiedene Varianten (*z.B. Nachrichten, Zeit, Bedingung, Signal, Fehler*). Das Startereignis kennzeichnet den Beginn eines Prozesses. Jeder (Teil-)Prozess besitzt zwingend mindestens ein Startereignis. Das  Zwischenereignis tritt im Prozessverlauf ein, das Endereignis beendet einen Prozess. Jedes Ereignis kann untypisiert sein, d. h., es besitzt keine interne Markierung. Solche Ereignisse werden auch Blanko-Ereignisse genannt. Interne Marker können Nachrichten oder Bedingungen sein. Ein Ereignis wird nach dem Muster [Objekt] und passiviertes [Verb] beschrieben (*z.B. Schaden gemeldet*).|![Ergebnisse](./img/bpmn_ergebnisse.png)|
-|Datenobjekte|Datenobjekte werden zur Ausführung von Aktivitäten gebraucht oder erzeugt. Sie können einzelne Objekte (*z.B. Schadenakte*) oder ganze Sammlungen (*z.B. Antragsdaten*) davon repräsentieren. Datenobjekte werden mit dem sie umschließenden Prozess instanziiert und zerstört – sie besitzen keine Persistenz über den Prozess hinaus. Es gibt auch Datenspeicher, die beispielsweise Datenbanken darstellen können (siehe hierzu Allweyer 2020).|![datenobjekte](./img/bpmn_datenobjekte.png)|
-|Pools|Pools repräsentieren die Teilnehmer und Verantwortlichen eines Prozesses (*z.B. der Helpdesk*). Dies können Organisationen, Personen, Rollen oder Systeme sein. Ein Pool dient dazu, Prozesse zu partitionieren. Pools können auch als Black Boxes (*unter Ausblendung innerer Abläufe*) dargestellt werden. Jeder Pool kennzeichnet einen Teilprozess und benötigt daher ein Start- und ein Endereignis. Pools werden eingesetzt, um den Wechsel der Verantwortlichkeit in einem Geschäftsprozess zu modellieren.|![pools](./img/bpmn_pools.png)![pools as box](./img/bpmn_pools_as_backbox.png)|
-|Lanes|Eine Lane (Schwimmbahn) weist Aufgabenträgern Zuständigkeiten für Aufgaben zu und befindet sich immer innerhalb eines bestimmten Pools. Aufgabenträger können beispielsweise Personen (*z.B.Heinz Müller*), Rollen (*z.B. Sachbearbeiter*), Anwendungen (*z.B.Schadenmanagementsystem*) sein. Lanes können beliebig verschachtelt werden, um eine Verfeinerung der Zuständigkeiten darzustellen. Ein Flussobjekt (Aktivität, Ereignis) darf immer nur in genau einer Lane positioniert sein.|![lanes](./img/bpmn_lanes.png)|
-|Nachrichten|Nachrichten symbolisieren den Inhalt einer Kommunikation und werden entweder an Nachrichtenflüsse assoziiert oder sie sind Bestandteil eines Ereignisses.|![Nachrichten](./img/bpmn_nachrichten.png)|
-|Annotationen|Annotationen ermöglichen weiterführende Angaben, Kommentare oder Notizen und können an jedes Flussobjekt geheftet werden.|![annotation](./img/bpmn_annotation.png)|
+|**Aktivität** (*BPMN*) *bzw.* **Funktion** (*EPK*)<br></br>- Aufgaben die im Prozess ausgeführt werden<br></br>- nicht weiter zerlegbar (*atomar*)<br></br>- Benennung: **[Objekt]** + (*aktives*) **[Verb]** (*z.B. Antrag unterschreiben*) <br></br><br></br>**Aktivität** (*BPMN*)<br></br>- zwei Sequenzflüsse können in eine Aktivität übergehen |![Aktivität](./img/bpmn_aktivität.png) | ![Funktion](./img/epk_funktion.png) |
+|**Teilprozess** (*BPMN*) *bzw.* **Prozesswegweiser** (*erweitertes EPK*)<br></br>- verweist auf Teilprozesse ohne dabei mehr Komplexität zu erzeugen<br></br>- Benennung: **[Objekt]** + (*aktives*) **[Verb]** (*z.B. Schaden bearbeiten*)<br></br><br></br>**Teilprozess** (*BPMN*)<br></br>- wird durch ein weiteres BPMN dargestellt welches durch das `+` Zeichen geöffnet bzw. geschlossen wird <br></br><br></br>**Prozesswegweiser** (*erweitertes EPK*)<br></br>- kann nicht geöffnet werden verweist aber auf einen Teilprozess |![Teilprozess](./img/bpmn_teilprozess.png) |*Erweitertes EPK*<br></br>![Prozesswegweiser](./img/erweitertes_epk_subprozess.png) |
+|**Ereignis** (*BPMN + EPK*)<br></br>- entsteht im Verlauf eines (*Teil-*) Prozess <br></br>- haben in der Regel eine Ursache (*trigger*) und Auswirkung (*result*)<br></br>- Jeder (*Teil-*) Prozess muss mindestens einen Start-Ereignis & End-Ereignis besitzen<br></br>- Benennung: **[Objekt]** + (*passiviertes*) **[Verb]** (*z.B. Schaden gemeldet*)<br></br><br></br>**Ereignis** (*BPMN*)<br></br>- 3 Typen mit eigenen Symbolen (*Start-, Zwischen-, Endereignis*) welche jeweils typisiert (*z.B. Nachricht, Signal, Fehler*) oder untypisiert (*keine interne Markierung = "Blanko"*) sein können <br></br>- kann aktive den Ablauf steuern (*ereignisbasiertes Gateway*)<br></br><br></br>**Ereignis**  (*EPK*)<br></br>- beschreibt immer einen eingetretenen, passiven Zustand (*z.B. „Bestellung ist eingegangen"*) <br></br>- hat keine Handlungsfähigkeit, weshalb auch keine Entscheidung von ihm ausgehen darf|![Ereignis](./img/bpmn_ergebnisse.png) |![Ereignis](./img/epk_ereignis.png) |
+|**Sequenzfluss** (*BPMN*) *bzw.* **Kontrollfluss** (*EPK*) <br></br>- bringen Aktivitäten/Funktionen und Ereignisse in zeitliche und logische Abfolge, sind niemals losgelöst<br></br>- eine Kante verbindet immer nur zwei Elemente miteinander<br></br><br></br>**Kontrollfluss** (*EPK*)<br></br>- Funktionen und Ergebnisse müssen sich immer abwechseln |![Kontrollfluss](./img/uml_akt_dia_kontrollfluss.png) |![Kontrollfluss](./img/uml_akt_dia_kontrollfluss.png) |
+|**Datenobjekte** (*BPMN + Erweiterte EPK*)<br></br>- werden zur Ausführung von Aktivitäten/Funktionen gebraucht bzw. erzeugt<br></br>- können einzelne Objekte (*z.B. Schadenakte*) oder Sammlungen (*z.B. Antragsdaten*) repräsentieren<br></br>- werden mit dem sie umschließenden Prozess instanziiert und zerstört<br></br><br></br>**Informationsobjekte** (*Erweiterte EPK*)<br></br>- können auch persistente Datenspeicher darstellen|![Datenobjekte](./img/bpmn_datenobjekte.png) |*Erweiterte EPK*<br></br>![Datenobjekte](./img/erweitertes_epk_geschäftsobjekt.png) |
+|**Pools** (*BPMN*)<br></br>- sind Teilnehmer oder Verantwortliche eines Prozess und können Organisationen, Rollen, Personen oder Systeme sein (*z.B. Helpdesk*) <br></br>- kennzeichnen einen Teilprozess, benötigt d.h. ein Start- und ein Endereignis <br></br>- werden eingesetzt, um den Wechsel der Verantwortlichkeit in einem Geschäftsprozess zu modellieren <br></br>- können auch als Black Boxes (unter Ausblendung innerer Abläufe) dargestellt werden<br></br><br></br>**Organisationseinheit** (*Erweiterte EPK*)<br></br>- durch einen Strich mit der Betreffenden Funktion verbunden<br></br>- hat keine Unterteilungen und beschreibt nur OE |![Pools](./img/bpmn_pools.png) ![Pools Blackbox](./img/bpmn_pools_as_backbox.png) |*Erweiterte EPK*<br></br>![Pools](./img/erweitertes_epk_organisationseinheit.png) |
+|**Lanes** (*Schwimmbahn*) (*BPMN*)<br></br>- Unterteilung **innerhalb** eines Pools <br></br>- weist Aufgabenträgern Zuständigkeiten für Aufgaben zu<br></br>- können verschachtelt sein<br></br>- Der Sequenzfluss (`->`) darf Lane-Grenzen überschreiten, nicht aber Pool-Grenzen <br></br><br></br>**Organisationseinheit** (*Erweiterte EPK*)<br></br>- durch einen Strich mit der Betreffenden Funktion verbunden|![Lane](./img/bpmn_lanes.png) |*Erweiterte EPK*<br></br>![Pools](./img/erweitertes_epk_organisationseinheit.png)|
+|**Nachrichten** (*BPMN*)<br></br>- symbolisieren den Inhalt einer Kommunikation<br></br>- entweder an Nachrichtenflüsse assoziiert oder sie sind Bestandteil eines Ereignisses |![Nachrichten](./img/bpmn_nachrichten.png)| *keine Nachrichten* |
+|**Annotationen** (*BPMN*)<br></br>- Kommentare oder Notizen<br></br>- durch Assoziation (`...`) mit dem Flussobjekt (*Aktivität, Ereignis, Gateway*) verbunden |![Annotation](./img/bpmn_annotation.png) | *Keine Annotationen* |
 
-
-### Verbindungen
-> Die Verbindungstypen der BPMN heißen Sequenzfluss, Nachrichtenfluss und Assoziation.
-
-- Der **Sequenzfluss**:  
-gibt die Reihenfolge der Aktivitäten vor und kann zwar über Lane-Grenzen, jedoch nicht über Pool-Grenzen hinweg gehen.
-- Der **Nachrichtenfluss**:  
-verbindet Pools miteinander, deren Kommunikation über Nachrichten läuft.
-- Die **Assoziation**:  
-verbindet Datenobjekte und Annotationen mit Flussobjekten.
-
-*Beispiel für ein BPMN-Modell*
-![Beispiel für ein BPMN-Modell](./img/bpmn_modell.png)
-
-In der Abbildung wird ein Geschäftsprozess mit einer Interaktion zwischen der Rolle Anwender und der Rolle Systemadministrator als Bestandteil der Organisationseinheit Helpdesk dargestellt. Von den internen Abläufen der Rolle Anwender wird abstrahiert, deswegen ist diese als zugeklappter Pool (Black Box) modelliert. Der Prozess in der Organisationseinheit Helpdesk (modelliert als Pool) beginnt, indem bei einem Systemadministrator (modelliert als Lane) die Nachricht „Webseite nicht verfügbar“ eintrifft. Die Nachricht wird über einen Nachrichtenfluss vom Anwender zum Helpdesk übermittelt. Die Kommunikation zwischen Pools darf nur über Nachrichtenflüsse geschehen. Der Systemadministrator führt die Aktivität „Problem suchen“ aus und nutzt dazu einen „Problembericht“, der als Datenobjekt dargestellt ist. Außerdem behebt er in der folgenden Aktivität das Problem und muss entscheiden, ob der Anwender die Ursache für das Problem ist. Als Kommentar ist an die Entscheidung notiert, dass dies häufig der Fall ist.  Ist der Anwender schuld, wird ihm der Bedienfehler über eine Nachricht mitgeteilt, sodass er daraufhin das Problem selbst lösen kann. Ist der Anwender nicht schuld, wird das Problem vom Systemadministrator behoben, der sich beim Anwender mit einer Nachricht bedankt. Nachrichten müssen nicht explizit modelliert werden. Egal ob der Anwender schuld ist oder nicht, endet danach der Prozess, was durch ein Endereignis dargestellt wird.
-
-### Gateways
-> Gateways leiten Verzweigungen im Sequenzfluss eines Diagramms ein und beenden Verzweigungen. Die interne Markierung des Gateways legt dessen Bedeutung fest. Wir unterscheiden zwischen exklusiven, inklusiven, parallelen und ereignisbasierten Gateways.
-
-- **Exklusive Verzweigungen (XOR)**:  
-teilen den Sequenzfluss in echte Alternativen (**exklusives ODER**). Entweder wird der eine oder der andere Sequenzfluss ausgeführt, jedoch niemals mehr als einer.
-- **Inklusive Gateways (OR)**:  
-teilen den Sequenzfluss ebenso in Alternativen mit dem Unterschied, dass auch mehrere Flüsse ausgeführt werden können (**logisches ODER**).  
-
-*Beispiel: BPMN - XOR und OR Gateway*
-![BPMN - XOR und OR Gateway](./img/bpmn_xor_und_or_gateway.png)
-Die Abbildung zeigt ein einfaches Beispiel für die Verwendung von exklusiven und inklusiven Entscheidungen. Die Entscheidung, ob eine Zusatzversicherung abgeschlossen wird, kann entweder mit ja oder mit nein beantwortet werden. Wenn entschieden wurde, dass eine Zusatzversicherung abgeschlossen werden soll, kann entweder eine Zahn- oder eine Brillenzusatzversicherung abgeschlossen werden oder beide.
-
-- Das **parallele Gateway (AND)**:  
-führt zu einer Aufspaltung des Sequenzflusses in mehrere gleichzeitig ausgeführte Sequenzflüsse.
-- Ein **ereignisbasiertes Gateway**:  
-steuert den Sequenzfluss in Abhängigkeit vom Eintritt eines bestimmten Ereignisses (*z.B. dem Eintreffen einer Bestellung*).  
-
-*Beispiel: BPNN - AND und event-driven Gateway*
-![BPNN - AND und event-driven Gateway](./img/bpmn_AND_und_event_driven_gateway.png)
-Die Abbildung zeigt die Verwendung von parallelen und ereignisbasierten Gateways. Die dargestellten Prüfaktivitäten können parallel abgearbeitet werden. Sobald alle Prüfungen abgeschlossen sind, wird durch das Ereignis „Prüfergebnis fertig“ entschieden, wie der Ablauf weitergeht. Sind alle Daten korrekt, ist der Prozess abgeschlossen. Falls der Datensatz inkorrekt ist, muss die Aktivität „Kundendaten in Antrag aufnehmen“ erneut ausgeführt werden. Der Eingang zweier Sequenzflüsse in eine Aktivität ist in der BPMN erlaubt, ohne dass dies etwas Spezielles bedeutet. Entweder führt der eine Sequenzfluss zur Ausführung der Aktivität oder der andere. Dies ist nicht in allen Notationen so (*wie z.B. in UML-Aktivitätsdiagrammen*). Daher ist es empfehlenswert, immer zusammenführende Gateways zu modellieren, sodass beim Wechsel der Notation nicht versehentlich Fehler unterlaufen.
-
-### Übersicht über die BPMN-Elemente
-Zu Beginn des RE-Prozesses kann eine vollumfängliche Nutzung der BPMN hinderlich sein, denn die Stakeholder müssen die Anforderungen verstehen, um deren Korrektheit und Angemessenheit beurteilen zu können. Je weiter der RE-Prozess fortschreitet, desto konkreter und stabiler werden die Anforderungen und desto sinnvoller kann ein Einsatz weiterer Notationselemente der BPMN sein.
-
-*Zuordnung BPMN zu Geschäftsprozesselementen*
-|Element|Beispiel|Symbol(e) BPMN|
+|Beschreibung: Gateways (*BPMN*) & Konnektoren (*EPK*) |Darstellung<br></br>BPMN |Darstellung<br></br>EPK |
 |---|---|---|
-|Prozess|Antragsbearbeitung|![Prozess](./img/bpmn_prozess_antragsbearbeitung.png)|
-|Aktivität|Adressprüfung|![Aktivität adressprüfung](./img/bpmn_aktivität_adressprüfung.png)|
-|Geschäftsobjekt|Antrag|![Geschäftsobjekt Antrag](./img/bpmn_geschäftsobjekt_antrag.png)|
-|Zustand|Schaden gemeldet<br></br>Schaden reguliert|![Zustand Schaden](./img/bpmn_zustand_schaden.png)|
-|Ereignis|Antragseingang|![Ereignis Antragseingang](./img/bpmn_ergebnis_antragseingang.png)|
-|Rolle|Sachbearbeiter|![Rolle Sachbearbeiter](./img/bpmn_rolle_sachbearbeiter.png)|
-|Nutzer|Karl Meier|![Nutzer](./img/bpmn_nutzer_karl_meier.png)|
-|Geschäftsregeln|Versicherungssumme ><br></br>250.000.000 € →<br></br>separate Risikoprüfung<br></br>durchführen|![Geschäftsregeln](./img/bpmn_geschäftsregeln.png)|
-|Organisationseinheit|IT-Abteilung, IT-Sicherheitsbeauftragter|![Organisationseinheit](./img/bpmn_organisationseinheit.png)|
-|Kontrollfluss und -steuerung|Sequenzfluss, Kontrollfluss, Parallelisierung, Entscheidung|![Kontrollfluss](./img/bpmn_kontrollfluss_kontrollsteuerung.png)|
-|System|Antragssystem|![System](./img/bpmn_organisationseinheit.png)|
-|Kommentare und Notizen|Gruppierung, Annotation, Kommentar|![Kommentare](./img/bpmn_kommentare_notizen.png)|
+|**AND** (*parallel*) (*BPMN + EPK*)<br></br>- der Prozess gabelt sich am **AND-Split** in alle ausgehenden Pfade gleichzeitig auf, und wird erst fortgesetzt, wenn **"alle Pfade"** am **AND-Join** abgeschlossen sind<br></br><br></br>**AND** (*EPK*)<br></br>- im Gegensatz zum BPMN, kann ein Split-Konnektor nur auf eine Funktion folgen und nie auf ein Ereignis |*"paralleles Gateway"*<br></br>![AND](./img/bpmn_and_parallel_gateway.png) |*"UND Konnektor"*<br></br>![AND](./img/epk_and_konnektor.png) |
+|**OR** (*BPMN + EPK*)<br></br>- der Prozess gabelt sich am **OR-Split**, von dort aus muss mindestens 1 Pfad (*können aber auch mehrere oder alle*) fortgesetzt werden, der Prozess geht erst weiter wenn **"alle fortgesetzten Pfade"** am **OR-Join** abgeschlossen sind <br></br><br></br>**OR** (*EPK*)<br></br>- im Gegensatz zum BPMN, kann ein Split-Konnektor nur auf eine Funktion folgen und nie auf ein Ereignis |*"inklusives Gateway"*<br></br>![OR](./img/bpmn_or_inklusive_gateway.png) |*"Oder-Konnektor"*<br></br>![OR](./img/epk_or_konnektor.png) |
+|**XOR** (*BPMN + EPK*)<br></br>- der Prozess gabelt sich am **XOR-Split**, von dort aus wird je nach den Bedingungen nur ein Pfad fortgesetzt, der Prozess geht erst weiter wenn **"der eine Pfad"** am **XOR-Join** abgeschlossen ist <br></br><br></br>**XOR** (*BPMN*)<br></br>- müssen nicht geschlossen werden wenn Pfad in ein End-Ereignis führt <br></br><br></br>**XOR** (*EPK*)<br></br>- im Gegensatz zum BPMN, kann ein Split-Konnektor nur auf eine Funktion folgen und nie auf ein Ereignis |*"exklusive Gateway"*<br></br>![XOR](./img/bpmn_xor_exklusive_gateway.png) |*"Exklusiv-Oder Konnektor"*<br></br>![XOR](./img/epk_xor_konnektor.png) |
+|**ereignisbasiertes Gateway** (*BPMN*)<br></br>- nach dem Gateway sind die **Ereignisse** notiert auf welche das Gateway wartet, es wird nur der Pfad nach dem zuerst eintreffende Ereignisse fortgesetzt<br></br>- demnach muss dem Gateway immer mindestens 1 Ereignis folgen (*logisch wären aber mindestens 2*)<br></br>- im gegensatz zu den anderen Gateways und Konnektoren gibt es hier **nur ein Gateway** |*"ereignisbasiertes Gateway"*<br></br>![ereignisbasiertes Gateway](./img/bpmn_ereignis_gateway.png) | *kein "ereignisbasierter Konnektor"* |
 
 ---
-## 3. Modellierung mit Ereignisgesteuerten Prozessketten
-> Ereignisgesteuerte Prozessketten (EPK) sind im deutschsprachigen Raum weit verbreitet. Sie haben ihren Ursprung im Saarland. Dort wurden sie 1992 unter der Leitung von August Wilhelm Scheer von seiner Arbeitsgruppe an der Universität des Saarlandes entwickelt. Die EPK wird, genau wie die BPMN, eingesetzt, um betriebliche Abläufe zu modellieren. Erweiterte Ereignisgesteuerte Prozessketten (eEPK) erhöhen durch zusätzliche Notationselemente die Ausdrucksmächtigkeit der EPK.  
+## 3. Modellierung mit dem "Business Process Model Notation" BPMN
+- zur detailernteren Darstellung von Geschäftsprozessen
+- wird von der **O**bject **M**anagement **G**roup (*OMG*) verwaltet und weiterentwickelt, welche ein Konsortium aus über 800 Mitgliedsunternehmen ist
+- die OMG stellt mit der BPMN einen Modellierungsstandart bereit, der die Bedeutung grafischer Notationselemente und deren Zusammenspiel definiert
+- für den fortgeschrittenen RE-Prozess geeignet (*konkrete und stabile Anforderungen vorhanden*)
 
-*Beispiel: EPK*
+### Verbindungen
+- **Sequenzfluss**: 
+gibt die Reihenfolge der Aktivitäten vor und kann zwar über Lane-Grenzen, jedoch nicht über Pool-Grenzen hinweg gehen.
+- **Nachrichtenfluss**:  
+verbindet Pools miteinander, deren Kommunikation über Nachrichten läuft.
+- **Assoziation**:  
+verbindet Datenobjekte und Annotationen mit Flussobjekten.
+
+<details>
+<summary>*Beispiel: Ausschnitt aus BPMN-Modell*</summary>
+
+![Beispiel für ein BPMN-Modell](./img/bpmn_modell.png)
+
+- die Abbildung stellt ein Geschäftsprozess mit einer Interaktion zwischen der Rolle Anwender und der Rolle Systemadministrator (*welcher Bestandteil der Organisationseinheit Helpdesk ist*) dar
+- von den internen Abläufen der Rolle Anwender wird abstrahiert, deswegen ist diese als zugeklappter **Pool (Black Box)** modelliert
+- der Prozess in der Organisationseinheit Helpdesk (**Pool**) beginnt, indem bei einem Systemadministrator (**Lane**) die **Nachricht** „Webseite nicht verfügbar“ eintrifft, die **Nachricht** wird über einen Nachrichtenfluss vom Anwender zum Helpdesk übermittelt
+- die Kommunikation zwischen **Pools** darf nur über **Nachrichtenflüsse** geschehen
+- der Systemadministrator führt die **Aktivität** „Problem suchen“ aus und nutzt dazu einen „Problembericht“, der als **Datenobjekt** dargestellt ist
+- er behebt in der folgenden **Aktivität** das Problem und muss entscheiden, ob der Anwender die Ursache für das Problem ist
+- als **Kommentar** ist an die Entscheidung notiert, dass dies häufig der Fall ist
+- Ist der Anwender schuld, wird ihm der Bedienfehler über eine **Nachricht** mitgeteilt, sodass er daraufhin das Problem selbst lösen kann
+- ist der Anwender nicht schuld, wird das Problem vom Systemadministrator behoben, der sich beim Anwender mit einer **Nachricht** bedankt. **Nachrichten** müssen nicht explizit modelliert werden
+- Egal ob der Anwender schuld ist oder nicht, endet danach der Prozess, was durch ein **Endereignis** dargestellt wird
+</details>
+
+<details>
+<summary>*Beispiel: BPMN-Modell, Beschaffungsprozess*</summary>
+
+![BPMN Modell](./img/bpmn_gesammt_beispiel_prozess.png)
+- Organisationseinheit **Kunde** (**Pool**) *ist unterteilt in*:
+	- **Fachabteilung** (**Pool**) *welche wiederum unterteilt ist in*:
+		- die Rolle **Mitarbeiter** (**Lane**)
+		- die Rolle **Abteilungsleiter** (**Lane**)
+	- die Rolle **Einkauf** (**Lane**)
+- **Lieferant** (**Pool**)
+
+1. Der Geschäftsprozess beginnt damit dass ein Bedarf beim **Mitarbeiter** aufgetreten ist (**Start-Ereignis**).
+	- dies kann entweder ein "Neubedarf" oder "Ersatzbedarf" sein (**XOR Gateway**)
+	- Der **Abteilungsleiter** entweder bewilligt die Bestellung oder lehnt sie ab (**XOR Gateway**) womit der Beschaffungsprozess endet (**End-Ereignis**).
+	- Der **Einkauf** gibt die Bestellung auf (**Aktivität**) und sendet dazu eine Nachricht zum **Lieferanten**.
+2. Beim **Lieferant** wird das **Start-Ereignis** "Bestellung eingetroffen" ausgelöst.
+	- löst eine Verfügbarkeitsprüfung (**Aktivität**) der Lagerbestände für das bestellte Produkt aus.
+	- Bei Verfügbarkeit (**XOR Gateway**) wird der Lagerbestand um die bestellte Anzahl reduziert, die entsprechende Rechnung erstellt und mit der Ware in den Versandprozess (**Teilprozess**) übergeben.
+	- Sollte die Ware nicht auf Lager sein (**XOR Gateway**), wird ein Wiederbeschaffungsprozess (**Teilprozess**) initiiert. Der Geschäftsprozess steht so lange, bis das **Ereignis**, dass "die Ware eingetroffen und dem Bestand hinzugefügt ist", eintritt.
+	- Der Gesamtprozess ist beendet, wenn die Ware beim Mitarbeiter des Kunden angekommen ist (**End-Ergebnis** *es gibt zwei, eins für jeden Pool*).
+</details>
+
+### Gateways
+> Leiten Verzweigungen im Sequenzfluss eines Diagramms ein (*...-Split*) und beenden (*...-Join*) Verzweigungen.  
+
+<details>
+<summary>*Beispiel: XOR und OR Gateway*</summary>
+
+![BPMN - XOR und OR Gateway](./img/bpmn_xor_und_or_gateway.png)
+
+- die Entscheidung, ob eine Zusatzversicherung abgeschlossen wird, kann entweder mit ja oder mit nein beantwortet werden
+- wenn entschieden wurde, dass eine Zusatzversicherung abgeschlossen werden soll, kann entweder eine Zahn- oder eine Brillenzusatzversicherung abgeschlossen werden oder beide 
+</details>
+
+<details>
+<summary>*Beispiel: paralleles (AND) und ereignisbasiertes (*event-driven*) Gateway*</summary>
+
+![BPNN - AND und event-driven Gateway](./img/bpmn_AND_und_event_driven_gateway.png)
+
+- der Prozess startet mit dem Sartereignis "*Kunde will Vertrag abschließen*"
+- darauf folgt die Aktivität "*Kundendaten in Antrag aufnehmen*", welche in ein AND-split führt 
+- die in der Mitte dargestellten Prüfaktivitäten werden zunächst **parallel** abgearbeitet:
+	- sobald alle Prüfungen abgeschlossen sind (*alle Pfade im AND-join eingetroffen*) wird ein Ereignis ausgelöst
+- **eines der Ereignis nach dem "ereignisbasiertem Gateway"** wird ausgeführt:
+	- **Ereignis**: "*alle Datensätze korrekt*" -> **Endereignis**: "*weiter mit Versicherungsbedingungen*"
+	- **Ereignis**: "*Datensatz inkorrekt*" -> **Aktivität**: "*Kundendaten in Antrag aufnehmen*" -> ...
+	- Anmerkung: das Ereignis dass zuerst eintrifft, in diesem Fall kann nur eins eintreffen
+- der Eingang zweier Sequenzflüsse in eine Aktivität ("*Kundendaten in Antrag aufnehmen*") ist in der BPMN erlaubt, Entweder führt der eine Sequenzfluss zur Ausführung der Aktivität oder der andere
+</details>
+
+---
+## 4. Modellierung mit Ereignisgesteuerten Prozessketten EPK
+- zu einfachen Darstellung von Geschäftsprozessen
+- Im Saarland 1992 unter Leitung von August Wilhelm Scheer an der Universität des Saarlands entwickelt.
+- Im deutschsprachigen Raum weit verbreitet.
+- Die **e**rweiterte **E**reignisgesteuerte **P**rozess**k**etten (eEPK) erhöhen durch zusätzliche Notationselemente die Ausdrucksmächtigkeit der EPK.
+- Müssen mit mindestens einem **Start-Ereignis** starten und mit mindestens einem **End-Ereignis** enden. 
+- Funktionen und Ereignisse wechseln sich immer ab, dies ist von der Notation vorgeschrieben!
+
+<details>
+<summary>*Beispiel: EPK*</summary>
+
 ![Beispiel EPK](./img/beispiel_epk.png)
-Die Abbildung zeigt folgenden Sachverhalt: Ein potenzieller Kunde telefoniert mit der Kundenbetreuung. Sind die Kundendaten nicht bekannt, werden diese zunächst dokumentiert. Sind die Kundendaten bekannt, wird ein Angebot unterbreitet. Ist der Kunde nicht am Angebot interessiert, werden die Gründe dazu erfragt. Dann ist das Gespräch beendet. Ist der Kunde hingegen interessiert, wird das weitere Vorgehen besprochen. Zur Auswahl stehen die Vereinbarung eines Folgetermins und das Versenden von Unterlagen. Beide Optionen können einzeln oder gemeinsam gewählt werden. Je nach Entscheidung wird der Termin vereinbart und/oder die Unterlagen versendet. Anschließend ist das Gespräch zu Ende. An diesem Beispiel fällt eine Besonderheit der EPK auf.  
-Funktionen und Ereignisse wechseln sich immer ab, dies ist von der Notation vorgeschrieben.
+- *Start-Ereignis: "__Kundengespräch gestartet__"* __NICHT IM DIAGRAMM DARGESTELLT!__ 
 
-*Basisnotationselemente der EPK ohne Konnektoren*
-|Name|Bedeutung|Darstellung|
-|---|---|---|
-|Ereignis|Ein Ereignis ist etwas, das im Verlauf eines Prozesses passiert und den Ablauf beeinflusst. Ereignisse haben in der Regel eine Ursache (trigger) und Auswirkungen (results). Es ist jedoch selber passiv und trifft keine Entscheidungen. Das heißt, Ereignisse verbrauchen weder Ressourcen noch Zeit. Jeder Geschäftsprozess hat mindestens ein Start- und ein Endereignis. Mehrere Startereignisse treten insbesondere in Teilprozessen auf. Beispiel: Ein Kundenkontakt kann die unterschiedlichsten Gründe für das Zustandekommen besitzen und genauso mit vielen differenzierten Ereignissen enden. Ein Ereignis wird nach dem Muster [Objekt] und passiviertes [Verb] beschrieben (*z.B.Schaden gemeldet*).|![Ereignis](./img/epk_ereignis.png)|
-|Funktion|Eine Funktion ist eine fachliche Tätigkeit oder Aufgabe. Sie nimmt meist Zeit in Anspruch und kann Ressourcen verbrauchen. Sie kann über den weiteren Verlauf des Prozesses entscheiden, ist also aktiv und sollte auch so benannt werden. Die Funktion ist der Aktivität in BPMN gleichzusetzen. Funktionen werden aktiv formuliert und nach dem Pattern [Objekt] + [Verb] benannt (z. B. Antrag unterschreiben).|![Funktion](./img/epk_funktion.png)|
-|Kontrollfluss|Kontrollflusskanten bringen Funktionen und Ereignisse in zeitliche und logische Abfolgen. Ereignisse und Funktionen folgen einander dabei streng abwechselnd, d. h., das Element nach einem Ereignis muss immer eine Funktion sein und umgekehrt. Jedes Element der Notation ist durch eine Kante verbunden. Es gibt keine losgelösten Ereignisse oder Funktionen; EPK sind immer zusammenhängende Graphen. Eine Kante verbindet immer genau zwei Elemente miteinander, d. h., ein Element hat nie zwei ausgehende Kanten.|![Kontrollfluss](./img/epk_kontrollfluss.png)|
+- *Funktion: "__Kunde telefoniert mit der Kundenbetreuung__"*  
 
-### Konnektoren
-> Analog zu den Gateways der BPMN gibt es in EPK Konnektoren. Diese Konnektoren leiten Verzweigungen ein (sogenannter Split) oder beenden sie (sogenannter Join). Ein Konnektor ist entweder ein Split oder ein Join, jedoch nie beides gleichzeitig. Konnektoren sind die einzigen Symbole, die Kontrollflüsse verzweigen oder zusammenführen. Ereignisse und Funktionen haben nie mehr als einen Ein- und einen Ausgang.  
+**XOR** **nur eine Auswahl Möglichkeit erlaubt**  
+	- *Ereignis: "__Kundendaten sind bekannt__"*
+	- *Ereignis: "__Kundendaten sind nicht bekannt__"* -> *Funktion: "__Kundendaten aufnehmen__"* -> *Ereignis: "__Kundendaten sind dokumentiert__"*
 
-*Beispiel: EPK Konnektoren*
+- *Funktion: "__Angebot dem Kunden unterbreiten__"*
+
+**XOR** **nur eine Auswahl Möglichkeit erlaubt**
+	- *Ereignis: "__Kunde nicht interessiert__"* -> *Funktion: "__nach Gründen fragen__"* -> _End-Ereignis: "**Gespräch ist beendet**"_
+	- *Ereignis: "__Kunde interessiert__"* -> *Funktion: "__weiteres Vorgehen besprochen__"*
+
+		**OR** **eine, mehrere oder alle Auswahl Möglichkeiten erlaubt** 
+			- *Ereignis: "__Kunde wünscht Folgetermin__"* -> *Funktion: "__Folgetermin vereinbaren__"*
+			- *Ereignis: "__Kunde wünscht Unterlagen__"* -> *Funktion: "__Unterlagen zusenden__"*  
+
+- -> _End-Ereignis: "**Gespräch ist beendet**"_
+</details>
+
+### Konnektoren (*Entscheidungen*)
+- leiten Verzweigungen ein (*Split*), welche nachher wieder zusammen geführt werden sollten (*Join*)
+- ein Konnektor kann entweder ein Split oder ein Join aber nicht beides sein
+- einem Konnektor muss immer auf eine Funktion folgen
+- Ereignisse und Funktionen haben nie mehr als einen Ein- und einen Ausgang
+
+<details>
+<summary>*Beispiel: EPK Konnektoren*</summary>
+
 ![Beispiel: EPK Konnektoren](./img/epk_beispiel_konnektoren.png)
-- **„Und“-Konnektoren `^`**:  
-umschließen Teilprozesse, die gleichzeitig bzw. unabhängig voneinander ausgeführt werden.
-- **„Oder“-Konnektoren `v`**:  
-umschließen alternative Pfade, wobei mehrere Alternativen gleichzeitig ausgeführt werden können.
-- **„Exklusiv-Oder“-Konnektoren `XOR`**:  
-umschließen Alternativen, von denen jeweils nur eine ausgeführt werden darf.
+</details>
 
-### Wichtige Regeln zur Modellierung
+<details>
+<summary>*Beispiel: Negative Beispiele für Konnektoren*</summary>
+
 ![epk negative beispiel](./img/epk_negative_beispiele_1.png)  
-Die Abbildung zeigt Negativbeispiele, die im Folgenden von links nach rechts erläutert werden.  
-- **1:** In der ersten EPK werden zwei Ereignisse mit einem Und-Konnektor verbunden. Der Join wird jedoch gleichzeitig wieder als Split benutzt, was in der EPK nicht zulässig ist.
-- **2-3:** Auch die beiden Kontrollflüsse von den zwei Ereignissen zu der Funktion in der zweiten EPK sind nicht zulässig, genau wie der umgekehrte Fall in der dritten EPK.
-- **4:** Die EPK ganz rechts zeigt eine parallele Ausführung, die durch einen Und-Konnektor dargestellt ist. Der Diagrammausschnitt verstößt gegen die Regel, dass Ereignis und Funktion streng abwechselnd aufeinanderfolgen müssen, da vor dem verzweigenden Konnektor entweder ein Ereignis oder eine Funktion modelliert sein muss. Gleiches gilt für das Notationselement nach dem zusammenführenden Konnektor. Außerdem darf auf ein Ergeignis keine Entscheidung folgen. Einer Entscheidung muss eine Funktion vorangestellt sein.  
-![epk negative und positive Beispiel](./img/epk_beispiel_falsch_richtig.png)
+*von links nach rechts*
+- **1. Und-Konnektor fungiert als Join und Split gleichzeitig:**  
+zwei Ereignisse sind mit einem Und-Join-Konnektor verbunden, welcher gleichzeitig wieder als Split benutzt wird
+- **1. - 2. Ereignis bzw. Funktion haben mehr als 1 Eingang bzw. Ausgang:**  
+der Kontrollfuss kann sich nur durch einen Konnektor teilen bzw. vereinen
+- **4. Ereignisse und Funktionen müssen sich immer abwechseln:**  
+können sich nicht abwechseln, weil vor und nach dem UND-Konnektor entweder eine Wiederholung durch ein Ereignis oder eine Funktion auftritt
 
-### Erweiterte EPK
+---
+![epk negative und positive Beispiel](./img/epk_beispiel_falsch_richtig.png)
+- Auf eine Ereignis darf kein Konnektor (*Entscheidung*) folgen, sondern nur nach einer Funktion.
+</details>
+
+<details>
+<summary>*Beispiel: erweiterte EPK*</summary>
+
 ![Beispiel erweitertes eEPK](./img/erweitertes_epk_beispiel.png)
-Die Abbildung zeigt die Notationselemente der erweiterten Ereignisgesteuerten Prozessketten, die der Notation mehr Ausdrucksmöglichkeit verleihen.
-- Das **gelbe Oval** kennzeichnet eine Organisationseinheit und ist den Pools bzw. Lanes der BPMN gleichzusetzen.
-- Anwendungssysteme werden in einem **hellblauen Rechteck** mit doppelten vertikalen Strichen an den Seiten dargestellt.
-- Informationsobjekte werden im **dunkelblauen Rechteck** dargestellt und können Datenobjekte bzw. eine Sammlung von Datenobjekten oder sonstigen Datenspeichern darstellen.
-- Mit Informationsobjekten können also auch persistente Datenspeicher modelliert werden, was sie von den Datenobjekten der BPMN unterscheidet.
-- Prozesswegweiser können als Hinweise auf andere Prozesse verstanden werden. Sie werden durch ein Rechteck symbolisiert, hinter dem sich ein Sechseck verbirgt. Mit Prozesswegweiser ist es also möglich, andere Prozesse zu referenzieren und Prozesshierarchien zu bilden.
+</details>

@@ -29,19 +29,18 @@ Die am häufigsten eingesetzten Prüftechniken sind Reviewtechniken, bei denen d
 
 ---
 ## 1. Aktivitäten zum Prüfen und Abstimmen von Anforderungen
->Das Ziel der Aktivitäten zum Prüfen und Abstimmen ist die Qualitätsicherung und Freigabe der Anforderungen zur Umsetzung in den nachgelagerten Phasen des Softwareprojekts.
+##### Ziele:
+- **Abstimmung** (*widersprüchliche Anf. verschiedener Stakeholder*)
+- **Qualitätssicherung** (*fachliche und handwerkliche*)
+- **Freigabe der Anforderungen** (*zur Umsetzung in nachgelagerten Phasen*)
 
 ##### Risiken unzureichend geprüfter Anforderungen
-- Fehler pflanzen sich über die technische Spezifikation und die Architektur bis hin zum Programmcode fort (*Mehraufwand*).
-- Rechtliche Risiken:
-	- Zeitverlust -> Vertragsstrafen aufgrund der Nichteinhaltung von Lieferzeiten.
-	- Verstoß gegen rechtliche Vorgaben (*z.B. Datenschutzgesetz*) -> strafrechtlichen Konsequenzen.
-- Einmal umgesetzte Anforderungen lassen sich nicht ohne Weiteres wieder aus dem System entfernen.
+- **Fortpflanzung von Fehlern** (*-> tech. Spezifikation -> Architektur -> Code = Mehraufwand*)
+- **Umsetzung unnötiger Anf.** (*= Mehraufwand*)
+- **Vertragsstrafen** (*Überschreitung der Lieferzeit durch Mehraufwand*)
+- **strafrechtlichen Konsequenzen** (*Verstoss gegen Gesetze, z.B. Datenschutzgesetz*)
 
-Daher hilft ein etablierter und projektbegleitender Abstimmungsprozess bei der Auswahl
-der wichtigsten umzusetzenden Anforderungen. In Prozessmodellen, die eine evolutionäre Entwicklung unterstützen, werden beispielsweise für jeden Zyklus die zu bearbeitenden Anforderungen jeweils neu festgelegt.
-
-##### Kernaktivität „Prüfen und Abstimmen“
+##### Die 4 Schritte der Kernaktivität "Prüfen und Abstimmen"
 1. [**Prüfkriterien festlegen**](#2-prüfkriterien):  
 	- Bei der Prüfung von umfangreichen Dokumentationen und/oder unter hohem Zeitdruck können nicht alle Prüfkriterien gleichermaßen berücksichtigt werden. Daher müssen im Vorfeld der Prüfung die relevanten Prüfkriterien bestimmt werden. Welche das im Einzelnen sind, hängt maßgeblich von der Projektsituation, Art und Wichtigkeit der Anforderungen, der verfügbaren Zeit und der dafür eingeplanten Personen ab.
 2. [**Prüfprinzipien**](#3-prüfprinzipien) **und** [**Prüftechniken auswählen**](#4-prüftechniken):  
@@ -54,102 +53,100 @@ der wichtigsten umzusetzenden Anforderungen. In Prozessmodellen, die eine evolut
 
 ---
 ## 2. Prüfkriterien
-- Eine vollumfängliche Prüfung von Anforderungen nach allen erdenklichen Kriterien ist in der Praxis nicht möglich, da die Aufwände hierzu in keinem wirtschaftlich vernünftigen Verhältnis zum Nutzen stehen würden.
-- Daher gibt es in der Literatur zum Requirements Engineering verschiedene Prüfkriterien, die jeweils gezielt einen Aspekt fokussieren (*z. B. die Unterscheidung der drei Qualitätsaspekte Inhalt, Form und Abgestimmtheit*)
-- Mithilfe der Qualitätsaspekte wird die Menge der Prüfkriterien so strukturiert, dass man bei der Auswahl der Prüfkriterien zuerst die relevanten Qualitätsaspekte identifizieren und anschließend aus der Menge der den Qualitätsaspekten zugeordneten Prüfkriterien die jeweils relevanten auswählen kann.
+- Der Aufwand alle erdenklichen Prüfkriterien zu prüfen steht in keinem wirtschaftlichen Verhältnis zum Nutzen.
+- Deswegen werden die relevanten Qualitätsaspekte (*Inhalt, Form und Abgestimmtheit*) identifiziert und deren zugeordneten Prüfkriterien Ausgewählt. 
 
 ### Prüfkriterien zum Inhalt
 >"Sind alle relevanten Anforderungen im erforderlichen Detailgrad
 so erfasst, dass sie verstanden werden können?“.
 
-##### Prüfkriterien:
-- **Vollständigkeit aller Anforderungen**:  
-Hier wird die Gesamtheit der dokumentierten Anforderungen betrachtet.
-	- Umfasst die Menge der dokumentierten Anforderungen auch wirklich alle relevanten Anforderungen an das System?
-	- Fehlen Anforderungen?
-	- Wurden Anforderungen dokumentiert, die nicht relevant sind?
+<details>
+<summary>*Prüfkriterien zum Inhalt*</summary>
+
+- **Vollständigkeit aller Anforderungen** (*Gesamtheit*):  
+	- *Umfasst die Menge der dokumentierten Anf. auch wirklich alle relevanten Anf. an das System?*
+	- *Fehlen Anforderungen?*
+	- *Wurden Anforderungen dokumentiert, die nicht relevant sind?*
 - **Vollständigkeit einzelner Anforderungen**:  
-Hierzu wird jede einzelne Anforderung dahingehend untersucht, ob alle relevanten Informationen zur Beschreibung dieser Anforderung vorliegen:
-	- Sind alle Informationen zum Verständnis dieser Anforderungen dokumentiert?
+	- *Sind alle Informationen zum Verständnis dieser Anforderungen dokumentiert?*
 - **Verfolgbarkeit**:  
-Zu diesem Kriterium wird überprüft, ob zu jeder Anforderung die notwendigen Informationen dokumentiert sind, um eine angemessene Nachverfolgbarkeit zu gewährleisten:
-	- Falls es Querverweise auf zusätzliche Dokumente gibt, sind diese eindeutig?
-	- Falls es Abhängigkeiten zwischen Anforderungen gibt, sind diese klar erkennbar?
-	- Ist klar, wer der Ersteller bzw. die Quelle der Anforderung ist?
-- **Adäquatheit (_auch: Korrektheit_) bezüglich der Wünsche der Stakeholder**:  
-Hier wird geprüft, ob die dokumentierten Anforderungen auch tatsächlich das wiedergeben, was die Stakeholder gemeint bzw. sich gewünscht haben:
-	- Hat das der Stakeholder wirklich so gesagt?
-	- Entsprechen die Anforderungen der Intention der Quelle?
+	- *Falls es Querverweise auf zusätzliche Dokumente gibt, sind diese eindeutig?*
+	- *Falls es Abhängigkeiten zwischen Anforderungen gibt, sind diese klar erkennbar?*
+	- *Ist klar, wer der Ersteller bzw. die Quelle der Anforderung ist?*
+- **Adäquatheit (_Korrektheit_)** (*Wünsche der Stakeholder*):  
+	- *Hat das der Stakeholder wirklich so gesagt?*
+	- *Entsprechen die Anforderungen der Intention der Quelle?*
 - **Widerspruchsfreiheit (_auch: Konsistenz_)**:  
-Hierzu wird geprüft, ob es in der Menge der dokumentierten Anforderungen Widersprüche oder Inkonsistenzen gibt:
-	- Ist die gegebene Menge an Anforderungen erfüllbar?
-	- Schließen sich Anforderungen gegenseitig aus?
-	- Widersprechen sich Anforderungen?
-- **Keine vorzeitigen Entwurfsentscheidungen**:  
-Hier wird geprüft, ob in Anforderungen bereits festgelegt wird, wie die Anforderungen zu erfüllen sind, ohne dass es dazu verbindliche organisatorische oder rechtliche Randbedingungen gibt:
-	- Werden bereits Vorschriften zur konkreten Gestaltung des Systems gemacht?
-	- Werden zu verwendende Technologien vorgeschrieben? Werden detaillierte Angaben zu internen technischen Abläufen gemacht?
-	- Werden technische Einschränkungen oder Bedingungen beschrieben?
+	- *Ist die gegebene Menge an Anforderungen erfüllbar?*
+	- *Schließen sich Anforderungen gegenseitig aus?*
+	- *Widersprechen sich Anforderungen?*
+- **Keine vorzeitigen Entwurfsentscheidungen**: (*außer bei Randbedingungen*) 
+	- *Werden bereits Vorschriften zur konkreten Gestaltung des Systems gemacht?*
+	- *Werden zu verwendende Technologien vorgeschrieben?*
+	- *Werden detaillierte Angaben zu internen technischen Abläufen gemacht?*
+	- *Werden technische Einschränkungen oder Bedingungen beschrieben?*
 - **Dokumentation des fachlichen Problems**:  
-Hierzu wird geprüft, ob sich zu jeder dokumentierten Anforderung das fachliche Problem identifizieren lässt:
-	- Ist zu jeder Anforderungen klar, welches fachliches Problem sie löst bzw. welcher Zweck damit erfüllt wird?
+	- *Ist zu jeder Anforderungen klar, welches fachliches Problem sie löst bzw. welcher Zweck damit erfüllt wird?*
 - **Überprüfbarkeit**:  
-Hier wird geprüft, ob sich aus der Dokumentation zu der Anforderung die korrespondieren Abnahmekriterien und Testfälle für die Akzeptanztests erstellen lassen. Das erstellte System wird mit Testfällen getestet, die auf Grundlage der dokumentierten Anforderungen erstellt werden. Daher müssen die Anforderungen so formuliert werden, dass nach Abschluss der Implementierung deren Umsetzung überprüft werden kann:
-	- Lassen sich konkrete Testfälle ableiten?
-	- Ist klar, wie die Anforderungen nach der Umsetzung auf Richtigkeit überprüft werden können?
-	- Sind bereits im Abnahmetest zu prüfende Kriterien festgelegt?
+	- *Lassen sich konkrete Testfälle ableiten?*
+	- *Ist klar, wie die Anforderungen nach der Umsetzung auf Richtigkeit überprüft werden können?*
+	- *Sind bereits im Abnahmetest zu prüfende Kriterien festgelegt?*
 - **Notwendigkeit bezüglich des Zielbeitrags**:  
-Hierzu wird geprüft, wie relevant bzw. notwendig die Anforderung tatsächlich zur Erreichung des formulierten Ziels ist. Oft werden alle Anforderungen dokumentiert, welche die Stakeholder in dem Moment der Ermittlung wichtig finden. Dabei tragen nicht alle Anforderungen gleichermaßen zur Erreichung des Projektziels bei. Daher wird mit diesem Kriterium gezielt jede Anforderung reflektiert, inwieweit sie tatsächlich einen Beitrag zum Projektziel leistet:
-	- Lässt sich der Beitrag der Anforderung zum Projektziel beschreiben?
-	- Erfüllt die Anforderung ein wichtiges Bedürfnis der Stakeholder?
-	- Wird mit ihr eine Funktion oder Eigenschaft beschrieben, die vorerst nicht so wichtig ist?
+	- *Lässt sich der Beitrag der Anforderung zum Projektziel beschreiben?*
+	- *Erfüllt die Anforderung ein wichtiges Bedürfnis der Stakeholder?*
+	- *Wird mit ihr eine Funktion oder Eigenschaft beschrieben, die vorerst nicht so wichtig ist?*
+</details>
 
 ### Prüfkriterien zur Dokumentation
 >"Wurden die Anforderungen verständlich und unter Einhaltung der Vorschriften zur Dokumentation dokumentiert?“
 
-##### Prüfkriterien:
+<details>
+<summary>*Prüfkriterien zur Dokumentation*</summary>
+
 - **Konformität zur Dokumentenstruktur**:  
-Hierzu wird geprüft, ob zum einen die Anforderungen an der richtigen Stelle dokumentiert wurden und ob alle geforderten Elemente der Dokumentenstruktur ausgefüllt wurden:
-	- Entspricht die Dokumentenstruktur dem vorgegebenen Template?
-	- Sind alle Pflichtkapitel ausgefüllt?
-	- Werden insbesondere Qualitätseigenschaften und Randbedingungen an den richtigen Stellen im Dokument beschrieben?
+	- *Entspricht die Dokumentenstruktur dem vorgegebenen Template?*
+	- *Sind alle Pflichtkapitel ausgefüllt?*
+	- *Werden insbesondere Qualitätseigenschaften und Randbedingungen an den richtigen Stellen im Dokument beschrieben?*
 - **Verständlichkeit**:  
-Hierzu wird geprüft, ob der formulierte Text vom Leser verstanden werden kann und ob fach- oder projektspezifische Begriffe und Abkürzungen im Glossar erläutert werden:
-	- Ist jede Abkürzung im Glossar beschrieben?
-	- Ist der Text verständlich formuliert?
-	- Sind alle benötigten Kontextinformationen gegeben, damit die Anforderungen richtig verstanden werden können?
+	- *Ist jede Abkürzung im Glossar beschrieben?*
+	- *Ist der Text verständlich formuliert?*
+	- *Sind alle benötigten Kontextinformationen gegeben, damit die Anforderungen richtig verstanden werden können?*
 - **Eindeutigkeit**:  
-Hierzu wird überprüft, ob die Anforderungen genauso verstanden werden können, wie sie tatsächlich gemeint waren oder ob die Dokumentationsform einen unzulässig hohen Interpretationsspielraum zulässt:
-	- Ist der Text eindeutig formuliert?
-	- Auf welche Weise kann der Text noch verstanden werden?
-	- Gibt es Doppeldeutigkeiten in der Verwendung von Begriffen?
-	- Sind die richtigen Fachbegriffe verwendet worden?
-	- Wurde bei der Dokumentation eine angemessen präzise Ausdrucksweise gewählt?
+	- *Ist der Text eindeutig formuliert?*
+	- *Auf welche Weise kann der Text noch verstanden werden?*
+	- *Gibt es Doppeldeutigkeiten in der Verwendung von Begriffen?*
+	- *Sind die richtigen Fachbegriffe verwendet worden?*
+	- *Wurde bei der Dokumentation eine angemessen präzise Ausdrucksweise gewählt?*
 - **Konformität zu Dokumentationsregeln**:  
-Hierbei wird geprüft, ob die Anforderungen entsprechend den aktuellen Modellierungskonventionen oder sonstigen Vorschriften dokumentiert wurden. So gibt es häufig organisationsspezifische Vorgaben, z. B. nach welchem Schema oder in welcher Reihenfolge Anforderungen zu dokumentieren sind oder welche Modellierungssprachen für welchen Zweck eingesetzt werden:
-	- Entspricht die Dokumentation den aktuellen Vorschriften?
+	- *Entspricht die Dokumentation den aktuellen Vorschriften?*
 - **Konformität zu Dokumentationsformat**:  
-Hierzu wird überprüft, ob die Anforderungen im vorgeschriebenen Format und unter Einsatz der vorgeschriebenen Anwendungen dokumentiert werden. Die Vorschriften dazu werden häufig organisationsspezifisch festgelegt:
-	- Wurden die Anforderungen in dem dazu vorgesehenen Format dokumentiert?
+	- *Wurden die Anforderungen in dem dazu vorgesehenen Format dokumentiert?*
+</details>
 
 ### Prüfkriterien zur Abgestimmtheit
 >"Stimmen alle relevanten Stakeholder den dokumentierten Anforderungen zu und sind die bekannten Konflikte gelöst?“  
-Insbesondere durch das Erlangen neuer Erkenntnisse im Verlauf des Softwareprozesses können neue Anforderungen identifiziert werden, die sich mit den bereits dokumentierten Anforderungen widersprechen.
 
-##### Prüfkriterien:
+- Insbesondere durch das Erlangen neuer Erkenntnisse im Verlauf des Softwareprozesses können neue Anforderungen identifiziert werden, die sich mit den bereits dokumentierten Anforderungen widersprechen.
+
+<details>
+<summary>*Prüfkriterien zur Abgestimmtheit*</summary>
+
 - **Abgestimmtheit jeder Anforderung**:  
-Zu diesem Kriterium wird geprüft, inwieweit die Menge der Anforderungen nach der Dokumentation bereits mit den Stakeholdern abgestimmt wurde:
-	- Wurde die Anforderung bereits mit den relevanten Stakeholdern abgestimmt?
-	- Gibt es Anforderungen, die nach der Dokumentation noch nicht mit den Stakeholdern besprochen wurden?
+	- *Wurde die Anforderung bereits mit den relevanten Stakeholdern abgestimmt?*
+	- *Gibt es Anforderungen, die nach der Dokumentation noch nicht mit den Stakeholdern besprochen wurden?*
 - **Abgestimmtheit nach Änderung von Anforderungen**:
-Hierbei wird geprüft, ob nach Änderungen der Dokumentation bereits abgestimmter Anforderungen erneut abgestimmt wurde. Das wird insbesondere dann erforderlich, wenn durch Abhängigkeiten zwischen Anforderungen Änderungen erfolgen, die ursprünglich nicht vorherzusehen waren.
+- *Ob nach Änderungen der Dokumentation bereits abgestimmter Anforderungen erneut abgestimmt wurde.*  
+*Das wird insbesondere dann erforderlich, wenn durch Abhängigkeiten zwischen Anforderungen Änderungen erfolgen, die ursprünglich nicht vorherzusehen waren.*
 - **Konflikte aufgelöst**:  
-Hier wird geprüft, ob alle identifizierten Konflikte zwischen den Stakeholdern beseitigt und die Widersprüche in der Menge der dokumentierten Anforderungen aufgelöst wurden:
-	- Sind alle bekannten Konflikte gelöst?
-	- Sind alle bekannten Widersprüche behoben?
+	- *Sind alle bekannten Konflikte gelöst?*
+	- *Sind alle bekannten Widersprüche behoben?*
 - **Freigabe erteilt**:  
-Vor der Umsetzung der Anforderungen müssen diese explizit freigegeben werden. Im Unterschied zur fachlichen Abgestimmtheit bedeutet die Erteilung der Freigabe den Beschluss, dass auf Basis des aktuellen Stands mit der Umsetzung begonnen werden darf. Unter Umständen kann dies auch der Fall sein, wenn noch nicht alle Qualitätsaspekte erfüllt sind, mit der Umsetzung jedoch trotzdem schon begonnen werden sollte. Andererseits kann die Umsetzung von bereits fertig abgestimmten Anforderungen auch zurückgestellt werden, weil Anforderungen neu priorisiert wurden:
-	- Ist die Freigabe zur Umsetzung erteilt?
+	- *Vor der Umsetzung der Anforderungen müssen diese explizit freigegeben werden.*
+	- *Im Unterschied zur fachlichen Abgestimmtheit bedeutet die Erteilung der Freigabe den Beschluss, dass auf Basis des aktuellen Stands mit der Umsetzung begonnen werden darf.*
+	- *Unter Umständen kann dies auch der Fall sein, wenn noch nicht alle Qualitätsaspekte erfüllt sind, mit der Umsetzung jedoch trotzdem schon begonnen werden sollte.*
+	- *Andererseits kann die Umsetzung von bereits fertig abgestimmten Anforderungen auch zurückgestellt werden, weil Anforderungen neu priorisiert wurden.*
+	- *Ist die Freigabe zur Umsetzung erteilt?*
+</details>
 
 ---
 ## 3. Prüfprinzipien

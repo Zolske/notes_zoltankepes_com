@@ -51,15 +51,13 @@ Zeigt immer nur eine bestimmte Sicht auf das System. Zum Beispiel:
 	- Ein Aktivitätsdiagramm zeigt interne Abläufe des Systems.
 	- Beide sind Bestandteil desselben UML-Modells.
 
-
-
-
 ##### UML Diagrammtypen Kategorien
 - **Strukturdiagramme**:  
 woraus ein System besteht (*Aufbau, Elemente, Zusammensetzung sowie Schnittstellen von Systemen*).
 - **Verhaltensdiagramme**:  
 was in einem System und an seinen Schnittstellen abläuft.  
 
+![UML Überblick](./img/uml_überblick.jpg)
 ##### Trennung von Bedeutung und Darstellung
 - **Modellelement**:  
 Teil des darzustellenden Modells mit einer bestimmten Bedeutung (*z.B. "Bestellung"*).
@@ -86,7 +84,7 @@ Use-Case-Diagramme werden eingesetzt, um den Systemkontext zu bestimmen und zu d
 |---|---|---|
 |Anwendungsfall<br></br>(*use case*)|Hauptfunktion eines Systems, die ausgeführt werden muss, um ein bestimmtes Ergebnis zu erzielen.|![anwendungsfall](./img/uml_use_case_anwendungsfall.png)|
 |System, Systemgrenze|Das System stellt den Gegenstand der Betrachtung dar. Der Funktionsumfang eines Systems wird durch die Systemgrenze und die darin enthaltenen Anwendungsfälle festgelegt. Alle Elemente außerhalb der Systemgrenze befinden sich auch außerhalb des Systems.|![System](./img/uml_use_case_system_grenze.png)|
-|Akteur<br></br>(*actor*)|Ein Akteur ist eine Rolle oder ein anderes System, die/das mit dem betrachteten System interagiert. Dabei kann ein Akteur der Auslöser für Anwendungsfälle sein, der mit dem System ein bestimmtes Ergebnis erzielen kann, oder er ist zur Erreichung des Ergebnisses erforderlich, jedoch selbst nicht der Auslöser. Grundsätzlich befinden sich Akteure immer außerhalb der Systemgrenze.|![akteur](./img/uml_use_case_akteur.png)|
+|Akteur<br></br>(*actor*)|Ein Akteur ist eine Rolle oder ein anderes System, die mit dem betrachteten System interagiert. Dabei kann ein Akteur der Auslöser für Anwendungsfälle sein, der mit dem System ein bestimmtes Ergebnis erzielen kann, oder er ist zur Erreichung des Ergebnisses erforderlich, jedoch selbst nicht der Auslöser. Grundsätzlich befinden sich Akteure immer außerhalb der Systemgrenze.|![akteur](./img/uml_use_case_akteur.png)|
 |Kommunikation zwischen Akteur und System|Akteure, die bei der Ausführung eines Use Case mit dem System interagieren, werden direkt mit dem betreffenden Use Case verbunden.|![Kommunikationl](./img/uml_use_case_kommunikation.png)|
 
 
@@ -96,7 +94,7 @@ Use-Case-Diagramme werden eingesetzt, um den Systemkontext zu bestimmen und zu d
 - als Dokumentationsform für den Systemüberblick und zur Bestimmung des Systemkontexts
 
 ##### Identifikation von Anwendungsfällen
-- in der Praxis fällt schwer, die richtige Ebene zu identifizieren, auf der Anwendungsfälle beschrieben werden können (*oft werden zu kleine und dadurch zu viele Use Cases dokumentiert*) - in der Regel ist ein Anwendungsfall eine Aufgabe, die in mehreren Schritten erledigt wird und mit welcher der Akteur ein bestimmtes Ergebnis erzielen möchte
+- in der Praxis fällt  es schwer, die richtige Ebene zu identifizieren, auf der Anwendungsfälle beschrieben werden können (*oft werden zu kleine und dadurch zu viele Use Cases dokumentiert*) - in der Regel ist ein Anwendungsfall eine Aufgabe, die in mehreren Schritten erledigt wird und mit welcher der Akteur ein bestimmtes Ergebnis erzielen möchte
 - **Faustregel**: Für einen Anwendungsfall meldet sich der Nutzer am System an bzw. begibt sich zum System.
 - bei der Benennung der Use Cases sollte darauf geachtet werden, dass es sich immer um eine Aktivität handelt, die mit einem Verb beschrieben wird  
 *Beispiele für geeignete und ungeeignete Use Cases*
@@ -177,7 +175,7 @@ Beziehungen (auch: Assoziationen) zwischen Klassen beschrieben werden.
 |![beschriftung](./img/uml_klass_beziehung_benannt.png)<br></br>*durchgezogene Linie, Beschriftung der Linie mit einem Namen für die Beziehung*|Vertrag und Adresse sind über eine benannte Assoziation verbunden; die beiden Klassen sind verbunden durch die Beziehung „Rechnungsanschrift“.|
 |![mit Pfeil](./img/uml_klass_beziehung_pfeil.png)<br></br>*durchgezogene Line mit einer Pfeilspitze, ggf. Benennung der Beziehung*|Durch die Pfeilspitze wird eine Navigationsrichtung vorgeben: vom Vertrag zur Adresse. Das bedeutet, dass der Vertrag eine Adresse kennt und man sich vom Vertrag zur Adresse durchhangeln kann, jedoch nicht von der Adresse zum Vertrag: Ein Vertrag kennt seine Adresse, aber die Adresse weiß nichts von und über die Existenz des Vertrags.|
 |![Multiplizitäten](./img/uml_klass_bezeihung_multiplizität.png)<br></br>*An den Enden der Beziehung werden Multiplizitäten modelliert und damit Aussagen über die Anzahl der assoziierten Objekte gemacht.*|Ein Vertrag hat genau eine Rechnungsanschrift, eine Adresse kann jedoch die Rechnungsanschrift zu mindestens einem, aber maximal beliebig vielen Verträgen sein.|
-|![Vererbungsbeziehung](./img/uml_klass_beziehung_vererbung.png)<br></br>*Vererbungsbeziehung: durchgezogene Linie, geschlossene Pfeilspitze an einem Ende*|Dies ist die Klasse, auf welche die Pfeilspitze zeigt (hier: Artikel), vererbt alle Attribute auf die Klassen am anderen Ende der Beziehung (hier: Film und Album). Die Vererbung ist eine „ist ein“-Beziehung. Die Klassen Film und Album haben ebenfalls die Attribute Preis, Name und Verfügbarkeit, ohne diese jedoch extra als eigenes Attribut zu haben.|
+|![Vererbungsbeziehung](./img/uml_klass_beziehung_vererbung.png)<br></br>*Vererbungsbeziehung: durchgezogene Linie, geschlossene Pfeilspitze an einem Ende*|Die Klasse, auf welche die Pfeilspitze zeigt (*Artikel*), vererbt alle Attribute auf die Klassen am anderen Ende der Beziehung (*Film und Album*). Die Vererbung ist eine „ist ein“-Beziehung. Die Klassen Film und Album haben ebenfalls die Attribute Preis, Name und Verfügbarkeit, ohne diese jedoch extra als eigenes Attribut zu haben.|
 
 #### Multiplizitäten im Klassendiagramm
 >Zu Beziehungen können mit Multiplizitäten (auch: Kardinalitäten) Mengenangaben festgelegt werden. Diese Angaben werden jeweils an das Ende und die Spitze einer Beziehung notiert: Links von „..“ steht die Untergrenze und rechts von „..“ die Obergrenze der Mengenangaben. Davon ausgenommen sind jedoch die Vererbungsbeziehungen. Zu ihnen können keine Mengenangaben modelliert werden.
@@ -194,7 +192,7 @@ Beziehungen (auch: Assoziationen) zwischen Klassen beschrieben werden.
 #### Einsatz im Requirements Engineering
 
 - Im Umfeld des RE wird das Klassendiagramm genutzt, um statische Konzepte eines Anwendungsbereichs zu dokumentieren.
-- Das umfasst Geschäftsobjekte, fachliche Entitäten (branchenspezifische Dinge der realen Welt, die mit Informationssystemen verwaltet werden sollen), Personen, Objekte, Systeme und deren relevante Eigenschaften sowie Beziehungen und Abhängigkeiten zueinander.
+- Das umfasst Geschäftsobjekte, [text](chrome-extension://mpognobbkildjkofajifpdfhcoklimli/components/private-intro/private-intro.html)fachliche Entitäten (*branchenspezifische Dinge der realen Welt, die mit Informationssystemen verwaltet werden sollen*), Personen, Objekte, Systeme und deren relevante Eigenschaften sowie Beziehungen und Abhängigkeiten zueinander.
 - Das vordergründige Ziel ist dabei die Dokumentation, das Verstehen und die Kommunikation des fachlichen Problems. Das bedeutet, die Klassen im Klassendiagramm werden als Konzepte der fachlichen Umgebung betrachtet und nicht als Elemente eines Systems.
 - Eine UML-Klasse entspricht dabei einem fachlichen Konzept, also einer Menge von Objekten mit den gleichen Eigenschaften, beispielsweise Kunde, Artikel oder Bestellung. Für die Darstellung von Verhalten oder Abläufen ist das Klassendiagramm nicht geeignet.
 

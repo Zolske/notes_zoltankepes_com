@@ -39,7 +39,7 @@ Zur Dokumentation von Anforderungen kann jede Art der Darstellung verwendet werd
 	<dd>- Verfügbarkeit muss über Projekt- bzw. Systemlaufzeit gewährleistet werden (Einarbeitung neuer Mitarbeiter).</dd>
 </dl>
 
-##### Die 4 Schritte zur systematischen Dokumentation von Anforderungen:
+##### Die 4 Kernaktivitäten zur systematischen Dokumentation von Anforderungen:
 1. **Bestimmung von Zweck und Zielgruppe**:  
 	- Kommunikationsunterstützung der beteiligten Stakeholder
 	- Wissensspeicher und Referenz für Beschlüsse und Definitionen

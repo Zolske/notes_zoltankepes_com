@@ -8,7 +8,7 @@ title: M03 Glossar
 
 ---
 ### Geschäftsprozess
->Ein Geschäftsprozess beschreibt **wer** (Rolle/Organisationseinheit) **was** (Aktivität) in welcher Reihenfolge (zeitlich-logisch) tut — mit einem klaren **Ziel**, das aus der Unternehmensstrategie abgeleitet ist. Er kann aus mehreren Teilprozessen bestehen.
+>Ein Geschäftsprozess beschreibt **wer** (Rolle/Organisationseinheit) **was** (Aktivität) in welcher Reihenfolge (zeitlich-logisch) tut — mit einem klaren **Ziel**, das aus der Unternehmensstrategie abgeleitet ist. Kann aus mehreren Teilprozessen bestehen und folgt dabei den Geschäftsregeln. Prozesse und Aktivitäten lösen Ereignisse aus und umgekehrt. Ein Prozess hat, genau wie Geschäftsobjekte, einen bestimmten Zustand.
 
 ---
 ### Stakeholder

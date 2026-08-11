@@ -17,11 +17,11 @@ title: L05 Fehler und Ausnahmen
 <details>
 <summary>ZUSAMMENFASSUNG</summary>
 
-Programmierer:innen machen Fehler, ganz gleich, wie klein ihr Entwicklungsprojekt auch sein mag. Das ist nicht zu vermeiden. Angesichts dessen erweist es sich als nicht zu unterschätzender Vorteil, dass Python leistungsstarke Tools zur Behandlung und Behebung von Syntaxfehlern, Ausnahmen und logischen Fehlern bereitstellt.
+Programmierer machen Fehler, ganz gleich, wie klein ihr Entwicklungsprojekt auch sein mag. Das ist nicht zu vermeiden. Angesichts dessen erweist es sich als nicht zu unterschätzender Vorteil, dass Python leistungsstarke Tools zur Behandlung und Behebung von Syntaxfehlern, Ausnahmen und logischen Fehlern bereitstellt.
 
 Syntaxfehler treten immer dann auf, wenn der Programmcode die Syntaxregeln von Python verletzt. Sobald der Interpreter einen solchen Fehler erkennt, bricht er die Ausführung des Programms ab und gibt eine hilfreiche Fehlermeldung aus, die unter anderem die betroffene Zeile und die Art des aufgetretenen Fehlers bezeichnet. Das erleichtert die Lokalisierung und Behebung der Fehlerursachen beträchtlich.
 
-Ähnlich verhält es sich mit Ausnahmen. Diese werden ausgelöst, wenn bei der Ausführung eines syntaktisch korrekten Programms Laufzeitfehler auftreten, die den normalen Programmablauf unterbrechen. Auch in diesem Fall erzeugt der Interpreter eine Meldung, die auf die Art des Problems und die wahrscheinliche Fehlerursache hinweist. Darüber hinaus bietet sich den Programmierer:innen hier die Möglichkeit, Ausnahmen durch die Verwendung einer try-Anweisung abzufangen und gezielt zu behandeln.
+Ähnlich verhält es sich mit Ausnahmen. Diese werden ausgelöst, wenn bei der Ausführung eines syntaktisch korrekten Programms Laufzeitfehler auftreten, die den normalen Programmablauf unterbrechen. Auch in diesem Fall erzeugt der Interpreter eine Meldung, die auf die Art des Problems und die wahrscheinliche Fehlerursache hinweist. Darüber hinaus bietet sich den Programmierer hier die Möglichkeit, Ausnahmen durch die Verwendung einer try-Anweisung abzufangen und gezielt zu behandeln.
 
 Eine dritte Möglichkeit zur Diagnose und Behebung von Problemen eröffnet sich durch die vielseitigen Loggingfunktionen, die Ihnen einen detaillierten Überblick über den Programmablauf und die diesem zugrunde liegende Logik liefern. Damit trägt Python der Tatsache Rechnung, dass Anwendungsfehler nicht immer in Abstürzen resultieren, sondern sich mitunter lediglich als Abweichungen vom erwarteten Verhalten des Codes bemerkbar machen. Solche logischen Fehler sind ohne eine detaillierte Erfassung des Programmablaufs oft kaum zu identifizieren und zu beseitigen.
 </details>
@@ -124,6 +124,8 @@ Die Python Umgebung stellt ein Tool zum Protokollieren der Ausführung des Progr
 
   - `filename="mylog.log", filemode="w"` *erstellt eine Datei mit den Log-Nachrichten in der Datei `mylog.log` , es werden dann keine weiteren Nachrichten auf den Bildschirm ausgegeben.*
 
+  - `force=True` *erzwingt die Änderungen im `basicConfig`, nach mehrmaligen ändern.*
+
   - `format="%(asctime)s: %(message)s"` *Formatierung von Log-Nachrichten* `2019-10-11 16:08:59,464: My log message`
     `%(`**&lt;**__Datentype>__`)s` *'s' steht für String, der Rest kann x beliebiger Text sein wie `: ` im Beispiel.*
 
@@ -139,7 +141,7 @@ Die Python Umgebung stellt ein Tool zum Protokollieren der Ausführung des Progr
   ```python
   import logging
   
-  logging.basicConfig(filename="mylog.log", filemode="w", level=logging.DEBUG)
+  logging.basicConfig(filename="mylog.log", filemode="w", level=logging.DEBUG force=True)
   
   logging.debug("Debug is the lowest log level in severity")
   logging.info("Info is the second lowest log level")
