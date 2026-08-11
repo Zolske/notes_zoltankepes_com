@@ -192,7 +192,7 @@ Beziehungen (auch: Assoziationen) zwischen Klassen beschrieben werden.
 #### Einsatz im Requirements Engineering
 
 - Im Umfeld des RE wird das Klassendiagramm genutzt, um statische Konzepte eines Anwendungsbereichs zu dokumentieren.
-- Das umfasst Geschäftsobjekte, [text](chrome-extension://mpognobbkildjkofajifpdfhcoklimli/components/private-intro/private-intro.html)fachliche Entitäten (*branchenspezifische Dinge der realen Welt, die mit Informationssystemen verwaltet werden sollen*), Personen, Objekte, Systeme und deren relevante Eigenschaften sowie Beziehungen und Abhängigkeiten zueinander.
+- Das umfasst Geschäftsobjekte, fachliche Entitäten (*branchenspezifische Dinge der realen Welt, die mit Informationssystemen verwaltet werden sollen*), Personen, Objekte, Systeme und deren relevante Eigenschaften sowie Beziehungen und Abhängigkeiten zueinander.
 - Das vordergründige Ziel ist dabei die Dokumentation, das Verstehen und die Kommunikation des fachlichen Problems. Das bedeutet, die Klassen im Klassendiagramm werden als Konzepte der fachlichen Umgebung betrachtet und nicht als Elemente eines Systems.
 - Eine UML-Klasse entspricht dabei einem fachlichen Konzept, also einer Menge von Objekten mit den gleichen Eigenschaften, beispielsweise Kunde, Artikel oder Bestellung. Für die Darstellung von Verhalten oder Abläufen ist das Klassendiagramm nicht geeignet.
 
