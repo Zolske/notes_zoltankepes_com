@@ -116,31 +116,48 @@ Typische Attribute können sein:
 	- Behebung der wichtigsten Fehler unter Berücksichtigung der verbleibenden Ressourcen.
 
 ### Faktoren zur Festlegung der Priorität einer Anforderung
-*Die 4 Faktoren welche die Priorität von Anforderungen beeinflussen.*
-|Faktor|Bedeutung|
+
+|Faktor	|Was steckt dahinter? |
 |---|---|
-|**Wert/Kosten**<br></br>(*finanzielle*)|Wie viel trägt die Anf. zum Geldverdienst oder zu den Kosten bzw. Kosteneinsparungen bei?<br></br>(*Kundenzufriedenheit beeinflusst den Wert*).|
-|**Kundenzufriedenheit**|Wie sehr freuen sich Kunden, wenn sie umgesetzt wird bzw. wie unzufrieden sind sie, wenn nicht?|
-|**Risiko**|Wie groß ist das Risiko, wenn die Anf. gar nicht oder falsch umgesetzt wird?|
-|**Abhängigkeiten**<br></br>(*zwischen Anforderungen*)|Muss diese Anf. vor anderen umgesetzt werden?|
+|*Finanzieller* **Wert**/ **Kosten**|Wie viel Geld bringt die Umsetzung ein (*oder spart sie*)? <br></br>Was kostet die Umsetzung (*Entwicklung, Lizenzen, Hardware, ...*)?|
+|**Risiko**	|Welche Gefahr entsteht, wenn die Anforderung nicht oder falsch umgesetzt wird? |
+|**Kundenzufriedenheit** |Wie stark beeinflusst die Anforderung die Zufriedenheit der Stakeholder? |
+|**Abhängigkeiten** |Beeinflusst die Reihenfolge in welcher die Anf. umgesetzt werden. |
 
-#### Wie beeinflussen sich diese gegenseitig?
-Im Idealfall haben alle vier Faktoren gleiches Gewicht. Aber es gibt Sonderfälle in denen die Priorität einer Anforderung die Priorität anderer übersteigt obwohl sie eventuell einen niedrigen Wert/Kosten Faktor hat.
-- hohes Risiko,
-- viele Abhängigkeiten
+>Normalerweise sind alle vier Faktoren gleichwertig aber:  
+– Risiko kann den **Wert** überstimmen (*z.B. bei Gesetzen*), <br></br>- **Abhängigkeiten** können die Reihenfolge erzwingen, auch wenn ein anderer Wert höher wäre.
 
-*Beispiel: Bewertung mit den Werten: "niedrig = 1", "normal = 2", "hoch = 3"*
-||Anforderung 1|Anforderung 2|Anforderung 3|Anforderung 4|
-|---|---|---|---|---|
-|Wert/Kosten|**1 (+2**)|*2*|*3*|**2 (+1)**|
-|*Kundenzufri.*|*2*|*2*|*2*|*2*|
-|**Risiko**|**3**|*2*|*2*|*2*|
-|**Abhängigkeit**|*2*|*2*|*2*|**3**|
-|Priorität|**10**|*8*|*9*|**10**|  
+<details>
+<summary>Beispiel: *wenn ein __hohes Risiko__ zu einer höheren Priorität führt*</summary>
 
-*Trotz niedrigem "Wert/Kosten" Faktor haben Anforderungen 1 und 4 eine höhere Priorität.*
+- *Beispiel 1* – **gesetzliche Anforderung**:  
+Ein System muss die DSGVO einhalten. Wenn diese Anforderung nicht umgesetzt wird → rechtliche Konsequenzen, Bußgelder, Imageschaden. Das Risiko ist hier so hoch, dass es den Wert der Anforderung übersteigt → sie bekommt automatisch höchste Priorität.
+
+- *Beispiel 2* – **Sicherheitslücke**:
+Eine Banking-App braucht eine Authentifizierung. Wird sie nicht oder schlecht umgesetzt → Sicherheitslücke, Datenverlust, Vertrauensverlust. Hohes Risiko = hohe Priorität.
+
+- *Beispiel 3* – **technisches Risiko**:
+Eine Funktion ist technisch sehr komplex und könnte bei falscher Umsetzung andere Teile des Systems zum Absturz bringen. Auch das ist ein Risiko.
+</details>
+
+<details>
+<summary>Beispiel: *wenn __Abhängigkeiten__ die Reihenfolge der Umsetzung erzwingen*</summary>
+
+- *Beispiel* - **Speicherung eines Vertrags**:
+„Das Speichern eines Vertrags kann nicht sinnvoll implementiert werden, bevor das System nicht in der Lage ist, Verträge zu erzeugen."  
+Das heißt: Selbst wenn „Vertrag speichern" einen höheren Wert hätte, muss zuerst „Vertrag erstellen" umgesetzt werden. Die Abhängigkeit erzwingt die Reihenfolge.
+</details>
 
 ### Methoden zur Priorisierung von Anforderung
+
+*Gegenüberstellung der Priorisierungs Methoden*
+|Methode |Beschreibung |Vorteile |Nachteile |
+|---|---|---|---|
+|**MoSCoW** |Anforderungen werden in 4 Kategorien eingeteilt: <br></br>**Must, Should, Could, Won't** |- Schnelle Kategorisierung auch großer Mengen mit wenig Personen <br></br>- Einfach verständlich und kommunizierbar <br></br>- Trennt klar essentielle von optionalen Anforderungen |- In der Praxis landen fast alle Anforderungen in „Must" oder „Should" <br></br>-  Keine Ordnung innerhalb einer Kategorie (mehrere „Musts" bleiben ungeordnet) <br></br>-  Berücksichtigt Risiko und Abhängigkeiten nicht explizit |
+|**Wert-Risiko-Matrix** |- Anforderungen werden nach Wert (Nutzen) und Risiko (Umsetzungsrisiko) in eine 2×2-Matrix eingeordnet|- Einfach anzuwenden <br></br>- Liefert eine klare Priorisierungsreihenfolge: <br></br>1. hoher Wert + geringes Risiko <br></br> 2. hoher Wert + hohes Risiko <br></br>3. geringer Wert + geringes Risiko <br></br>4. vermeiden |- Kundenzufriedenheit und Abhängigkeiten zwischen Anforderungen werden nicht berücksichtigt <br></br>- Wenn viele Anforderungen in dasselbe Feld fallen, entsteht erneut Unentschiedenheit |
+|**Kano** |Anforderungen werden nach ihrem Einfluss auf die Kundenzufriedenheit klassifiziert: <br></br>**Basisfaktoren** (*selbstverständlich*), <br></br>**Leistungsfaktoren** (*explizit gefordert*), <br></br>**Begeisterungsfaktoren** (*positiv überraschend*) |- Berücksichtigt explizit die Kundenzufriedenheit <br></br>-  Hilft, den Unterschied zwischen „muss sein" und „begeistert" sichtbar zu machen <br></br>-  Ergänzt andere Methoden ideal |- Keine direkte Reihenfolge (kein Ranking), nur Klassifizierung <br></br>-  Kano-Typen verändern sich im Laufe der Zeit (was heute begeistert, ist morgen Basis) <br></br>-  Aufwändigere Erhebung (Kundenbefragung notwendig) |
+|**Team Estimation Game** |Alle Anforderungen werden spielerisch durch ein Team in eine vollständige, durchnummerierte Reihenfolge (*lineare totale Ordnung*) gebracht |- Bezieht das gesamte Team kollaborativ ein <br></br>- Führt zu einem konsensbasierten Ergebnis <br></br>- Ergebnis ist eine eindeutige Reihenfolge ohne Ranggleichheit <br></br>- Fördert Diskussion und gemeinsames Verständnis |- Zeitaufwändig, besonders bei vielen Anforderungen <br></br>- Ergebnis hängt stark von den Teilnehmenden und deren Wissensstand ab <br></br>- Kein explizites Einbeziehen von Wert, Risiko oder Kundenzufriedenheit als formale Kriterien |
+
 #### MoSCoW-Methode
 Anforderungen werden in eine von vier Prioritätskategorien eingeordnet:
 - **Muss** (*engl.* __m__*ust*):  
@@ -153,13 +170,6 @@ Anforderungen sind für den Projekterfolg nicht relevant und werden dann berück
 - **Nicht umsetzen** (*engl.* __w__*on’t*):  
 Anforderungen werden momentan nicht umgesetzt, jedoch vielleicht im späteren Verlauf des Projekts.
 
-<br></br>
-- **Vorteile**:  
-	- eine große Menge von Anforderungen lassen sich mit wenigen Personen relativ schnell kategorisieren
-- **Nachteile**: 
-	- insbesondere bei der Einbeziehung von Anwendern und Auftraggebern bei der Priorisierung, dass am Ende fast alle Anforderungen als Muss- und Soll-Anforderungen kategorisiert werden
-
-
 #### Wert-Risiko-Matrix
 - Die Faktoren Kundenzufriedenheit und Abhängigkeiten werden nicht explizit berücksichtigt.
 - Nur der Wert (*der durch die Umsetzung der Anforderungen geschaffen wird*) und  
@@ -170,12 +180,10 @@ das Risiko (*dass es bei der Umsetzung zu großen Problemen kommt*) führen zu i
 
 *Beispeil: Wert-Risiko-Matrix*
 ![Wert-Risiko-Matrix](./img/Wert-Risiko-Matrix.png)
-
-- **Vorteile**:  
-	- ist einfach umzusetzen
-- **Nachteile**:  
-	- Kundenzufriedenheit und Abhängigkeiten werden nicht explizit mit berücksichtigt
-	- keine klare Priorität wenn viele Anforderungen "als erstes umgesetzte" werden müssen (*kann durch Kano-Typen weiter priorisiert werden*)
+- **Hoher Wert** + **geringes Risiko** → sofort umsetzen (maximaler Nutzen, minimales Risiko)
+- **Hoher Wert** + **hohes Risiko** → als zweites umsetzen (lohnt sich trotz Risiko)
+- **Geringer Wert** + **geringes Risiko** → irgendwann, wenn noch Kapazität
+- **Geringer Wert** + **hohes Risiko** → möglichst vermeiden oder gar nicht aufnehmen
 
 #### Kundenzufriedenheit nach Kano
 > Klassifiziert Anforderungen hinsichtlich der Wichtigkeit für Stakeholder.
