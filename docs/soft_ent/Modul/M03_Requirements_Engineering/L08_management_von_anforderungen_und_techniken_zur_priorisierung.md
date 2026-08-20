@@ -48,7 +48,7 @@ Typische Attribute können sein:
 - **Quelle**: *woher die Anforderung ermittelt wurde*
 - **Beschreibung**: *was die Anforderung fordert*
 - **Stabilität**: *wie veränderlich oder festgelegt eine Anforderung zu einem bestimmten Zeitpunkt ist*
-- **Status**: *z. B. in Abstimmung oder umgesetzt*
+- **Status**: *nicht genormt, z. B. aufgenommen, in Abstimmung oder umgesetzt*
 - **Kritikalität & Priorität**: *wie wichtig ist die Anforderung für den Projekterfolg?*
 
 *Beispiel für eine tabellarische Darstellung von Anforderungsattributen*
@@ -92,14 +92,14 @@ Typische Attribute können sein:
 ![Beispiel für Anforderungskonfigurationen](./img/anforderungs_konfigeration.png)
 
 ### Lebenszyklus von Anforderungen im Softwareprozess
-1. **in Ausschreibung enthalten**: *sie sind als Projektvision abstrakt formuliert*
+1. **in Ausschreibung enthalten**: *Anf. sind als Projektvision abstrakt formuliert*
 2. **grob spezifiziert**: *erhoben und dokumentiert*
-3. **fein spezifiziert**: *Anforderungen mit der höchsten Priorität werden verfeinert und im Detail spezifiziert. Erforderlich ist dabei der Detailgrad, den das Entwicklungsteam benötigt, um die Anforderungen zu verstehen und umzusetzen. Die dokumentierten Anforderungen bilden die Grundlage des zu liefernden Ergebnisses.*
-4. **umgesetzt**: *werden als program code implementiert*
-5. **getestet**: *auf Basis der Spezifikation, werden die implementierten Anforderungen getestet*
-6. **im Kundenrelease integriert**: *implementierte Anforderungen werden in die Software integriert*
-7. **abgenommen**: *Software wird in eine Testumgebung durch den Kunden getestet*
-8. **produktiv gesetzt**: *erfolgreiche Abnahme durch den Kunden*
+3. **fein spezifiziert**: *Anforderungen mit der höchsten Priorität wurden verfeinert und im Detail spezifiziert. Erforderlich ist dabei der Detailgrad, den das Entwicklungsteam benötigt, um die Anforderungen zu verstehen und umzusetzen. Die dokumentierten Anforderungen bilden die Grundlage des zu liefernden Ergebnisses.*
+4. **umgesetzt**: *wurden als program code implementiert*
+5. **getestet**: *auf Basis der Spezifikation, wurden die implementierten Anforderungen getestet*
+6. **im Kundenrelease integriert**: *implementierte Anforderungen wurden in die Software integriert*
+7. **abgenommen**: *Software wurde in eine Testumgebung durch den Kunden getestet*
+8. **produktiv gesetzt**: *Anf. stehen den Nutzern zur Verfügung*
 
 ---
 ## 2. Techniken zur Priorisierung von Anforderungen
@@ -120,12 +120,12 @@ Typische Attribute können sein:
 |Faktor	|Was steckt dahinter? |
 |---|---|
 |*Finanzieller* **Wert**/ **Kosten**|Wie viel Geld bringt die Umsetzung ein (*oder spart sie*)? <br></br>Was kostet die Umsetzung (*Entwicklung, Lizenzen, Hardware, ...*)?|
-|**Risiko**	|Welche Gefahr entsteht, wenn die Anforderung nicht oder falsch umgesetzt wird? |
-|**Kundenzufriedenheit** |Wie stark beeinflusst die Anforderung die Zufriedenheit der Stakeholder? |
-|**Abhängigkeiten** |Beeinflusst die Reihenfolge in welcher die Anf. umgesetzt werden. |
+|**Risiko**	|Welche Gefahr entsteht, wenn die Anf. nicht oder falsch umgesetzt wird? |
+|**Kundenzufriedenheit** |Wie stark beeinflusst die Anf. die Zufriedenheit der Stakeholder? |
+|**Abhängigkeiten** |Umsetzung andere Anf. erst nach Umsetzung dieser Anf. möglich? |
 
 >Normalerweise sind alle vier Faktoren gleichwertig aber:  
-– Risiko kann den **Wert** überstimmen (*z.B. bei Gesetzen*), <br></br>- **Abhängigkeiten** können die Reihenfolge erzwingen, auch wenn ein anderer Wert höher wäre.
+– Risiko kann den **Wert** überstimmen (*z.B. bei Gesetzen*), <br></br>- **Abhängigkeiten** können die Reihenfolge erzwingen, auch wenn ein anderer **Wert** höher wäre.
 
 <details>
 <summary>Beispiel: *wenn ein __hohes Risiko__ zu einer höheren Priorität führt*</summary>

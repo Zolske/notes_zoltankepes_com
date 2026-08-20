@@ -51,42 +51,38 @@ Außerdem stellt Python unkomplizierte, einfach zu bedienende Funktionen bereit,
 
 #### 3. Zahlen
 
-- **ganzzahlige** positive als auch negative Zahlen haben den Datentyp **int**  und können beliebig lang sein
-- positive als auch negative **Gleitkommazahlen** (*floating-point*) (*Zahlen mit Nachkommastellen*)  haben den Datentyp **float** und können auch beliebig lang sein
+- **ganzzahlige** positive als auch negative Zahlen haben den Datentyp **int**  und können so groß sein wie es der RAM erlaubt
+- positive als auch negative **Gleitkommazahlen** (*floating-point*) (*Zahlen mit Nachkommastellen*)  haben den Datentyp **float**, sie können 64 Bit groß sein und sind 15-17 stellen nach der signifikanten Dezimalstelle genau  
+```Python
+>>> 0.1 + 0.2
+0.30000000000000004
+```
 - **Wissenschaftliche Notation** mit `e` oder `E` werden genutzt um Gleitkommazahlen verkürzt darstellen zu können. Z.B. `4.5e7` == `45,000,000`
 - **imaginäre Zahlen** haben den Datentyp **complex**. Format `a + bJ`  , `a` und `b` sind Gleitkommazahlen und der Buchstabe `J` für die Quadratwurzel aus -1 (*die sogenannte imaginäre Einheit*) steht.
 - **Imaginäre Zahlen** Zahlen, deren Quadrat eine nicht positive reelle Zahl (typischerweise –1) ist, werden als imaginär bezeichnet.
-- **Hexadezimal zahlen** `0x<hex>`  (*null*), `<hex>` ist der Platzhalter für hexadezimale Zahl.
-- **Oktalzahlen** `0o<octal>` (*null Buchstabe O*), `<octal>` ist der Platzhalter für Oktalzahl.  
+- **Hexadezimal zahlen** `0x<hex>` (*null + Buchstabe x*), `<hex>` ist der Platzhalter für hexadezimale Zahl, hat den Bereich: `0-9` und `a-f`.
+- **Oktalzahlen** `0o<octal>` (*null + Buchstabe o*), `<octal>` ist der Platzhalter für Oktalzahl, hat den Bereich: `0-7`.
+- **Binärzahlen** `0b<binär>` (*null + Buchstabe b*), `<binär>` ist der Platzhalter für Biärezahl, hat den Bereich: `0-1`.
+- *z.B.* `hex(8) == 0x8` , `oct(8) == 0o10` , `bin(8) == 0b1000`
 
 #### 4. Strings
 
 - kann zwischen zwei gleichen `'` oder `"` stehen
-
 - das selbe Anführungszeichen muss innerhalb des Strings escaped `\` werden
-
-- mit drei `"""` oder `'''` kann ein String über mehrere Zeilen erstrecken
-
+- mit drei `"""` oder `'''` kann sich ein String über mehrere Zeilen erstrecken
 - sind selber unveränderlich, allerdings kann der Variable ein neuer String zugewiesen werden
-
 - mit `len("String Text")` wird die Länge des Strings zurück gegeben
-
 - mit `+` können zwei Strings zusammengesetzt werden
-
 - mit `.format()` können variabel in den String eingebaut werden
   ```py
   age_var = 42
   my_str = "My name is {name} and I am {age} young.".format(name="Joe", age=age_var)
   ```
-
 - `print()` kann mehrere Komma separierte Werte ausgeben:
   `print("Text", 42, "Ende") # Text 42 Ende`
-
 - Strings können mit `*` multipliziert werden
-
 - Teile eines Strings können durch `[]` zurück gegeben werden
   (*von erstem bis vorletztem Buchstaben, dritte Position Schritte*)
-
   ```py
   my_string="Hello, World!"
   print(my_string[0]) # H
@@ -97,7 +93,6 @@ Außerdem stellt Python unkomplizierte, einfach zu bedienende Funktionen bereit,
   print(my_var[0:-2]) # Hello, Worl
   print(my_var[-6:]) # World!
   ```
-
 - wichtige Methoden:
   ```py
   print(("-").join("TEST")) # T-E-S-T
@@ -112,7 +107,7 @@ Außerdem stellt Python unkomplizierte, einfach zu bedienende Funktionen bereit,
 1. Datei muss unter Angabe des Pfads + Name und des Modus mit Hilfe der `open()` Funktion geöffnet werden.
    | Modus        | Beschreibung                                                 |
    | ------------ | ------------------------------------------------------------ |
-   | `"r"` Read   | - Öffnet Datei im Lesemodus<br />- Ist der Standard Modus und muss deswegen nicht angegeben werden |
+   | `"r"` Read   | - Öffnet Datei im Lesemodus<br />- Ist der Standard Modus und muss deswegen nicht angegeben werden <br />- Falls keine Datei mit dieser Bezeichnung **existiert**, wird ein **Fehlermeldung ausgegeben** |
    | `"x"` Create | - Veranlasst die Erstellung einer neuen Datei mit dem angegebenen Namen<br />- Falls bereits eine Datei mit dieser Bezeichnung **existiert**, wird ein **Fehlermeldung ausgegeben** |
    | `"a"` Append | - Bewirkt die Erstellung einer neuen Datei, falls der angegebene Dateiname nicht existiert.<br />- Wenn bereits eine Datei mit der genannten Bezeichnung **vorhanden** ist, wird dies Datei geöffnet - **ohne Ausgabe einer Fehlermeldung**, Anschließend werden alle neuen Einträge **am Ende der Datei angefügt**, sodass die bereits bestehenden Dateiinhalte erhalten bleiben. |
    | `"w"` Write  | - Bewirkt ebenfalls die Erstellung einer neuen Datei, falls der angegebene Dateiname nicht existiert. Wenn bereits eine Datei mit der genannten Bezeichnung vorhanden ist, wird diese Datei geöffnet (wiederum **ohne Ausgabe einer Fehlermeldung**). Allerdings werden in letzterem Fall - anders als im Anfügemodus - **alle vorherigen Inhalte der bereits bestehenden Datei gelöscht**. Alle neuen Einträge werden am Dateianfang eingefügt. |
@@ -125,7 +120,7 @@ Außerdem stellt Python unkomplizierte, einfach zu bedienende Funktionen bereit,
 
 ```py
 my_file=open("someFile.txt", "w")
-my_file.write("I am writing into the file.") # gibt zurück weiviele Zeichen in die Datei geschrieben wurden
+my_file.write("I am writing into the file.") # gibt zurück wei viele Zeichen in die Datei geschrieben wurden
 my_file.close()
 
 my_file=open("someFile.txt", "r")
@@ -133,4 +128,4 @@ print(my_file.read()) # I am writing into the file.
 my_file.close()
 ```
 
-**NOTE:** Beim lesen/schreiben von Dateien kann es zu unvorhergesehen Fehlern kommen die Außerhalb des Zugriff Bereiches des Programmierers liegen. Deshalb sollte ein solcher Vorgang immer mit einem **try-catch** Block gesichert werden, um dass Programm vom Abstürzen zu Retten!
+**NOTE:** Beim lesen/schreiben von Dateien kann es zu unvorhergesehen Fehlern kommen die Außerhalb des Zugriff Bereiches des Programmierers liegen. Deshalb sollte ein solcher Vorgang immer mit einem **try-except** Block gesichert werden, um dass Programm vom Abstürzen zu Retten!

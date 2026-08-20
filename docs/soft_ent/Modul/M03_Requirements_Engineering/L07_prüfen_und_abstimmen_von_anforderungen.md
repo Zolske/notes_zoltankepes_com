@@ -211,7 +211,7 @@ bewertet.
 - Ein formale Version des Walkthroughs ist eine Inspektion.
 
 ### Perspektivenbasiertes Lesen
-- Lässt sich mit einem Review (*z.B. Stellungnahme oder Walkthrough*) kombinieren.
+- Wird mit einem Review (*z.B. Stellungnahme oder Walkthrough*) kombinieren.
 - Abhängig von der aktuellen Projektsituation, werden dem Reviewer Perspektiven zugeteilt, aus der sie die Anforderungen bewerten sollen.
 - *Beispiel*:
 	- Rollenperspektiven: Einer liest aus der Sicht des Kunden, einer aus der Sicht des Testers und einer aus der Sicht des Softwarearchitekten.

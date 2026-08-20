@@ -52,6 +52,7 @@ oder Gelesenen hat und durch kontinuierliches Feedback Anforderungen an die Stak
 ##### Zusammenhang: System - Systemkontext - irrelevanter Umgebung
 - **System**: (*das zu entwickelnde oder anzupassende System*)
 - **Systemkontext**:  
+Alles **was Abhängigkeiten** (*Bezug*) zum entwickelnden System hat.
 	- alle **Stakeholder**
 	- existierende **Systeme**: (*nicht das zu entwickelnde oder anzupassende System*)  
 		- **Umsysteme**:  
@@ -66,7 +67,7 @@ oder Gelesenen hat und durch kontinuierliches Feedback Anforderungen an die Stak
 			- Öffentliche Dokumente (*z.B. Standards und Best-Practices-Quellen*)
 		- ... von bereits existierenden Umsystemen (*z.B. Schnittstellen*) oder Altsystemen.
 - **irrelevante Umgebung**:  
-Enthält alles was keinen Einfluss auf die Anforderungen hat.
+Alles was **keine Abhängigkeiten** (*Bezug*) zum entwickelnden System hat. 
 
 ##### System- und Kontextgrenze
 - Können sich während der Entwicklung verschieben.

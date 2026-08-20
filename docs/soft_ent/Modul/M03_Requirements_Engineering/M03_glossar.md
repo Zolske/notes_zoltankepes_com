@@ -29,3 +29,24 @@ Der Schlüsselgedanke: Das Problem ist unabhängig von jeder Lösung. Erst die A
 ---
 ### Softwareprozess
 > Mit „Softwareprozess" ist der gesamte Ablauf der Softwareentwicklung gemeint – also alle Phasen und Aktivitäten, die von der ersten Idee bis zum fertigen Produkt durchlaufen werden (z. B. Anforderungsanalyse, Design, Implementierung, Test, Wartung).  
+
+---
+### Geschäftsobjekt
+>Ist ein fachliches „Ding", das im Rahmen eines Geschäftsprozesses bearbeitet wird – und dabei einen bestimmten Zustand annehmen kann.
+
+*Beispiele*:
+	- Ein Schaden (Zustand: „gemeldet", „in Bearbeitung", „abgeschlossen")
+	- Ein Warenkorb in einem Onlineshop
+	- Eine Bestellung, ein Vertrag, eine Rechnung
+	
+Kurz: *alles, was ein Unternehmen fachlich verwaltet und was sich durch Prozesse verändert*.
+
+---
+### Objektmodell
+>Ist ein übergreifendes fachliches Modell, das die Zusammenhänge und Eigenschaften mehrerer Geschäftsobjekte dokumentiert.  
+Es zeigt also nicht ein einzelnes Objekt, sondern das Gesamtbild: Welche Objekte gibt es, welche Eigenschaften haben sie, und wie hängen sie zusammen?
+
+Typisches Werkzeug dafür: *das UML-Klassendiagramm*.
+
+---
+

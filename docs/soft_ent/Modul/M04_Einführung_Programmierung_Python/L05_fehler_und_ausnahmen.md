@@ -43,29 +43,19 @@ Eine dritte Möglichkeit zur Diagnose und Behebung von Problemen eröffnet sich 
 ##### Try Block
 
 `try` `:`
-
 ` ` ` ` ` ` ` ` **&lt;**__Anweisungen>__ (*Fehler gefährdete Anweisungen*)
-
 `except` **&lt;**__Fehler_Type>__ `:`
-
 ` ` ` ` ` ` ` ` **&lt;**__Anweisungen>__ (*wenn Ausnahmetyp zutrifft*)
-
 `finally` `:` (*optional*)
-
 ` ` ` ` ` ` ` ` **&lt;**__Anweisungen>__ (*werden immer Ausgeführt*)
 
-- `try` enthält die Anweisungen die möglicherweise eine Ausnahme verursachen könnten (*Datei öffnen, durch 0 teilen*).
-
+- `try` enthält die Anweisungen die möglicherweise eine Ausnahme verursachen könnten (*Datei öffnen, durch 0 teilen*).  
   - Anweisungen die nach einer Anweisung folgen die eine Ausnahme verursachen werden nicht ausgeführt.
-
-- `except` wird nur ausgeführt falls der Ausnahmetyp zutrifft.
-
-  - Mehrere Ausnahmetypen können kombiniert werden
-    `except (ValueError, ZeroDivisionError):`
-
+- `except` wird nur ausgeführt falls der Ausnahmetyp zutrifft.  
+  - Mehrere Ausnahmetypen können kombiniert werden `except (ValueError, ZeroDivisionError):`
   - Es wird davon abgeraten alle möglichen Ausnahmen pauschal mit nur einem `except:` abzufangen.
-
   - Mehrere except Blöcke können aufeinander folgen, Blöcke nach dem zutreffenden werden nicht ausgeführt.
+  <br />
     ```python
     try:
         raise ZeroDivisionError                        # löst eine Ausnahme aus
@@ -109,26 +99,18 @@ except:
 Die Python Umgebung stellt ein Tool zum Protokollieren der Ausführung des Programms zur Verfügung. Die Log-Anweisung können genutzt werden um Informationen an bestimmten stelle im Codes zu loggen. Dadurch ergibt sich ein Bild zu logischen Programmablauf.
 
 - Dazu muss am Anfang des Codes die "logging" Bibliothek importiert werden (`import logging`).
-
 - Stufen nach aufsteigendem Schweregrad:
   `debug`, `info`, ( `warning` , `error` , `critical` *Standartstufen*).
-
   Nur die Standartstufen werden ausgegeben bzw. aufgezeichnet.
-
 - Standartstufen können wie folgt angepasst werden:
   `logging.basicConfig(level=logging.DEBUG)`
-
 - Einstellungen können unter `logging.basicConfig()` geändert werden.
-
   - `level=logging.DEBUG)` *setzt den Schwergrad auf `debug`*
-
   - `filename="mylog.log", filemode="w"` *erstellt eine Datei mit den Log-Nachrichten in der Datei `mylog.log` , es werden dann keine weiteren Nachrichten auf den Bildschirm ausgegeben.*
-
   - `force=True` *erzwingt die Änderungen im `basicConfig`, nach mehrmaligen ändern.*
-
   - `format="%(asctime)s: %(message)s"` *Formatierung von Log-Nachrichten* `2019-10-11 16:08:59,464: My log message`
-    `%(`**&lt;**__Datentype>__`)s` *'s' steht für String, der Rest kann x beliebiger Text sein wie `: ` im Beispiel.*
-
+    `%(`**&lt;**__Datentype>__`)s` *'s' steht für String, der Rest kann x beliebiger Text sein wie `: ` im Beispiel.*  
+<br />
     | Syntax            | Beschreibung                                                 |
     | ----------------- | ------------------------------------------------------------ |
     | `%(asctime)s`     | Erfassung des Erstellungsdatums und der Erstellungszeit des Protokolleintrags |
