@@ -91,7 +91,7 @@ Use-Case-Diagramme werden eingesetzt, um den Systemkontext zu bestimmen und zu d
 ##### Einsatz im Requirements Engineering
 - zur einfachen Darstellung der Funktionen des Systems nach außen
 - zur Kommunikation mit dem Anwender oder dem Management
-- als Dokumentationsform für den Systemüberblick und zur Bestimmung des Systemkontexts
+- als Dokumentationsform für den Systemüberblick (*Überblicksebene*) und zur Bestimmung des Systemkontexts
 
 ##### Identifikation von Anwendungsfällen
 - in der Praxis fällt  es schwer, die richtige Ebene zu identifizieren, auf der Anwendungsfälle beschrieben werden können (*oft werden zu kleine und dadurch zu viele Use Cases dokumentiert*) - in der Regel ist ein Anwendungsfall eine Aufgabe, die in mehreren Schritten erledigt wird und mit welcher der Akteur ein bestimmtes Ergebnis erzielen möchte

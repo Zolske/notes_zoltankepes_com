@@ -101,7 +101,7 @@ Ein maximaler Detaillierungsgrad der Beschreibung ist dann erreicht, wenn die au
 |---|---|---|
 |**Aktivität** (*BPMN*) *bzw.* **Funktion** (*EPK*)<br></br>- Aufgaben die im Prozess ausgeführt werden<br></br>- nicht weiter zerlegbar (*atomar*)<br></br>- Benennung: **[Objekt]** + (*aktives*) **[Verb]** (*z.B. Antrag unterschreiben*) <br></br><br></br>**Aktivität** (*BPMN*)<br></br>- zwei Sequenzflüsse können in eine Aktivität übergehen |![Aktivität](./img/bpmn_aktivität.png) | ![Funktion](./img/epk_funktion.png) |
 |**Teilprozess** (*BPMN*) *bzw.* **Prozesswegweiser** (*erweitertes EPK*)<br></br>- verweist auf Teilprozesse ohne dabei mehr Komplexität zu erzeugen<br></br>- Benennung: **[Objekt]** + (*aktives*) **[Verb]** (*z.B. Schaden bearbeiten*)<br></br><br></br>**Teilprozess** (*BPMN*)<br></br>- wird durch ein weiteres BPMN dargestellt welches durch das `+` Zeichen geöffnet bzw. geschlossen wird <br></br><br></br>**Prozesswegweiser** (*erweitertes EPK*)<br></br>- kann nicht geöffnet werden verweist aber auf einen Teilprozess |![Teilprozess](./img/bpmn_teilprozess.png) |*Erweitertes EPK*<br></br>![Prozesswegweiser](./img/erweitertes_epk_subprozess.png) |
-|**Ereignis** (*BPMN + EPK*)<br></br>- entsteht im Verlauf eines (*Teil-*) Prozess <br></br>- haben in der Regel eine Ursache (*trigger*) und Auswirkung (*result*)<br></br>- Jeder (*Teil-*) Prozess muss mindestens einen Start-Ereignis & End-Ereignis besitzen<br></br>- Benennung: **[Objekt]** + (*passiviertes*) **[Verb]** (*z.B. Schaden gemeldet*)<br></br><br></br>**Ereignis** (*BPMN*)<br></br>- 3 Typen mit eigenen Symbolen (*Start-, Zwischen-, Endereignis*) welche jeweils typisiert (*z.B. Nachricht, Signal, Fehler*) oder untypisiert (*keine interne Markierung = "Blanko"*) sein können <br></br>- kann aktive den Ablauf steuern (*ereignisbasiertes Gateway*)<br></br><br></br>**Ereignis**  (*EPK*)<br></br>- beschreibt immer einen eingetretenen, passiven Zustand (*z.B. „Bestellung ist eingegangen"*) <br></br>- hat keine Handlungsfähigkeit, weshalb auch keine Entscheidung von ihm ausgehen darf|![Ereignis](./img/bpmn_ergebnisse.png) |![Ereignis](./img/epk_ereignis.png) |
+|**Ereignis** (*BPMN + EPK*)<br></br>- entsteht im Verlauf eines (*Teil-*) Prozess <br></br>- haben in der Regel eine Ursache (*trigger*) und Auswirkung (*result*)<br></br>- Jeder (*Teil-*) Prozess muss mindestens einen Start-Ereignis & End-Ereignis besitzen<br></br>- Benennung: **[Objekt]** + (*passiviertes*) **[Verb]** (*z.B. Schaden gemeldet -> ist bereits eingetreten*)<br></br><br></br>**Ereignis** (*BPMN*)<br></br>- 3 Typen mit eigenen Symbolen (*Start-, Zwischen-, Endereignis*) welche jeweils typisiert (*z.B. Nachricht, Signal, Fehler*) oder untypisiert (*keine interne Markierung = "Blanko"*) sein können <br></br>- kann aktive den Ablauf steuern (*ereignisbasiertes Gateway*)<br></br><br></br>**Ereignis**  (*EPK*)<br></br>- hat keine Handlungsfähigkeit, weshalb auch keine Entscheidung von ihm ausgehen darf|![Ereignis](./img/bpmn_ergebnisse.png) |![Ereignis](./img/epk_ereignis.png) |
 |**Sequenzfluss** (*BPMN*) *bzw.* **Kontrollfluss** (*EPK*) <br></br>- bringen Aktivitäten/Funktionen und Ereignisse in zeitliche und logische Abfolge, sind niemals losgelöst<br></br>- eine Kante verbindet immer nur zwei Elemente miteinander<br></br><br></br>**Kontrollfluss** (*EPK*)<br></br>- Funktionen und Ergebnisse müssen sich immer abwechseln |![Kontrollfluss](./img/uml_akt_dia_kontrollfluss.png) |![Kontrollfluss](./img/uml_akt_dia_kontrollfluss.png) |
 |**Datenobjekte** (*BPMN + Erweiterte EPK*)<br></br>- werden zur Ausführung von Aktivitäten/Funktionen gebraucht bzw. erzeugt<br></br>- können einzelne Objekte (*z.B. Schadenakte*) oder Sammlungen (*z.B. Antragsdaten*) repräsentieren<br></br>- werden mit dem sie umschließenden Prozess instanziiert und zerstört<br></br><br></br>**Informationsobjekte** (*Erweiterte EPK*)<br></br>- können auch persistente Datenspeicher darstellen|![Datenobjekte](./img/bpmn_datenobjekte.png) |*Erweiterte EPK*<br></br>![Datenobjekte](./img/erweitertes_epk_geschäftsobjekt.png) |
 |**Pools** (*BPMN*)<br></br>- sind Teilnehmer oder Verantwortliche eines Prozess und können Organisationen, Rollen, Personen oder Systeme sein (*z.B. Helpdesk*) <br></br>- kennzeichnen einen Teilprozess, benötigt d.h. ein Start- und ein Endereignis <br></br>- werden eingesetzt, um den Wechsel der Verantwortlichkeit in einem Geschäftsprozess zu modellieren <br></br>- können auch als Black Boxes (unter Ausblendung innerer Abläufe) dargestellt werden<br></br><br></br>**Organisationseinheit** (*Erweiterte EPK*)<br></br>- durch einen Strich mit der Betreffenden Funktion verbunden<br></br>- hat keine Unterteilungen und beschreibt nur OE |![Pools](./img/bpmn_pools.png) ![Pools Blackbox](./img/bpmn_pools_as_backbox.png) |*Erweiterte EPK*<br></br>![Pools](./img/erweitertes_epk_organisationseinheit.png) |
@@ -235,7 +235,7 @@ verbindet Datenobjekte und Annotationen mit Flussobjekten.
 ### Konnektoren (*Entscheidungen*)
 - leiten Verzweigungen ein (*Split*), welche nachher wieder zusammen geführt werden sollten (*Join*)
 - ein Konnektor kann entweder ein Split oder ein Join aber nicht beides sein
-- einem Konnektor muss immer auf eine Funktion folgen
+- einem Entscheidungs Konnektor  (*OR, XOR*) muss immer auf eine Funktion folgen, während ein Und-Konnektor auch einem Ereignis folgen darf
 - Ereignisse und Funktionen haben nie mehr als einen Ein- und einen Ausgang
 
 <details>
@@ -251,14 +251,14 @@ verbindet Datenobjekte und Annotationen mit Flussobjekten.
 *von links nach rechts*
 - **1. Und-Konnektor fungiert als Join und Split gleichzeitig:**  
 zwei Ereignisse sind mit einem Und-Join-Konnektor verbunden, welcher gleichzeitig wieder als Split benutzt wird
-- **1. - 2. Ereignis bzw. Funktion haben mehr als 1 Eingang bzw. Ausgang:**  
+- **2. & 3. Ereignis bzw. Funktion haben mehr als 1 Eingang bzw. Ausgang:**  
 der Kontrollfuss kann sich nur durch einen Konnektor teilen bzw. vereinen
 - **4. Ereignisse und Funktionen müssen sich immer abwechseln:**  
 können sich nicht abwechseln, weil vor und nach dem UND-Konnektor entweder eine Wiederholung durch ein Ereignis oder eine Funktion auftritt
 
 ---
 ![epk negative und positive Beispiel](./img/epk_beispiel_falsch_richtig.png)
-- Auf eine Ereignis darf kein Konnektor (*Entscheidung*) folgen, sondern nur nach einer Funktion.
+- Auf eine Ereignis darf kein Entscheidungs-Konnektor (*OR, XOR*) folgen, sondern nur nach einer Funktion.
 </details>
 
 <details>
