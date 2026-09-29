@@ -3,7 +3,8 @@ title: L02 Variablen und Wertzuweisungen
 ---
 
 # M04 Einführung in die Programmierung mit Python
-## L02 Variablen und Wertzuweisungen
+
+# L02 Variablen und Wertzuweisungen
 
 <details>
 <summary>LERNZIELE</summary>

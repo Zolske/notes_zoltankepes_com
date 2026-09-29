@@ -4,7 +4,7 @@ title: L07 Prüfen und abstimmen von Anforderungen
 
 # Requirements Engineering
 
-## L07 Prüfen und abstimmen von Anforderungen
+# L07 Prüfen und abstimmen von Anforderungen
 
 <details>
 <summary>LERNZIELE</summary>

@@ -3,7 +3,8 @@ title: L06 Module und Pakete
 ---
 
 # M04 Einführung in die Programmierung mit Python
-## L06 Module und Pakete
+
+# L06 Module und Pakete
 
 <details>
 <summary>LERNZIELE</summary>

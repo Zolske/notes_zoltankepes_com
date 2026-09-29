@@ -3,7 +3,8 @@ title: L05 Fehler und Ausnahmen
 ---
 
 # M04 Einführung in die Programmierung mit Python
-## L05 Fehler und Ausnahmen
+
+# L05 Fehler und Ausnahmen
 
 <details>
 <summary>LERNZIELE</summary>

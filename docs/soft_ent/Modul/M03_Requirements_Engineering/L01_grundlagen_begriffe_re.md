@@ -4,7 +4,7 @@ title: L01 Grundlagen und Begriffe des Requirements Engineering
 
 # Requirements Engineering
 
-## L01 Grundlagen und Begriffe des Requirements Engineering
+# L01 Grundlagen und Begriffe des Requirements Engineering
 
 <details>
 <summary>LERNZIELE</summary>

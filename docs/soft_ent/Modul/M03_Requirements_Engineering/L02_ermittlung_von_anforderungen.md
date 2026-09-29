@@ -4,7 +4,7 @@ title: L02 Ermittlung von Anforderungen
 
 # Requirements Engineering
 
-# L02 ERMITTLUNG VON ANFORDERUNGEN
+# L02 Ermittlung von Anforderungen
 > Die Ermittlung von Anforderungen ist die Kernaktivität im Requirements Engineering, in der die [funktionalen Anforderungen](./L01_grundlagen_begriffe_re.md#funktionale-anforderungen), die [Qualitätsanforderungen](./L01_grundlagen_begriffe_re.md#qualitätsanforderungen) und die [Randbedingungen](./L01_grundlagen_begriffe_re.md#randbedingungen) für ein System identifiziert und bewertet werden. Das System, für das die Anforderungen erhoben werden, muss sich später in ein bestehendes Umfeld eingliedern. 
 
 ##### 4 Schritte zur Ermittlung von Anforderungen

@@ -3,7 +3,8 @@ title: L04 Funktionen
 ---
 
 # M04 Einführung in die Programmierung mit Python
-## L04 Funktionen
+
+# L04 Funktionen
 
 <details>
 <summary>LERNZIELE</summary>

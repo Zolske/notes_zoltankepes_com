@@ -4,7 +4,7 @@ title: L06 Modellierung von Systemen
 
 # Requirements Engineering
 
-## L06 Modellierung von Systemen
+# L06 Modellierung von Systemen
 
 <details>
 <summary>LERNZIELE</summary>

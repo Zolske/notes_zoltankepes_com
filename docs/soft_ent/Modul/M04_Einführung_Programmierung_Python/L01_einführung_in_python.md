@@ -3,7 +3,8 @@ title: L01 Einführung in Python
 ---
 
 # M04 Einführung in die Programmierung mit Python
-## L01 Einführung in Python
+
+# L01 Einführung in Python
 
 <details>
 <summary>LERNZIELE</summary>
