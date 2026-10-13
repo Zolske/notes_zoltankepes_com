@@ -29,6 +29,7 @@ Grundsätzlich lässt sich zu IT-Projekten ganz allgemein ein Idealmodell für e
 Die Menge aller aktiven Projektprozesse wird auch als Projektportfolio bezeichnet. Das Multiprojektmanagement kümmert sich um die Planung, Überwachung und Steuerung mehrerer Projektprozesse mithilfe der Gremien Projektportfolio-Board sowie dem ProjektmanagementOffice.
 </details>
 
+---
 ## 1.1 Projektbegriff und Arten von IT-Projekten
 
 ### [Projekt](./M06_glossar.md#projekt-allgemein) (*allgemein*)
@@ -103,14 +104,14 @@ Folgende Faktoren deuten auf die Komplexität eines Projektes:
 - Die Gesamtheit dieser aktiven Projekte nennt sich **Projektportfolio**.
 - Das Planen, Überwachen und Steuern von Projekten gleichzeitig wird **Multiprojektmanagement** genannt.
 
-### Ziele des Multiprojektmanagements
+### Ziele des Multiprojektmanagement
 - Auswahl der Projekte mit dem größten Nutzen für die Unternehmensziele.
 - Priorisierung laufender Projekte bei der Ressourcenzuteilung.
 - Ausgewogene Risikoverteilung im Portfolio (*z. B. nicht zu viele risikoreiche Projekte gleichzeitig*).
 - Kontinuierliche Bewertung von Planabweichungen, als Entscheidungsgrundlage für
 mögliche Steuerungsmaßnahmen.
 
-### Gremien und Rollen im Multiprojektmanagements
+### Gremien und Rollen im Multiprojektmanagement
 |Rolle/Gremium |Aufgaben |
 |---|---|
 |**(_Projekt_) Portfolio-Board** |- **Strategische Entscheidungen**: Projekte für das Portfolio auswählen, genehmigen und regelmäßig (re-)priorisieren. <br></br>- Entscheidungen zu Phasenübergängen im IT-Projektlebenszyklus. <br></br>**Mitglieder**: IT-Leitung (*CIO*), IT-Führungsebene, Leitung des PMO|
