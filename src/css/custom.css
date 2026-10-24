@@ -61,12 +61,20 @@ dt {
   size: 18px;
 }
 
-/* as Heading for Bullet lists */
+h4, h5, h6 {
+  margin-bottom: 5px !important;
+}
+
+h4 {
+  font-size: 19px;
+}
+
 h5 {
   font-size: 16px;
-  text-decoration: underline;
-  margin-bottom: 5px !important;
-  letter-spacing: 0.05ch;
+}
+
+h6 {
+  font-size: 14px;
 }
 
 /*comments in code block*/
