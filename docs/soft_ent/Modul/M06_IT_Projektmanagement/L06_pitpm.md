@@ -30,14 +30,15 @@ In der Durchführungsphase steuert das Projektmanagement die tagtägliche Arbeit
 ## 6.1 Struktur und Phasen in PITPM
 - Erweiterung und Anpassung des [PMBOK](M06_glossar.md#pmbok)-Guides.
 - Für kleine und mittlere Softwareprojekte geeignet (*4-12 Personenmonate, 3-12 Kalendermonate, Budget von 75-500 TEUR*)
-- Kontrollpunkt: Entscheidung über den Übergang in folgende Phasen und Kontrolle von wichtigen Ergebnissen.
+- Kontrollpunkt: Entscheidung über den Übergang in folgende Phasen und Kontrolle von wichtigen Ergebnissen.  
+
 *Phasen, Aktivitäten und Kontrollpunkte im PITPM*
 ![übersicht PITPM](./img/pitpm_übersicht.png)
 
 <details>
 <summary>**1. Phase:** *Vorbereitung*:</summary>
-- Ausarbeitung des Projektauftrags
-- Abstecken des Umfangs
+- Ausarbeitung des [Projektauftrags](M06_glossar.md#projektauftrag-project-brief)
+- Abstecken des Projektumfangs
 - Erste Risikoabschätzung und Anlage eines Risikoregisters
 - Entscheidung, ob Projekt beauftragt werden soll
 </details>
@@ -59,28 +60,42 @@ In der Durchführungsphase steuert das Projektmanagement die tagtägliche Arbeit
 
 <details>
 <summary>**3. Phase:** *Durchführung*:</summary>
+
+- diese Phase erfolgt in mehreren Iterationen
 - Planung der Iteration
-- Steuerung des Projekts
+- **Kontrollpunkt: "Planung der Iteration"**
+- Softwaresystem wird entwickelt & Projekt gesteuert
 </details>
 
-<details>
-<summary>**1. Phase:** **:</summary>
-- 
-</details>
+##### Kontrollpunkt: "**Bereitstellung zur Abnahme**" (*nach jeder Iteration*)
 
 <details>
-<summary>**1. Phase:** **:</summary>
-- 
+<summary>**4. Phase:** *Einführung*:</summary>
+
+- Planung der Einführung und Durchführung des Abnahmetests
+- **Kontrollpunkt: "Abnahme erteilt**" -> Überführung Systems in Betrieb
+- Anwender müssen ewt. qualifiziert werden
 </details>
+
+##### Kontrollpunkt: "**Produktionsstart**"
+<details>
+<summary>**5. Phase:** *Abschlussphase*:</summary>
+
+- Dokumentation von Erfahrungen
+- beenden von Verträgen
+- Schlussrechnung für Projekt
+</details>
+
+##### Kontrollpunkt: "**Projekt beendet**"
 
 
 ---
 ## 6.2 IT-Projekt "konfigurieren"
 - In der "Planungsphase" konfiguriert das Projektmanagement das Projektmanagement.
-- Die Projektmanagement-Pläne & Aktivitäten leiten sich aus den elf Wissensgebieten (*WG*) des PITPM ab.
+- Die Projektmanagement-Pläne & Aktivitäten leiten sich aus den 9 Wissensgebieten des PITPM ab.
 
 <details>
-<summary>**1. WG:** *Projektteam aufstellen*:</summary>
+<summary>**1.:** *Projektteam aufstellen*:</summary>
 - Auf Basis des Projektauftrags und der Vorbereitungsphase.
 - Abdeckung aller erforderlicher Kompetenten und Fähigkeiten.
 - Zu beachtende Kriterien der Zusammenstellung:
@@ -95,7 +110,7 @@ In der Durchführungsphase steuert das Projektmanagement die tagtägliche Arbeit
 </details>
 
 <details>
-<summary>**2. WG:** *Kick-off-Workshop durchführen*:</summary>
+<summary>**2.:** *Kick-off-Workshop durchführen*:</summary>
 - Organisation: Projektmanagement
 - Teilnehmer: alle aktuell bekannten Projektbeteiligten
 - Vorstellung von: allen Beteiligten, Ziel, Zeitraum und Meilensteine
@@ -105,7 +120,7 @@ In der Durchführungsphase steuert das Projektmanagement die tagtägliche Arbeit
 </details>
 
 <details>
-<summary>**3. WG:** *Projektmanagementplan entwickeln*:</summary>
+<summary>**3.:** *Projektmanagementplan entwickeln*:</summary>
 - Wie läuft das Projekt ab?
 - Anpassung des PITPM-Prozessmodelles auf spezifische Besonderheiten
 - Ziel: Initiales Durchdenken der Projektaufgaben durch den Projekteiter
@@ -119,14 +134,14 @@ In der Durchführungsphase steuert das Projektmanagement die tagtägliche Arbeit
 </details>
 
 <details>
-<summary>**4. WG:** *Risikoplanung konfigurieren*:</summary>
+<summary>**4.:** *Risikoplanung konfigurieren*:</summary>
 - Ziel: nicht die einzelnen Risiken identifizieren, sondern zu definieren, wie das Risikomanagement allgemein im Projekt durchgeführt werden soll
 - Vorgaben über Vorgehensweisen, Regeln und Eskalationspfade
 - Allgemeine Beschreibung, wie mit Risiken umzugehen ist und welche Konsequenzen möglich sind
 </details>
 
 <details>
-<summary>**5. WG:** *Beschaffung/Zulieferungen planen*:</summary>
+<summary>**5.:** *Beschaffung/Zulieferungen planen*:</summary>
 - Vorgaben und Rahmenbedingungen für Beschaffungen im Projekt (*Freigabeprozesse, Kostengrenzen, Standards und zu berücksichtigende DIN-Normen*)
 - Beispiele: Lieferanten mit Zertifikaten, bestimmte Hardware, zentrales Lizenzmanagement
 - Vertragsarten:
@@ -137,7 +152,7 @@ In der Durchführungsphase steuert das Projektmanagement die tagtägliche Arbeit
 </details>
 
 <details>
-<summary>**6. WG:** *Projekt-Controlling aufsetzen*:</summary>
+<summary>**6.:** *Projekt-Controlling aufsetzen*:</summary>
 - Aufwandsschätzung überprüfen bzw. Ersteinschätzung vornehmen
 - Kostenplangenehmigung bei überschrittenen Toleranzgrenzen
 - Erstellung Kostenkurve für jedes Arbeitspaket
@@ -145,13 +160,13 @@ In der Durchführungsphase steuert das Projektmanagement die tagtägliche Arbeit
 </details>
 
 <details>
-<summary>**7. WG:** *Softwareentwicklung konfigurieren*:</summary>
+<summary>**7.:** *Softwareentwicklung konfigurieren*:</summary>
 - Auswahl eines Softwareprozessmodelles
 - Bereitstellung der Werkzeuge zur Entwicklung und Betrieb der Software
 </details>
 
 <details>
-<summary>**8. WG:** *Projektkommunikation planen*:</summary>
+<summary>**8.:** *Projektkommunikation planen*:</summary>
 - Analyse der Stakeholder auf deren Bedürfnisse und Interessen
 - Auf Basis der Analyse: Wie stark werden einzelne Stakeholder eingebunden?
 - Typische Elemente: regelmäßige Meetings innerhalb des Teams, mit dem Auftraggeber oder dem Lenkungsausschuss
@@ -159,7 +174,7 @@ In der Durchführungsphase steuert das Projektmanagement die tagtägliche Arbeit
 </details>
 
 <details>
-<summary>**9. WG:** *Anforderungsmanagement konfigurieren*:</summary>
+<summary>**9.:** *Anforderungsmanagement konfigurieren*:</summary>
 - Festlegen der Organisation des fachlichen Requirements Engineering
 - Wie wird mit Änderungsanfragen (Change Requests) verfahren?
 - Erfolgt in Abstimmung mit verantwortlichem Requirements Engineer
@@ -168,14 +183,14 @@ In der Durchführungsphase steuert das Projektmanagement die tagtägliche Arbeit
 </details>
 
 <details>
-<summary>**10. WG:** *Change-Request-Prozess planen*:</summary>
+<summary>**10.:** *Change-Request-Prozess planen*:</summary>
 - Behandlung von Änderungen und Anpassungswünschen seitens des Kunden im PM-Plan festgelegt
 - Berücksichtigung des Kostenrahmens, da zusätzliche Umsetzungsaufwände
 - Change-Request-Prozess: Definition von Entscheidungswege für späte Anforderungen
 </details>
 
 <details>
-<summary>**11. WG:** *Qualitätsplanung erstellen*:</summary>
+<summary>**11.:** *Qualitätsplanung erstellen*:</summary>
 
 ##### Konstruktives Qualitätsmanagement:
 - Definition von Qualitätseigenschaften **a priori** (*vor der Erstellung*)

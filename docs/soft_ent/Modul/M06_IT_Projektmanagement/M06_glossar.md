@@ -11,6 +11,16 @@ title: M06 Glossar
 >Ist eine zeitlich befristete, relativ innovative und risikobehaftete Aufgabe von erheblicher Komplexität, die aufgrund ihrer Schwierigkeit und Bedeutung meist ein gesondertes Projektmanagement erfordert.  
 
 ---
+### Chief Information Officer (*CIO*)
+>Auf Deutsch in etwa „IT-Leitung" oder „Vorstand für Informationstechnologie".
+
+Der CIO ist die ranghöchste Führungskraft für den IT-Bereich in einem Unternehmen und verantwortet:
+- die IT-Strategie des Unternehmens
+- die IT-Infrastruktur und IT-Anwendungslandschaft
+- die digitale Transformation
+- die Abstimmung zwischen IT und Geschäftszielen
+
+---
 ### Änderungsprozess (*auch "Change Prozess" oder "Change"*)
 >Steht für die Zusammenfassung aller Änderungen und Abpassungen an der **IT-Infrastruktur** und der **Organisationsstruktur** eines Unternehmens im Zusammenhang mit der Einführung oder Änderung von IT-Systemen.  
 - **IT-Infrastruktur**: *Hardware, IT-Services und Lizensen sowie Schnittstellen*

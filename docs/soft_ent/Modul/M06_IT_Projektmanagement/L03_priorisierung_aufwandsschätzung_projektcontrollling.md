@@ -231,7 +231,7 @@ zeigt den echten Fortschritt
 |---|---|---|
 |**Budget at Completion**<br/>(*Budget bei Projektende*) |**BAC** |- Geplantes bzw. geschätztes Gesamtbudget des Projekts. Diese Zahl ändert sich über die Projektlaufzeit nur durch Anpassungen des Gesamtbudgets, beispielsweise nach Change Requests der Auftraggebenden.<br/>- Die Einheit von `BAC` ist beispielsweise Geld in EUR oder Zeit in Personentagen. |
 |**Planned Value**<br/>(*geplanter Wert*) |**PV<sub>AP</sub>** |- Geplante Aufwände für das gesamte Arbeitspaket `AP`.<br/>- Dieser Wert ergibt sich durch die im Projektplan eingeplanten Ressourcen wie Personal- oder Hardwarekosten, die für das Arbeitspaket eingeplant werden. <br/>- Ist ein Arbeitspaket beendet, so wurden im Projekt, Werte im Umfang der für ein Arbeitspaket ursprünglich geplanten Kosten geschaffen.|
-||**PV<sub>P t</sub>** |- Geplante Aufwände für ein Projekt `P` zum Zeitpunkt `t`. <br/>- Ergibt sich aus der Summe aller bis zum Zeitpunkt `t` ~erarbeiteten~ **geplanten** (*NICHT erarbeiteten Werten!!!*) Werte `PV`<sub>`AP t`</sub> in einem Projekt `P`.|
+||**PV<sub>P t</sub>** |- Geplante Aufwände für ein Projekt `P` zum Zeitpunkt `t`. <br/>- Ergibt sich aus der Summe aller bis zum Zeitpunkt `t` ~erarbeiteten~ als **"Beendet geplanten"** (*Frist bis ...*) Arbeitspakete `PV`<sub>`AP t`</sub> in einem Projekt `P`.|
 |**Actual Costs**<br/>(*tatsächliche Kosten*) |**AC<sub>AP t</sub>** |- Höhe der tatsächlich bisher entstandenen Kosten in einem Arbeitspaket `AP` zum Zeitpunkt `t`. |
 ||**AC<sub>P t</sub>** |- Höhe der tatsächlich entstandenen Kosten im Projekt `P` zum Zeitpunkt `t`.<br/>- Ergibt sich aus der Summe aller `AC`<sub>`AP t`</sub> in einem Projekt `P`. |
 |**Estimate to Complete**<br/> (*geschätzte Kosten zum Abschluss*) |**ETC<sub>AP t</sub>** |- Am Zeitpunkt `t` geschätzte noch anfallende Kosten zur Fertigstellung des Arbeitspakets `AP`.<br/>- Wurde das Arbeitspaket `AP` bereits begonnen, d.h. ist `AC`<sub>`AP t`</sub> > 0, wird `ETC`<sub>`AP t`</sub> zum Zeitpunkt `t` neu geschätzt.<br/>- Wurde das Arbeitspaket `AP` noch nicht begonnen, gilt `ETC`<sub>`AP t`</sub> = `PV`<sub>`AP`</sub>. |
@@ -253,7 +253,7 @@ Der "**Scheduled Performance Index**" drückt aus wie Gut das Projekt in der Zei
 
 ![eva_beispiel](./img/eva_beispiel.jpg)
 - **AC<sub>P t</sub>** : `20` = *alle* AC<sub>abgeschlossene AP</sub> + *alle* AC<sub>begonnene AP</sub> = 15 + 5
-- **PV<sub>P t</sub>** : `32` = *alle* PV<sub>geplant vor Stichtag t AP</sub> = 20 + 12 (*nur AP **geplant** vor Stichtag!*)
+- **PV<sub>P t</sub>** : `32` = *alle* PV<sub>nach "Plan Beendet" zum Stichtag t AP</sub> = 20 + 12 (*nur AP **die nach Plan beendet** sein sollten*)
 - **ETC<sub>P t</sub>** : `235` = *alle* PV<sub>nicht begonnene AP</sub> + *alle* ETC<sub>begonnene AP</sub> = 228 + 7  
 (*_alle_ PV<sub>nicht begonnene AP</sub> = BAC - *alle* PV<sub>abgeschlossene AP</sub> - *alle* PV<sub>begonnene AP</sub>  
 = 260 - 20 - 12 für dieses Beispiel angenommen*)

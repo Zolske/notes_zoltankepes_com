@@ -106,6 +106,7 @@ Eine Arbeitspakete, bei der die Pufferzeit gleich null ist. Jede Verzögerung hi
 
 - **Kritischer Pfad**:  
 Die Abfolge aller kritischen Aktivitäten – also die längste Kette von Aufgaben ohne jeglichen Puffer, die vom Projektstart bis zum -ende reicht
+(*Es gibt keine Aktivitäten mit Puffer die eine Verzögerung ausgleichen können!*)
 
 ### Die 4 Beziehungstypen zwischen Aktivitäten (*Arbeitspaketen*)
 **Hinweis**: Aktivität = operative Begriff für Arbeitsp. im Zeitlichen Ablauf (*Gantt*), Arbeitspaket = Planungsbegriff aus dem Projektstrukturplan. Beide beschreiben das selbe Konzept nur aus leicht unterschiedlichen Perspektiven. 

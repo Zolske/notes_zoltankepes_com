@@ -56,8 +56,8 @@ Ist klein (*max. 10 Personen*), interdisziplinär und selbstorganisiert — ohne
 |Rolle	            |Verantwortung |
 |---|---|
 |**Developer**<br/>*(im sinne von Produkt Entwickler & nicht nur Softwareentwickler)* |Konstruktive Arbeit am Produkt (*Konzeption, Entwicklung, Qualitätssicherung, Inbetriebnahme*) |
-|**Product Owner**	|- Maximiert den Produktwert <br/>- erstellt, pflegt und priorisiert die Backlock-Elementen im Product Backlog <br/>- Entwicklung und Kommunikation des Produktziels <br/>- Sicherstellung von Transparenz und Verständlichkeit des Backlogs|
-|**Scrum Master**	|Setzt Scrum in Theorie & Praxis um; coacht das Team und beseitigt Hindernisse |
+|**Product Owner**	|- verantwortlich das Team Produktwert maximiert <br/>- erstellt, pflegt und priorisiert die Backlock-Elementen im Product Backlog <br/>- Entwicklung und Kommunikation des Produktziels <br/>- Sicherstellung von Transparenz und Verständlichkeit des Backlogs|
+|**Scrum Master**	|Setzt Scrum in Theorie & Praxis um; coacht das Team (*Effizienz &uarr;*) und beseitigt Hindernisse |
 
 #### Events (*innerhalb eines Sprints*)
 Ein Sprint (*Zyklus*) dauert maximal einen Monat und wird ohne Pause vom nächsten gefolgt.
@@ -113,12 +113,14 @@ Ein Sprint (*Zyklus*) dauert maximal einen Monat und wird ohne Pause vom nächst
     ##### Projektauftraggeber (*Executive*):
     - Hauptverantwortlich für das Projekt
     - geben Rahmenbedingungen vor (*Kosten, Zeit, Qualität, Kundenerwartung*)
-    ##### Hauptnutzer (*Senior User*):
-    - verantwortlich für Systemspezifikation, Qualität und Abnahmetest
-    - Priorisierung der Anforderungen & Informationsbeschaffung
-    ##### Hauptlieferant (*Senior Supplier*):
-    - Erstellung des Systems nach Kundenanforderung
-    - überprüft Anforderungen der Hauptnutzer auf Umsetzbarkeit und Risiken
+    ##### Hauptnutzer (*Senior User, vertreten die Seite der Nutzer*):
+    - verantwortlich für Systemspezifikation, Systemqualität und Abnahmetest
+    - Priorisierung der Anforderungen & beschaffen Informationen von den Nutzern
+    - fokussieren Bedürfnisse der Nutzer
+    ##### Hauptlieferant (*Senior Supplier, liefern das "Produkt"*):
+    - verantwortlich für, Erstellung des Systems nach Kundenanforderung & vorgegebenen Rahmenbedingungen
+    - überprüft Anforderungen der Hauptnutzer auf Umsetzbarkeit
+    - erkennen und melden von Risiken
 
 #### 3. Ebene: Projektleitung PL (*Project Manager*):
 - Für Leitungsaufgaben des Tagesgeschäfts verantwortlich
